@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+  <script type="text/javascript">window.IE = false;</script>
+<html class="no-js" lang="es" >
+<!--[if IE 11 ]><!--><script type="text/javascript">window.IE = 11;</script><!--<![endif]-->
+
+
+  <head>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="QuGhypAEZrD5kJ5Zwuhi83jdnCiuO/bVBU8Obk72nzH3zuBHiriMVCH+1HcHEG2JNLvdCYCy73zXtUC65D1DfA==" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2, user-scalable=yes">
+
+
+
+
+
+    <meta name="revisit-after" content="5 days">
+
+  <title>Liderazgo Capacitación y Eventos</title>
+
+  <link rel="shortcut icon" type="image/png" href="/files/12196789/Copia_de_Logo_AI_1.ai_(1).png?lmsauth=c57dbf6a3b228c7f0a0cffd4c629c385b28b898b"/>
+
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet"> <!-- Ubuntu for Greek Polytonic -->
+<link href="https://fonts.googleapis.com/css?family=Bitter:400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800" rel="stylesheet">
+
+
+
+  <link rel="stylesheet" media="screen" href="/stylesheets/base-colors.css?1786067772" />
+
+
+
+  <link rel="stylesheet" media="screen" href="/stylesheets/default-styles.css?1787093786" />
+  <link rel="stylesheet" media="screen" href="/stylesheets/styles.css?1787085952" />
+  <link rel="stylesheet" media="screen" href="/stylesheets/owl.carousel-v2.css?1786067772" />
+  <link rel="stylesheet" media="screen" href="/stylesheets/mobile/portal_search.css?1786067772" />
+
+
+    <link rel="stylesheet" media="screen" href="/stylesheets/panels.css?1786067772" />
+
+      <link rel="stylesheet" media="screen" href="/files/8754207/custom_stylesheet_portal_theme_137613_v87(12).css" title="theme" />
+
+<link rel="stylesheet" media="screen" href="/stylesheets/fonts/font-all.css?1786067772" />
+
+  <script src="/javascripts/font-awesome-kit.js?1787093786"></script>
+  <link rel="stylesheet" media="screen" href="/stylesheets/evo-main-icons.css?1787093786" />
+  <link rel="stylesheet" media="screen" href="/stylesheets/evo_popup.css?1787093786" />
+    <link rel="stylesheet" media="screen" href="/files/8754207/custom_stylesheet_evo_theme_137613_v87(11).css" type="text/css" />
+
+<link rel="stylesheet" media="screen" href="/stylesheets/editor-content.css?1786067772" />
+
+
+
+
+
+
+
+
+  <script src="/javascripts/modernizr-2.8.3.min.js?1786067768"></script>
+
+<script src="/javascripts/lite.js?1786067768"></script>
+<script src="/javascripts/page_statistics.js?1787093786"></script>
+
+<link rel='stylesheet' href='/libraries/flowplayer/7.2.7/skin/skin.css?v=4'>
+<link rel='stylesheet' href='/libraries/flowplayer/7.2.7/audio/flowplayer.audio.css?v=4'>
+<script src='/libraries/flowplayer/7.2.7/flowplayer.min.js?v=4'></script>
+<script src='/libraries/flowplayer/7.2.7/audio/flowplayer.audio.min.js?v=4'></script>
+<script src='/libraries/flowplayer/7.2.7/flowplayer.speed-menu.min.js?v=4'></script>
+<script src='/javascripts/flowplayer_setup.js?v=35'></script>
+<script src='/javascripts/flowplayer_extensions.js?v=17'></script>
+
+  <script>
+    set_visitor_mode();
+  </script>
+
+  <script>
+    set_portal_mode();
+  </script>
+
+
+  <script>
+    set_new_editor();
+  </script>
+
+<script>
+  set_mobile_editor();
+</script>
+
+
+
+
+  <script>
+    set_video_recording_mode();
+  </script>
+
+  <script>
+    set_audio_recording_mode();
+  </script>
+
+
+  <script>
+    set_grey_page_mode();
+  </script>
+
+<script>
+  set_mobile_vars('/files/8754207/custom_stylesheet_user_theme_137613_v87(12).css' , '<link rel="stylesheet" media="screen" href="/files/8754207/custom_stylesheet_user_theme_137613_v87(12).css" title="theme" />', '');
+</script>
+
+  <script>
+    var bjqs_called = false; // prevent calling bjqs twice in mobile resolutions
+  </script>
+
+<!-- TODO: can we cache this in local storage? -->
+
+<script>
+  set_translations({
+    ok_text: 'Correcto',
+    cancel_text: 'Cancelar',
+    no_notifications_text: 'No tienes notificaciones.',
+    no_messages_text: 'Tu buzón de entrada está vacío.',
+    chat_request_text: 'Solicitud de chat de',
+    accept_text: 'Aceptar',
+    ignore_text: 'Ignorar',
+    you_have_selected_all_text: 'Has seleccionado todos los elementos de esta página.',
+    select_all_items_text: 'Selecciona todos los ítems en todas las páginas',
+    all_items_selected_text: 'Todos los elementos de todas las páginas han sido seleccionados.',
+    clear_selection_text: 'Quitar selección',
+    are_you_sure_text: '¿Estás seguro?',
+    chat_request_canceled_text: 'El chat solicitado ha sido cancelado.',
+    no_events_this_month_text: 'No hay eventos este mes.',
+    no_events_this_week_text: 'No hay eventos esta semana.',
+    access_code_text: 'Código de acceso',
+    email_address_text: 'Dirección de correo electrónico',
+    sticky_question_text: '¿Destacado?',
+    file_text: 'Archivo',
+    save_text: 'Guardar',
+    cancel_text: 'Cancelar',
+    comment_text: 'Comentario',
+    send_text: 'Enviar',
+    send_message_text: 'Enviar y notificar',
+    send_to_text: 'Enviar a',
+    students_text: 'Estudiantes',
+    teachers_text: 'Profesores',
+    managers_text: 'Gerentes',
+    parents_text: 'Padres',
+    monitors_text: 'Monitores',
+    administrators_text: 'Administradores',
+    close_text: 'Cerrar',
+    picker_empty_text: 'Debe haber al menos una persona en la columna seleccionada.',
+    picker_limit_text: 'No puede seleccionar más de 1000 personas',
+    alert_box_title: 'Alerta',
+    confirmation_box_title: 'Confirmar',
+    select_all_text: 'Seleccionar todo',
+    deselect_all_text: 'Anular la selección',
+    mark_as_read_text: 'Marcar como leído',
+    mark_as_unread_text: 'Marcar como no leído',
+    processing: 'Procesando...',
+    do_not_press_refresh_or_back_button: 'Por favor, no presiones actualizar o el botón Atrás.',
+    this_might_take_a_while_to_complete: 'Esta acción tomará un momento en ser completada',
+    expand_all: 'Expandir todos',
+    contract_all: 'Contraer todo',
+    set_feeds_text: 'Establecer alimentadores de noticias',
+    edit_feeds_text: 'Editar feeds',
+    picker_populate_matches_list: 'Llene la lista de Coincidencias mediante el filtro de búsqueda. A continuación, seleccione elementos y utilice > para moverlos a la lista de Seleccionados.',
+    picker_add_to_selected_list: 'Haga click en Añadir para añadir a las personas en la lista Seleccionados.',
+    like_text: 'Me gusta',
+    likes_text: 'Me gustan',
+    reset_order_text: 'Restablecer orden',
+    change_text: 'Modificar',
+    close_the_editor_text: '¿Cerrar el editor?',
+    do_not_close_button_text: 'No cerrar',
+    required_text: 'Obligatorio',
+    copilot_at_work_text: '¡El agente CYPHER está trabajando para ahorrarte tiempo!<br/><br/> Te enviará una notificación<br/> cuando el contenido esté listo para su revisión.',
+    has_value_text: 'tiene valor',
+    has_no_value_text: 'no tiene valor',
+    on_or_later_than_text: 'En o después de',
+    on_or_earlier_than_text: 'En o antes de',
+    date_range_text: 'Intervalo de fechas',
+    less_than_text: 'Menos que',
+    greater_than_text: 'Mas grande que',
+    in_text: 'En',
+    equals_text: 'Igual',
+    contains_text: 'Contiene',
+    starts_with_text: 'Comienza con',
+    ends_with_text: 'Termina con',
+    yes_text: 'Sí',
+    no_text: 'No',
+    video_not_started_text: 'Vídeo: No comenzado',
+    video_playing_text: 'Vídeo: Reproduciéndose',
+    video_started_text: 'Video: started, click here to resume',
+    video_finished_text: 'Vídeo: Terminado',
+    no_items_selected: 'Ningún ítem fue seleccionado',
+  });
+</script>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" media="screen" href="/stylesheets/jquery-confirm.css?1786067772" />
+
+<link rel="stylesheet" media="screen" href="/stylesheets/plugins/vex.css?1786067772" />
+<link rel="stylesheet" media="screen" href="/stylesheets/plugins/vex-theme-os.css?1786067772" />
+
+
+
+
+
+  <link rel="stylesheet" media="screen" href="/stylesheets/evo_theme_variables.css?1787093786" />
+<link rel="stylesheet" media="screen" href="/stylesheets/components/tabnav.css?1787093786" />
+<link rel="stylesheet" media="screen" href="/stylesheets/components/fab-scrolldown.css?1786067772" />
+<link rel="stylesheet" media="screen" href="/stylesheets/plugins/tinymce/tinymce-microcard-preview.css?1786067772" />
+<link rel="stylesheet" media="screen" href="/stylesheets/evo.css?1787093786" />
+
+
+
+
+
+<script language='javascript' async='true' type='text/javascript' src='https://cdn.whatfix.com/prod/82df729f-7f48-4c5b-8258-383bb97b980f/initiator/initiator.nocache.js'></script>
+
+
+
+
+    
+  </head>
+
+<body class="portal flat test new-catalog color-heading ctr_error act_page_unavailable modern_theme grey_background   site_full_width  evo">
+    
+
+
+    <div id="wrapper">
+      <div id="browser_msg" style="display: none">
+  <div>
+    <h1>We no longer support Internet Explorer</h1>
+
+    <p>Please download one of these browsers:</p>
+
+    <div class="browser_msg_icons">
+      <a href="https://www.google.com/chrome/" target="_blank">
+        <img src="/images/browsers/chrome_128x128.png" loading="lazy" alt="" />
+        <span>Chrome</span>
+      </a>
+
+      <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">
+        <img src="/images/browsers/firefox_128x128.png" loading="lazy" alt="" />
+        <span>Firefox</span>
+      </a>
+
+      <a href="https://support.apple.com/downloads/safari" target="_blank">
+        <img src="/images/browsers/safari_128x128.png" loading="lazy" alt="" />
+        <span>Safari</span>
+      </a>
+
+      <a href="https://www.microsoft.com/en-us/edge" target="_blank">
+        <img src="/images/browsers/edge_128x128.png" loading="lazy" alt="" />
+        <span>Microsoft Edge</span>
+      </a>
+    </div>
+
+    <p>
+      <span>Keep your browser version up-to-date for a fast, secure, web experience.</span>
+    </p>
+  </div>
+</div>
+
+<a href="#contentWrap" role="button" class="skipToContent">Skip to content</a>
+
+<script>
+  on_ready(function() {
+      document.body.prepend(document.getElementsByClassName('skipToContent')[0])
+    });
+</script>
+        
+<header>
+  <div class="mobileBar">
+      <a href="#main-menu" class="leftMobileBar">
+        <span class="textOffScreen">View menu</span>
+      </a>
+
+    <div class="middleMobileBar">
+      <span>
+          <a href="/">Liderazgo Capacitación y Eventos</a>
+      </span>
+    </div>
+
+      <a href="/log_in/form" rel="facebox" excalibur-click="Excalibur.facebox" class="rightMobileBar" onclick="return false;">
+        Iniciar sesión
+      </a>
+  </div>
+
+    <div class="customLogo">
+
+  <a href="/">
+
+
+        <img src="/files/12196789/Logo-AI_liderazgo_png.png?lmsauth=2e5b70fa3b508fb3e60988e1a6f8d23a0cd607a8" alt="Liderazgo Capacitación y Eventos" class="scrolled_logo" style="max-height: calc(51px - (0px * 2))"/>
+
+  </a>
+
+      </div>
+
+    <nav role="navigation" class="mainNav" id="main-menu">
+  <ol>
+    <li class="mobile_only">
+      <a href="/">Inicio</a>
+    </li>
+    
+      
+      
+        <li>
+
+      	    <a target="_blank" href="https://liderazgo-online.com/cursos-online/">Cursos online</a>
+      	
+      </li>
+      
+      
+        <li>
+
+      	    <a target="_blank" href="https://liderazgo-online.com/cursos-virtuales/">Cursos virtuales</a>
+      	
+      </li>
+      
+      
+        <li>
+
+      	    <a target="_blank" href="https://liderazgo-online.com/certificacion-por-competencias-laborales/">Certificaciones</a>
+      	
+      </li>
+      
+      
+        <li>
+
+      	    <a target="_blank" href="https://liderazgo-online.com/diplomados/">Diplomados</a>
+      	
+      </li>
+
+
+
+      <li class="loginHolder">
+        <a href="/log_in/form" rel="facebox" excalibur-click="Excalibur.facebox" class="roundedBtn" style="background-color: #5B636B" onclick="return false;">
+          Iniciar sesión
+        </a>
+      </li>
+  </ol>
+</nav>
+</header>
+
+
+
+
+
+        <div id="contentHeader">
+            <h1>&nbsp;</h1>
+
+
+        </div>
+
+      <div id="contentWrap" role="main" class="" tabindex="-1">
+          <div id="contentBody">
+            <div id='alerts'  style='display:none' ></div>
+
+            <p>
+  Esta página no está disponible.
+</p>
+
+<div class='optionsRibbon'><ul><li class=""><a class='optionsRibbon-link' href='javascript:history.go(-1)'><i class='return'></i>Volver a la página anterior</a></li></ul></div>
+
+          </div>
+      </div>
+
+          
+
+
+
+<footer>
+  <nav role="navigation" class="footerNav">
+      <div class="footerLinks">
+
+   
+    </div>
+
+    <div class="fullWidthMobile">
+        <ul id="socialBlocks">
+            <li>
+                <a href="https://www.linkedin.com/company/liderazgocapacitacion/" title="LinkedIn" target='_blank' class="socialLin">
+                  <i></i>
+                  <span>LinkedIn</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/liderazgocapacitacion" title="Facebook" target='_blank' class="socialFb">
+                  <i></i>
+                  <span>Facebook</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/liderazgo.ecuador/" title="Instagram" target='_blank' class="socialIG">
+                  <i></i>
+                  <span>Instagram</span>
+                </a>
+            </li>
+        </ul>
+
+
+    </div>
+  </nav>
+</footer>
+
+
+<a href="#" class="back-to-top">
+  <span>
+    De atrás hacia delante
+  </span>
+</a>
+    </div>
+
+    
+
+    <script>if(!window.jQuery){document.write('<script src="/javascripts/jquery-master.js"><\/script>'); document.write('<script src="/javascripts/main_jquery_migrate.min.js"><\/script>');}
+        </script>
+
+<script src="/javascripts/jquery_ujs.js?1786067768"></script>
+<script src="/javascripts/lifecycle.es5.js?1786067768"></script>
+
+
+<script src="/javascripts/plugins/jquery-confirm.min.js?1787093786"></script>
+<script src="/javascripts/custom-confirm.js?1786067768"></script>
+
+<script src="/javascripts/plugins/response.min.js?1786067768"></script>
+
+    <script src="/javascripts/modernizr-load.js?1786067768"></script>
+
+  <script src="/javascripts/bjqs-1.3.js?1787085952"></script>
+  <script src="/javascripts/plugins/jquery.waypoints.min.js?1786067768"></script>
+  <script src="/javascripts/plugins/inview.min.js?1786067768"></script>
+  <script src="/javascripts/plugins/owl.carousel.min-v2.js?1786067768"></script>
+
+  <script src="/javascripts/micromodal.js?1787093786"></script>
+<script src="/javascripts/easing.js?1786067768"></script>
+<script src="/javascripts/spin.min.js?1786067768"></script>
+
+  <script src="/javascripts/components/fab-scrolldown.js?1786067768"></script>
+  <script src="/javascripts/components/tabnav.js?1787093786"></script>
+  <script src="/javascripts/components/popup_handler.js?1786067768"></script>
+  <script src="/javascripts/components/dropdown.js?1786067768"></script>
+  <script src="/javascripts/functions.js?1787093786"></script>
+
+<script src="/javascripts/core.js?1787093786"></script>
+
+
+<script src="/javascripts/excalibur.js?1787085952"></script>
+
+
+
+
+
+
+  <script src="/javascripts/jquery-caret-ui-timepicker.js"></script>
+
+
+<script src="/javascripts/focus-trap.js?1786067768"></script>
+<script src="/javascripts/jquery.tools-1.2.4-min.js?1786067768"></script> <!-- upgrade to 1.2.7 -->
+<script src="/javascripts/jquery-form-3.0.9.js?1786067768"></script>
+
+
+
+
+
+
+
+
+<script>
+  on_ready(init_min_height);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/javascripts/plugins/popperjs_core.js?1786067768"></script>
+<script src="/javascripts/plugins/tippy_bundle.js?1786067768"></script>
+
+<!-- TODO: can we avoid pulling this in on every page? -->
+<script src="/javascripts/plugins/vex.combined.min.js?1786067768"></script>
+
+<script>
+    vex.defaultOptions.className = 'vex-theme-os';
+    vex.dialog.defaultOptions.showCloseButton = true;
+</script>
+
+<script src="/javascripts/p5.min.js?1786067768"></script>
+<script src="/javascripts/p5_middleware.js?1786067768"></script>
+
+<div class="stack" style="display: none"></div>
+
+
+<script>
+	$.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+		if ((options.dataType == 'script') || (originalOptions.dataType == 'script')) {
+			options.cache = true;
+		}
+	});
+
+	$(document).ready(run_on_ready);
+</script>
+
+
+
+
+
+<script>
+    window.addEventListener( "pageshow", function ( event ) {
+        let visitor = true;
+
+        if (sessionStorage.getItem("logged_out_session") === 'true' && visitor === false) {
+            let historyTraversal = event.persisted ||
+                (typeof window.performance != "undefined" &&
+                    window.performance.getEntriesByType("navigation")[0].type === "back_forward");
+            if (historyTraversal) {
+                // Handle page restore.
+                window.location.reload();
+            }
+            sessionStorage.setItem("logged_out_session", "false");
+        }
+    });
+</script>
+
+
+
+
+
+  <script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
+
+    
+  </body>
+</html>

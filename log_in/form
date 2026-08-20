@@ -1,0 +1,100 @@
+  <style type="text/css">
+    form[data-active_window="credentials"] {
+      display: block;
+    }
+
+    form[data-active_window="access"], form[data-active_window="password"], form[data-active_window="admin"] {
+      display: none;
+    }
+  </style>
+
+  <div class="header"><h4>Iniciar sesión</h4></div>
+
+    <div class="facebox-content loginPopup">
+
+<div id='alerts'  style='display:none' ></div>
+
+
+  <form id="login_form" class="frmLogin" onsubmit="return ajax_submit_login(&#39;https://liderazgo.neolms.com/log_in/submit_from_portal?from=%2Fstudent_lesson%2Fshow%2F5612395%3Ffrom%3D%252Fstudent_lesson%252Fshow%252F5612395%253Flesson_id%253D26117744%26lesson_id%3D26117744%26section_id%3D110937921&amp;original_host=liderazgo.neolms.com&#39;)" data-active_window="credentials" action="" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="3JWS7puuLUdboLuVdvON6wGw1nEF3pgwo6K4F1x1/RBYk7TMxwhxt9pOLgeGDe3fKC0dKqpuaXS7k9URhVpukw==" />
+  <input type="hidden" name="form_login" value="true">
+
+<div>
+  <label for="userid">ID de usuario</label>
+  <input type="text" id="userid" name="userid" autocorrect="off" autocapitalize="off" autocomplete="username">
+</div>
+
+<div>
+  <label for="password">Contraseña</label>
+  <input type="password" id="password" name="password" autocorrect="off" autocapitalize="off" autocomplete="current-password">
+</div>
+
+<div class="loginOptions">
+    <input type="checkbox" value="1" id="checkboxName" name='remember_me'/>
+    <label for="checkboxName"><span>¿Recordarme?</span></label>
+
+    <a href="" role="button" data-change_active="password" no-loader="true">
+      ¿Has olvidado tu contraseña?
+    </a>
+</div>
+
+<button type="submit" id="submit_button" no-loader="true">
+  <span>
+    Iniciar sesión
+  </span>
+</button>
+
+
+
+</form>
+
+<form class="frmLogin" id="access_code_form" data-active_window="access" action="/join_with_access_code/submit_code_popup" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="QgWPuj2Ckz/OoevVggAtDRgkLWFZlb7vSvdhFqLd/oHGA6mYYSTPz09Pfkdy/k05MbnmOvYlT6tSxgwQe/JtAg==" />
+  <p>
+    Por favor, introduzca su código de acceso debajo
+  </p>
+
+  <input type="hidden" name="simple_login" id="simple_login" value="false">
+  <input type="text" placeholder="Código de acceso" name="registration_code" id="registration_code"><br />
+
+  <button type="submit" id="submit_access_code">
+    Registrarme
+  </button>
+
+  <a href="#" role="button" class="difSignIn" data-change_active="credentials" no-loader="true">
+    O acceda con sus credenciales personales<i></i>
+  </a>
+</form>
+<form class="frmLogin" onsubmit="return request_password();" data-active_window="password" action="" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Jt54PzSUedc3abe1mS3r8DKdWHgZVYVo9+928geM+jGi2F4daDIlJ7aHIidp04vEGwCTI7bldCzv3hv03qNpsg==" />
+  <p>
+    Por favor escriba su dirección de correo electrónico abajo
+  </p>
+
+  <input type="hidden" name="simple_login" id="simple_login" value="false">
+  <input type="text" name="email" id="email" placeholder="Dirección de correo electrónico"><br />
+
+  <button type="submit">
+    Enviar instrucciones sobre la contraseña
+  </button>
+
+  <a href="#" role="button" class="difSignIn" data-change_active="credentials" no-loader="true">
+    O acceda con sus credenciales personales<i></i>
+  </a>
+</form>
+
+  </div>
+
+
+<script type="text/javascript">
+  on_ready(function() {
+    var loginError = document.getElementById('login-error-data');
+    if (loginError) {
+      var alertBlock = $('<div class="alert_block error" style="width:auto" role="alert"><div class="alert_flex"><div class="alert_icon"><i class="error inverted"></i></div><p></p></div></div>');
+      alertBlock.find('p').text(loginError.getAttribute('data-message'));
+      $('#login_form').siblings('#alerts').empty().append(alertBlock).show();
+    }
+
+    init_portal_login();
+
+  });
+</script>
+
+

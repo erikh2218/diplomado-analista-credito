@@ -1,0 +1,316 @@
+/* ========================================
+   WIDGET VIEW MODE STYLES
+   
+   Styles for hiding admin controls in non-editor views
+   (instructor view and student view)
+   
+   Loaded in: html_section/_show.html.erb
+   Created: 2025-12-17
+   ======================================== */
+
+
+.widget-view-mode {
+  opacity: 1 !important;
+  transition: opacity 0.15s ease-in;
+}
+
+/* Widget spacing in view mode */
+.widget-view-mode .ui-component {
+  margin: 20px 0 !important;
+}
+
+.widget-view-mode .ui-component + .ui-component {
+  margin-top: 30px !important;
+}
+
+/* Hide all admin controls in view mode (non-editor) */
+.widget-view-mode .component-topbar,
+.widget-view-mode .component-type-badge,
+.widget-view-mode .component-menu-trigger,
+.widget-view-mode .flipbox-controls,
+.widget-view-mode .accordion-controls,
+.widget-view-mode .tab-controls,
+.widget-view-mode .grid-controls,
+.widget-view-mode .columns-controls,
+.widget-view-mode .callout-controls,
+.widget-view-mode .timeline-controls,
+.widget-view-mode .quiz-controls,
+.widget-view-mode .quote-controls,
+.widget-view-mode .grid-cell-placeholder,
+.widget-view-mode .add-accordion-item,
+.widget-view-mode .remove-accordion-item,
+.widget-view-mode .add-tab,
+.widget-view-mode .remove-tab,
+.widget-view-mode .add-timeline-item,
+.widget-view-mode .remove-timeline-item,
+.widget-view-mode .add-quiz-option,
+.widget-view-mode .remove-quiz-option,
+.widget-view-mode .edit-front-btn,
+.widget-view-mode .edit-back-btn,
+.widget-view-mode .flip-preview-btn,
+.widget-view-mode .regenerate-grid-btn,
+.widget-view-mode .regenerate-columns-btn,
+.widget-view-mode .component-spacer,
+.widget-view-mode .flipbox-header,
+.widget-view-mode .flipbox-side-indicator,
+.widget-view-mode .side-label,
+.widget-view-mode .tab-header i,
+.widget-view-mode .accordion-header > span > i {
+  display: none !important;
+}
+
+/* Remove hover effects in view mode */
+.widget-view-mode .ui-component:hover {
+  outline: none !important;
+  transform: none !important;
+}
+
+.widget-view-mode .ui-callout:hover {
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* New teacher-focused callout types */
+.widget-view-mode .callout-container[data-type="tip"]:hover {
+  background: rgba(var(--active-color-hover), 0.1) !important;
+}
+
+.widget-view-mode .callout-container[data-type="note"]:hover {
+  background: var(--lb-highlight-bg, rgba(0, 122, 255, 0.1)) !important;
+}
+
+.widget-view-mode .callout-container[data-type="warning"]:hover {
+  background: rgba(255, 59, 48, 0.1) !important;
+}
+
+.widget-view-mode .callout-container[data-type="example"]:hover {
+  background: rgba(52, 199, 89, 0.1) !important;
+}
+
+/* Backwards compatibility */
+.widget-view-mode .callout-container[data-type="info"]:hover {
+  background: rgba(var(--active-color-hover), 0.1) !important;
+}
+
+.widget-view-mode .callout-container[data-type="success"]:hover {
+  background: rgba(52, 199, 89, 0.1) !important;
+}
+
+.widget-view-mode .callout-container[data-type="danger"]:hover {
+  background: rgba(255, 59, 48, 0.1) !important;
+}
+
+.widget-view-mode .ui-card:hover,
+.widget-view-mode .ui-columns:hover,
+.widget-view-mode .column:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Flipbox: reduce shadow at rest, increase on hover (clickable element) */
+.widget-view-mode .flipbox-container {
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.08) !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.widget-view-mode .flipbox-container:hover {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Allow box shadows on nested widgets to display without clipping */
+.widget-view-mode .ui-grid.has-content,
+.widget-view-mode .ui-columns.has-content {
+  overflow: visible !important;
+}
+
+/* Clean grid and column appearance in view mode - no borders, shadows, or backgrounds */
+.widget-view-mode .grid-cell,
+.widget-view-mode .flex-column,
+[data-theme="dark"] .widget-view-mode .grid-cell,
+[data-theme="dark"] .widget-view-mode .flex-column {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  cursor: default !important;
+  padding: 0 !important;
+  min-height: auto !important;
+}
+
+.widget-view-mode .ui-grid,
+.widget-view-mode .ui-columns,
+[data-theme="dark"] .widget-view-mode .ui-grid,
+[data-theme="dark"] .widget-view-mode .ui-columns {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.widget-view-mode .grid-container,
+.widget-view-mode .columns-container,
+[data-theme="dark"] .widget-view-mode .grid-container,
+[data-theme="dark"] .widget-view-mode .columns-container {
+  padding: 0 !important;
+  min-height: auto !important;
+}
+
+.widget-view-mode .widget-grid,
+.widget-view-mode .columns-container,
+[data-theme="dark"] .widget-view-mode .widget-grid,
+[data-theme="dark"] .widget-view-mode .columns-container {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  min-height: auto !important;
+}
+
+.widget-view-mode .flex-columns {
+  min-height: auto !important;
+}
+
+/* Restore a min-height when any column uses center/bottom valign so
+   justify-content has vertical space to distribute. Without this, columns
+   collapse to content height in view mode and the alignment is invisible. */
+.widget-view-mode .flex-columns:has(> .flex-column[data-valign="center"]),
+.widget-view-mode .flex-columns:has(> .flex-column[data-valign="bottom"]) {
+  min-height: 120px !important;
+}
+
+.widget-view-mode .flex-columns:has(> .flex-column[data-valign="center"]) > .flex-column,
+.widget-view-mode .flex-columns:has(> .flex-column[data-valign="bottom"]) > .flex-column {
+  min-height: 120px !important;
+}
+
+/* Grid cells: give center/bottom-aligned cells vertical space so justify-content shows (mirrors lesson-builder-styles.css) */
+.widget-view-mode .grid-cell[data-valign="center"],
+.widget-view-mode .grid-cell[data-valign="bottom"] {
+  min-height: 120px !important;
+}
+
+.widget-view-mode .grid-cell > .ui-component,
+.widget-view-mode .flex-column > .ui-component {
+  margin: 0 !important;
+}
+
+/* Remove flipbox container bottom margin when nested in grid/column */
+.widget-view-mode .grid-cell .flipbox-container,
+.widget-view-mode .flex-column .flipbox-container {
+  margin-bottom: 0 !important;
+}
+
+/* Hide empty/whitespace-only paragraphs in grid cells and columns (TinyMCE artifacts) */
+.widget-view-mode .grid-cell > p:empty,
+.widget-view-mode .flex-column > p:empty,
+.widget-view-mode .grid-cell > p:has(> br:only-child),
+.widget-view-mode .flex-column > p:has(> br:only-child) {
+  display: none !important;
+}
+
+/* Zero out bottom spacing on last element inside grid/column cells */
+.widget-view-mode .grid-cell > :last-child,
+.widget-view-mode .flex-column > :last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Disable editing in view mode */
+.widget-view-mode [contenteditable="true"] {
+  cursor: default !important;
+  user-select: text !important;
+  -webkit-user-select: text !important;
+}
+
+/* Make flip box clickable in view mode */
+.widget-view-mode .flipbox-container {
+  cursor: pointer !important;
+}
+
+/* Contain flipbox within available width */
+.widget-view-mode .ui-flipbox {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.widget-view-mode .flipbox-container {
+  max-width: 400px !important;
+  margin: 0 auto 2rem auto !important;
+}
+
+/* Rectangular flipbox variant in saved view */
+.widget-view-mode .ui-flipbox[data-shape="rectangular"] .flipbox-container {
+  max-width: 600px !important;
+}
+
+.widget-view-mode .flipbox-front,
+.widget-view-mode .flipbox-back {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.widget-view-mode .flipbox-content {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+  flex: none !important;
+}
+
+/* Accordion functionality in saved view - collapsed by default */
+/* Support both class and data-attribute selectors for robustness */
+.widget-view-mode .accordion-content,
+.widget-view-mode [data-widget-part="accordion-content"] {
+  display: none !important;
+}
+
+.widget-view-mode .accordion-content.active,
+.widget-view-mode [data-widget-part="accordion-content"].active {
+  display: block !important;
+}
+
+.widget-view-mode .accordion-header,
+.widget-view-mode [data-widget-part="accordion-header"] {
+  cursor: pointer !important;
+}
+
+/* Hide focus indicators in saved view */
+.widget-view-mode .accordion-item.focused::before,
+.widget-view-mode .flex-column.focused::before {
+  display: none !important;
+}
+
+/* Only hide focused background when header is NOT active (expanded) */
+.widget-view-mode .accordion-item.focused .accordion-header:not(.active) {
+  background: transparent !important;
+}
+
+/* Show active (expanded) accordion header highlight in view mode */
+.widget-view-mode .accordion-header.active {
+  background: var(--active-color-bg-light, rgba(0, 122, 255, 0.06)) !important;
+  box-shadow: inset 3px 0 0 var(--active-color, #007aff) !important;
+}
+
+/* Grid/Columns visibility in saved view
+   - Hidden by default
+   - JS adds .has-content when they contain real content (text or widgets) */
+.widget-view-mode .ui-grid,
+.widget-view-mode .ui-columns {
+  display: none !important;
+}
+
+.widget-view-mode .ui-grid.has-content {
+  display: block !important;
+}
+
+.widget-view-mode .ui-columns.has-content {
+  display: block !important;
+}
+
+/* Internal layout when visible */
+.widget-view-mode .ui-grid.has-content .widget-grid {
+  display: grid !important;
+}
+
+.widget-view-mode .ui-columns.has-content .columns-container {
+  display: flex !important;
+}

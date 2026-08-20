@@ -1,0 +1,100 @@
+.panel {text-align: center; padding: 70px 20px}
+.panel, .panel * {box-sizing: border-box}
+.panel a {transition: all .3s ease-in-out}
+.panel h2 {font-size: 28px}
+
+.clearBtn, .colorBtn {margin: 15px 10px; white-space: nowrap; display: inline-block; color: #fff}
+.clearBtn:hover, .colorBtn:hover, .panel2 p, .panel3 p {color: #fff}
+.clearBtn {border: 2px solid #fff; padding: 7px 20px}
+.clearBtn:hover {opacity: 0.6}
+.colorBtn {padding: 9px 20px; font-size: 16px}
+.roundedBtn {border-radius: 50px}
+
+.panel1 > div, .site_full_width .panel_split_text_img > div {margin: auto; width: 100%; max-width: 1300px}
+.panel1.stripe > div .block {border: 1px solid #e5e5e5; border-top-width: 3px; padding: 10px 20px; color: #222; background-color: #fff; border-radius: 4px 4px 8px 8px}
+.panel1.stripe > div a.block:hover {border-right-color: #c8c8c8; border-bottom-color: #c8c8c8; border-left-color: #c8c8c8; box-shadow: 2px 2px 11px rgba(0,0,0,0.1)}
+.panel1 > div .block {margin: 20px 2%; display: inline-block; vertical-align: top; width: 100%}
+.panel1 .flexFixer {width: 80%; margin: 0 auto 20px; max-width: 350px}
+.panel1 .imgCrop {background-position: 50%; border-radius: 5px}
+.panel1.circularImg .flexFixer {width: 60%; max-width: 260px; margin: 0 auto 20px}
+.panel1.circularImg .imgCrop {border-radius: 50%; padding-bottom: 100%; width: 100%; margin: auto}
+.panel1 p {line-height: 1.5}
+.panel1 + .panel1 {padding-top: 0; margin-top: -50px}
+.flexbox .panel1 > div, .flexbox .panel1 .block {display: flex}
+.flexbox .panel1 > div {flex-flow: row wrap; justify-content: center}
+.flexbox .panel1 .block {flex-direction: column}
+.flexbox .panel1 .block .btnHolder {margin-top: auto}
+
+.panel2 {background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; position: relative; color: #fff; width: 100%; display: table; min-height: 340px}
+.panel2:before {content: ''; background-color: rgba(0,0,0,0.4); width: 100%; height: 100%; display: block; position: absolute; top: 0; left: 0}
+.panel2 > div {display: table-cell; vertical-align: middle; position: relative; text-align: center}
+.panel2 > div p {max-width: 1000px; margin: 10px auto}
+.panel2.counter .countHolder {display: inline-block; width: 45%; min-width: 200px; margin: 15px 2%; vertical-align: top}
+.panel2.counter.row-3-blocks .countHolder {width: 29%}
+.panel2.counter.row-4-blocks .countHolder {width: 20%}
+.panel2.counter .countHolder .count {font-size: 54px}
+.panel2.counter .countHolder .countItem {max-width: 280px; margin: auto}
+.panel2.counter.row-4-blocks .countItem {max-width: 250px}
+
+.panel3 {color: #fff; background-color: #048497}
+.panel3 p {margin: 10px auto}
+.panel3 a[class*='Btn'] {margin: 10px 0 10px 10px}
+.panel3 .clearBtn {padding: 5px 13px}
+.panel3 .colorBtn, .panel3 .clearBtn {margin-bottom: 0}
+
+.panel4 > div {width: 100%; max-width: 850px; margin: 0 auto}
+.panel4 > div p {line-height: 26px; margin: 25px 0}
+.panel4 .colorBtn, .panel4 .clearBtn {margin: 5px 10px 0}
+.panel4.withBorder > div {border: 2px solid #D54779; padding: 20px}
+
+.panel_split_text_img > div {position: relative; display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap; align-items: center; text-align: left}
+.panel_split_text_img > div p {line-height: 1.6}
+.panel_split_text_img.flipped > div {flex-direction: row-reverse}
+.panel_split_text_img > div .half {padding: 0 2%}
+.panel_split_text_img > div .half img,
+.panel_split_text_img > div .half video {display: block; margin: 10px auto; max-width: 100%; border-radius: 10px}
+.panel_split_text_img > div .half *[class*='Btn'] {margin-left: 0; margin-right: 0}
+.panel_split_text_img .text_wrapper *:not(.panelBtn) {color: inherit}
+
+#contentWrap .panel .medText, #contentWrap .panel3 p {font-size: 17px}
+#contentWrap .panel .lrgText, #contentWrap .customHome h2 {font-size: 22px; line-height: 29px}
+
+@media screen and (min-width: 480px) {
+  .panel1 > div .block {width: 46%}
+}
+@media screen and (min-width: 740px) {
+  .panel1 > div:not(.row-2-blocks) .block {width: 29%}
+
+  .panel_split_text_img .half {width: 50%}
+  .panel_split_text_img > div .half .text_wrapper {padding: 0 20px}
+}
+@media screen and (max-width: 767px) {
+  .panel2 {padding: 40px 20px}
+}
+@media screen and (min-width: 768px) {
+  #contentWrap .panel .medText {font-size: 19px}
+  #contentWrap .panel .lrgText, #contentWrap .customHome h2 {font-size: 30px; line-height: 37px}
+
+  .panel2 {display: flex; align-items: center; justify-content: center}
+  .panel2 > div {width: 100%}
+  .panel4.withBorder {padding: 70px 40px}
+  .panel4.withBorder > div {padding: 40px 70px}
+}
+@media screen and (min-width: 979px) {
+  .panel3 br {display: none}
+  .panel3 .colorBtn, .panel3 .clearBtn {margin: 0 0 0 10px}
+}
+@media screen and (min-width: 980px) {
+  .panel1 > div.row-4-blocks .block {width: 21%}
+}
+@media screen and (min-width: 1025px) {
+  .panel2.fixedBg {background-attachment: fixed}
+}
+@media screen and (min-width: 1280px) {
+  .panel2 {padding: 0}
+  .panel2.counter > div {display: block}
+  .panel2.counter.row-3-blocks {padding-left: 120px; padding-right: 120px}
+  .panel2.counter.row-4-blocks {padding-left: 70px; padding-right: 70px}
+  .panel2 > div, .panel > p.medText {width: 100%; max-width: 1400px; box-sizing: border-box}
+  .panel > p.medText {max-width: 1300px}
+}

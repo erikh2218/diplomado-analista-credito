@@ -1,0 +1,3628 @@
+.modal {
+    display: none;
+}
+
+.modal.is-open {
+    display: block;
+    position: absolute;
+    z-index: 500;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    border-radius:1px;
+    overflow:hidden;
+    width: 100%;
+    height: 100dvh;
+}
+
+.modal__overlay {
+    align-items: center;
+    background: var(--color-overlay-bg);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+header.modal__header {
+    height: 50px;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1002;
+    min-width: -webkit-fill-available;
+    min-width: -moz-available;
+    box-shadow: none !important;
+}
+
+.modal header.modal__header button.modal__close {
+    float: none;
+    opacity: 1;
+    position: absolute !important;
+    right: 5px;
+    font: normal normal normal 14px / 1;
+    top: 3px;
+    text-align: center;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    color: #fff;
+    text-shadow: none;
+    cursor: pointer;
+    background: transparent;
+    height: 40px;
+    line-height: 45px;
+}
+
+[dir="rtl"] .modal header.modal__header button.modal__close {
+    right: unset;
+    left: 5px;
+}
+
+.modal__content {
+    position: relative;
+    z-index: 1000;
+    height: calc(100% + 60px);
+}
+
+.modal__container {
+    background: var(--popup-bg-container);
+    background: var(--popup-bg);
+    border-radius: var(--main-border-r);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    z-index: 1000;
+    animation:popup-in .3s ease;
+    top: 5%;
+    width:100%;
+    padding: 50px 19px 10px;
+    height: auto;
+    /* min-height: 300px; */
+    max-width: 950px;
+    -webkit-box-shadow:0 0 5px 0 rgba(0,0,0,0.28);
+    -moz-box-shadow:0 0 5px 0 rgba(0,0,0,0.28);
+    box-shadow:0 0 5px 0 rgba(0,0,0,0.28);
+}
+
+.modal__container:has(.sml_popup) {
+    max-width: 600px;
+}
+
+
+.modal header.modal__header h1,
+.modal header.modal__header h2 {
+    line-height: 44px;
+    font-size: 17px !important;
+    color: var(--main-text-color);
+    padding: 4px 19px;
+    width: calc(100% - 80px);
+    overflow: hidden;
+    height: 100%;
+    text-overflow: ellipsis;
+    background: transparent;
+    border: none;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 !important;
+    box-sizing: border-box;
+    font-weight: var(--font-weight-bold);
+    font-family: Poppins, sans-serif;
+}
+
+[dir="rtl"] .modal header.modal__header h1,
+[dir="rtl"] .modal header.modal__header h2 {
+    left: unset;
+    right: 0;
+}
+
+@keyframes up-down {
+    0%{transform:translateY(100%)}
+    100%{transform:translateY(0%)}
+}
+
+.modal .modal__container .min{float:none;opacity:1;position:absolute;right:44px;font:normal normal normal 10px/1 FontAwesome;top:0;text-align:center;width:44px;height:44px;line-height:44px;color:#fff;text-shadow:none;cursor:pointer}
+.modal .modal__container .min:before{content:"__"}
+
+@keyframes popup-in {
+    0%{opacity:.7;transform:translate3d(0px,0px,0px) scale(.9)}
+    100%{opacity:1;transform:translate3d(0px,0px,0px) scale(1)}
+}
+
+.badgeLibraryCheckboxes {
+    margin: 1rem 0;
+}
+
+.tab-bar{position:absolute;bottom:0;left:0;right:0;width:calc(100% - 408px);margin-left:160px;height:30px;display:flex}
+.tab-bar .tab{height:100%;flex-grow:1;max-width:190px;background:#daecff;border:solid 1px #b5b5b5;margin:0 1px;border-bottom:none;overflow:hidden;text-overflow:ellipsis;min-width:80px;line-height:30px;padding:0 5px;color:#504d4d}
+.modal .modal__container .loading:after{background:rgba(255,255,255,0.41)}
+.modal .modal__container .close-popup:before{content:"X";font-family:sans-serif}
+.modal .modal__container .navbar{height: 50px;width:100%;background: transparent;position:absolute;left:0;top:0;z-index:2;}
+.modal .modal__container-tab-bar{position:fixed;z-index:9999999999999;bottom:0;left:0;padding:0 10px;display:flex;width:100%}
+.modal .modal__container-tab-bar .tab{height:30px;background:#5b636be8;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);color:#fff;flex-grow:1;flex-basis:0;max-width:200px;color:#333;-webkit-box-shadow:0 0 5px 0 rgba(0,0,0,0.19);-moz-box-shadow:0 0 5px 0 rgba(0,0,0,0.19);box-shadow:0 0 5px 0 rgba(0,0,0,0.19);line-height:30px;padding:0 8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.modal .modal__containerContainer{width:100%;height:100%;position:fixed;top:0;left:0;display:block}
+.modal .modal__containerContainer .modal__container{width:30%;min-height:40%;max-height:90%;background:#fff;position:absolute;left:0;right:0;top:50%;transform:translateY(-50%) scale(0.9);margin:0 auto;display:block;z-index:2;opacity:0;transition:all .3s ease;-webkit-box-shadow:0 0 5px 0 rgba(0,0,0,0.16);-moz-box-shadow:0 0 5px 0 rgba(0,0,0,0.16);box-shadow:0 0 5px 0 rgba(0,0,0,0.16)}
+@keyframes popup {
+    from{transform:translateY(-50%) scale(.9);opacity:0}
+    to{transform:translateY(-50%) scale(1);opacity:1}
+}
+.modal .modal__containerContainer.active .modal__container{transform:translateY(-50%) scale(1);animation:popup .3s ease;opacity:1}
+.modal .title{position:absolute;top:0;left:0;width:100%;line-height:44px;padding:0 10px;color:#333;background:#fff;box-sizing:border-box;border-bottom:solid 1px #d8d8d8}
+.modal .modal__container .modal__conten{background-color:var(--popup-bg-container);position:relative;width:100%;height: calc(100% + 60px);padding-top:50px;padding-bottom: 10px;border-radius:15px;}
+.modal .modal__container.medium{width:40%;height:80%}
+.modal .modal__container.small{width:500px;max-width:100%;height:40%}
+.overlay{background:rgba(128,128,128,0.51);z-index:9;position:fixed;height:calc(100% - 50px);width:100%;left:0;top:50px}
+.alert-overlay{background:rgba(128,128,128,0.51);z-index:9;position:fixed;height:calc(100% - 50px);width:100%;left:0;top:50px}
+.modal .modal__container .close-popup:hover,.modal .modal__container .min:hover{color:#ef3e33}
+.modal .hidden,#up-popup-nav.hidden{display:none}
+.tab.active{background:#fff!important;color:#5e5e5e;border-bottom:solid #1da1f2 2px}
+.tab{font-variant:small-caps}
+.modal__container-tab-bar{position:fixed;bottom:0;width:100%;text-align:right}
+.tab{width:200px;background:#f5f5f5;display:inline-block;height:35px;text-align:center;line-height:35px;margin:0 10px;box-shadow:0 0 1px 0 rgba(0,0,0,0.32)}
+#up-popup-nav{z-index:9;position:relative}
+#up-overlay{position:fixed;background:#00000040;width:100%;height:100%;z-index:999;display:block;top:0;left:0}
+.modal .modal__container .footer{
+    background:#F4F4F4;
+    clear:both;
+    margin:0;
+    overflow:hidden;
+    padding: 10px 0px 10px;
+    width:100%;
+    text-align:right;
+    box-sizing:border-box;
+    position: relative;
+    position: sticky;
+    bottom: 0;
+    left:0;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal .modal__content .messagePopup .footer {
+    justify-content: space-between;
+}
+
+.modal .modal__container button:not(.not-btn),#facebox .link_button{margin:0 0 0 3px;display:inline;padding:0 6px;height:28px;line-height:28px}
+.modal .modal__container.content-driven {
+    height: auto;
+    min-height: 300px;
+    max-width: 950px;
+}
+
+body.evo[class*="my_calendar"].modal .modal__container {
+    overflow: initial;
+}
+
+.modal .multiSelectOptions {
+    border-radius: 0px 0px 8px 8px;
+}
+
+.modal .modal__container button.tox-tbtn.tox-tbtn--select.tox-tbtn--select {
+    display: flex !important;
+}
+
+.modal .modal__container button:not(.not-btn).tox-tbtn {
+    height: 34px !important;
+}
+
+.modal .tox .tox-toolbar-overlord{
+    background-color:transparent;
+}
+
+.modal .tox .tox-toolbar, .tox .tox-toolbar__primary, .modal .tox .tox-toolbar__overflow{
+    background-image:none;
+}
+
+.modal .modal__container .modal__content{
+    /* min-height: 300px; */
+}
+
+@media screen and (max-width: 767px) {
+    .modal .modal__container .modal__content{
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+
+.modal form  .facebox-content > p {
+    padding-left: 0px !important;
+    margin: 0;
+    width: 100%;
+}
+
+.modal form .facebox-content {
+    padding: 0rem 1rem !important;
+    max-height: clamp(70dvh, min(80dvh, 100dvh - 150px), 90dvh);
+}
+
+.modal form .facebox-content:has(#UploaderContainer) {
+    padding: 5px !important;
+}
+
+.modal .modal__conten:has(.error) form .facebox-content {
+    max-height: calc(100dvh - 300px);
+}
+
+.modal .modal__container .modal__conten .image-container{ text-align: center; }
+
+.modal .modal__container .modal__conten .image-container img{ max-height: 1031px; max-width: 100%; }
+
+.modal .help_centre #hc_content_selector{
+    height: 100% !important;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal .help_centre .help_centre_content {
+    margin: 0;
+    overflow-y: scroll;
+    height: 100%;
+    flex-grow: 1;
+}
+
+.modal form.search-form {
+    display: block;
+    height: 43px;
+    width: 100%;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    position: relative;
+    padding-top: 0;
+}
+
+.modal form.search-form input {
+    width: 100% !important;
+    height: 37px !important;
+    border-radius: 50px !important;
+    padding-left: 50px !important;
+}
+
+.modal .help_centre form.search-form button:not(.not-btn) {
+    position: absolute !important;
+    right: auto;
+    margin: 0 !important;
+    padding: 4px 8px;
+    top: 4px;
+    left: 15px;
+    background: transparent;
+}
+.modal .help_centre form.search-form button:not(.not-btn) i:after{
+    color: var(--main-text-color);
+}
+
+body.evo .modal .help_centre_content:has(ul) {
+    top: 0px;
+    position: relative;
+}
+
+
+@media screen and (min-width: 768px) {
+    .modal .modal__container.removing {
+        opacity: .7;
+        transform: translate3d(0px, 0px, 0px) scale(.9);
+        transition: all .3s ease;
+    }
+    .modal__container .tox.tox-tinymce{
+        height: 381px !important;
+    }
+}
+
+
+.modal .modal__container .tox-editor-header {
+    width: 100% !important;
+}
+
+
+.facebox-content {
+    padding-bottom: 100px !important;
+}
+
+.modal .modal__container {
+    background: var(--popup-bg);
+    border-radius: var(--main-border-r);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.modal .modal__container .footer {
+    background: transparent !important;
+}
+
+.modal .modal__container .close-popup:before {
+    display: none;
+}
+
+
+.modal .modal__container:has(.facebox-content.add-game) {
+    max-width: 700px;
+}
+
+.modal .modal__container:has(.facebox-content.add-coteachers) {
+    max-width: 700px;
+    min-height: 255px;
+    height: 255px;
+}
+
+
+.modal *{
+    box-sizing: border-box;
+}
+.modal form .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+}
+.modal .facebox-content {
+    padding: 15px 15px 18px !important;
+    margin-bottom: 35px;
+    overflow-y: auto;
+    clear: both;
+}
+@media screen and (max-width: 767px) {
+    .modal .facebox-content {
+        max-height: 100vh;
+    }
+}
+
+.modal .materialStyle .img_left {margin: 0 20px 20px 0}/* repeat from editor-content.css to overwrite margin:0 above */
+.modal .materialStyle .img_right {margin: 0 0 20px 20px}
+.modal .materialStyle .img_center, .modal .materialStyle .img_full_width {margin: 20px auto}
+
+.modal .header {width: 100%; min-height: 44px; position: relative; margin: -10px 0 0; padding: 10px 10px 3px; box-sizing: border-box; overflow: hidden; z-index: 10; border-radius: 8px 8px 0 0}
+.modal .header + p {clear: both; margin-bottom: 0 0 -10px}
+.modal .header h4, .modal .header span {color: #fff}
+.modal .header h4 {padding: 0 0 7px 0; max-width: 268px}
+.modal .header h4 span {max-width: 470px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%; display: block; box-sizing: border-box}
+
+.modal .facebox-content {padding: 0 1rem; overflow-y: auto; clear: both; -webkit-overflow-scrolling: touch}
+.modal p, .modal fieldset {padding: 5px 0}
+.modal fieldset {color: #222; color: var(--main-text-color)}
+.modal .facebox-content p:first-child, .modal .facebox-content script:first-child + p {margin-top: 0}
+.modal .facebox-content p img:not(.icon):not(.close_image):not(.avatar):not(.img_left):not(.img_right):not(.img_center), .logoWrapper img {float: left; margin: 0 1rem; max-width: 100%; height: auto}
+.modal .facebox-content .materialStyle p[style*='text-align'] > img:not(.icon):not(.close_image):not(.img_left):not(.img_right):not(.img_center) {float: none; margin: inherit}
+.modal .facebox-content p img.avatar {height: 48px; width: 48px}
+
+/* new inbox popup */
+.modal .messagePopup .facebox-content p.avatarHolder img.avatar {width: 32px; height: 32px; margin: 0 5px 0 0; display: inline-block}
+.modal .messagePopup .facebox-content p.avatarHolder .multiple img.avatar {width: 32px; height: 32px; margin: 0 -18px 0 0; display: inline-block}
+.modal .messagePopup .facebox-content p.avatarHolder .multiple img.avatar:last-child {margin: 0 -5px 0 0}
+.modal .messagePopup .message_more_users_link {cursor: pointer}
+.modal .messagePopup .footer .messageOptions li a{
+    background:var(--active-color);
+    border-radius: var(--border-r-rounded);
+    color:#fff;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 2px 15px;
+}
+
+.modal .messageSendPopup a#bcc_link {
+    padding:0px 24px;
+}
+
+.modal .messagePopup .avatarHolder.avatar_msg_holder > span:first-of-type{
+    width: 50px;
+    font-weight: 600;
+}
+
+.modal .messagePopup  .facebox-content p.avatarHolder.avatar_msg_holder{
+    display: flex;
+    align-items: center;
+}
+
+.modal nav.tabnav {
+    margin: 1px 0 10px;
+    white-space: nowrap;
+}
+
+body.evo .modal #badge_form nav.tabnav {
+    overflow-y: hidden !important;
+}
+
+.modal .facebox-content .optionsRibbon {left: 0; padding-bottom: 0px;}
+.modal .facebox-content .optionsRibbon img {margin: 0}
+.modal .facebox-content .optionsRibbonTable_separate {padding-bottom: 1px}
+.modal .facebox-content .optionsRibbonTable_separate + table {margin: 0}
+.modal .facebox-content .optionsRibbon ul {margin-left: 0}
+.modal #user_trash_popup .optionsRibbon ul {margin-top: 0}
+
+/* Android default browser sprite overflow fix */
+.modal .facebox-content i {position: relative; z-index: 2; overflow: hidden}
+.modal .facebox-content p i.inline,
+.modal .facebox-content p.inline_icon i {margin-top: -4px}
+.modal .facebox-content p.inline_icon i.xCross {margin-top: 4px}
+.modal .facebox-content .mce-listbox .mce-caret {position: absolute}
+.modal .facebox-content i:after {overflow: auto}
+.modal .facebox-content #ip_addresses i:after {background: none}
+
+.mobile-app .facebox-content * {overflow: hidden}
+
+/* Definition Lists */
+.modal .facebox-content p + dl {margin-top: -10px}
+.modal .facebox-content dl {
+    margin: 5px 10px;
+    overflow: hidden;
+    direction: ltr;
+}
+[dir="rtl"] .modal .facebox-content dl {
+    display: flex;
+    justify-content: flex-end;
+}
+.modal .facebox-content dl dt {margin-top: 8px}
+
+/* Error, Warning and Info Alerts */
+.modal .loginPopup .alert_block, .mobileLogin .frmLogin .alert_block {margin-bottom: 10px !important}
+.modal .alert_block {clear: both; margin:10px; border-top: 10px solid transparent}
+.modal .alert_block p {padding: 0}
+.modal .loginPopup #alerts i::after {
+    color: #fff;
+}
+
+.modal .loginPopup #alerts i {
+    line-height: 15px;
+}
+
+.modal .loginPopup #alerts p {
+    margin-left: 10px;
+}
+
+/* FORMS */
+.modal .facebox-content label, .modal .facebox-content fieldset legend, .modal .labelGap {display: inline-block;}
+.modal .labelGap {margin-right: 14px}
+.modal .facebox-content input[type="checkbox"] + label,
+.modal .facebox-content input[type="radio"] + label {
+    width: auto !important;
+}
+.modal .full_width {width: 100% !important; margin: 0}
+
+.modal .footer {background: #f5f5f5; background: var(--highlight-bg-color); clear: both; margin: 2px 0 -10px; overflow: hidden; padding: 8px 10px; position: relative; width: 100%; text-align: right; box-sizing: border-box; border-radius: 0 0 8px 8px}
+.modal .footer table {box-shadow: none; margin: 0}
+.modal .footer table th, .modal .footer table td {border: 0; padding: 0}
+
+.modal .footer input + label {margin: 1px 0 0 0}
+.modal .footer input, .modal .footer label {padding: 0; line-height: 17px; float: left; margin: 7px 0 0 0}
+.modal .footer label {margin: 0 10px}
+.modal .footer span {margin: 6px 10px 0 0; display: inline-block}
+.modal button:not(.not-btn), .modal .link_button {margin: 0 0 0 3px; padding: 0 6px; height: 28px; line-height: 28px}
+.modal .footer button.floatL, .modal .footer a.floatL {margin-left: 0}
+.modal .footer .table-right input {float: right}
+.modal .footer .table-right label {float: right; margin-right: 0}
+.modal .footer table .button {float: none;  margin: 0 2px}
+
+.modal .tl, .modal .tr, .modal .bl, .modal .br {
+    height: 10px;
+    width: 10px;
+    overflow: hidden;
+    padding: 0
+}
+.modal_overlay_modal,
+.modal_overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%
+}
+.facebox_hide {
+    z-index:-100
+}
+.facebox_overlayBG {
+    background-color: #1a517c;
+    z-index: 100
+}
+* html .modal_overlay_modal,
+* html .modal_overlay {
+    position: absolute;
+}
+.modal #coupon_form select {position: relative}
+.modal #coupon_form select#coupon_discount_type {width: auto !important; display: inline-block !important}
+
+/* Log in as user */
+.modal .login_as_user, .modal .login_as_user + .footer {display: flex; justify-content: space-between}
+.modal .facebox-content.login_as_user > * {width: 48%}
+.modal .login_as_user > *:not(.vertical_separator) {padding: 10px 10px 0; text-align: center; display: flex; flex-direction: column}
+.modal .login_as_user > .vertical_separator {width: 1px; margin: 0 10px; background-color: var(--divider-border-color)}
+.modal .login_as_user > * svg {margin: auto auto 0; width: 70%; display: block}
+.modal .login_as_user + .footer {text-align: center}
+.modal .login_as_user + .footer > * {width: 48%}
+.modal .login_as_user > *:not(.vertical_separator).navbar {
+    text-align: left;
+}
+.modal .login_as_user > *:not(.vertical_separator).modal__conten {
+    padding-top: 50px !important;
+}
+@media screen and (max-width: 400px) {
+    .modal .login_as_user > *:not(.vertical_separator) {padding: 5px; font-size: 15px}
+    .modal .login_as_user > .vertical_separator {margin: 0 5px}
+}
+
+/* Onboarding popups */
+.modal .video.xxl_popup {max-height: 100% !important}
+.modal .video.xxl_popup .embed-max-size {margin: 0; max-width: 1110px; max-height: 619px}
+.modal .sl-demo .embed-max-size {max-width: 700px !important; margin: 10px auto 0 !important}
+.modal .sl-demo .embed-container {padding-bottom: calc(62.50% + 25px); width: 100%; transform: scale(1)}
+.modal .sl-demo .embed-container iframe {position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; border: none}
+
+/* Catalog page access code */
+.modal .xsml_popup input[type="password"] {width:100%; margin: 0}
+
+/* Email recipients */
+.modal .facebox-content table#receivers {margin-top: 0}
+
+/* Main Site Sign Up Form */
+.modal form#signup_form .facebox-content input[type="text"], .modal form#signup_form .facebox-content select {
+    width: 100%;
+    box-sizing: border-box;
+    margin-right: 0
+}
+.modal form#signup_form .facebox-content input#captcha {width: 65%}
+.modal form#signup_form .facebox-content input#captcha ~ img {vertical-align: middle}
+
+/* Portal Sign Up Form */
+.modal form#join_form .facebox-content label, .modal form#join_form .facebox-content input[type="text"] {
+    width: auto
+}
+
+/* Add Resources Form */
+.modal div.facebox-resources-filter {clear: both; overflow: hidden; padding: 0 10px}
+.modal div.facebox-resources-filter > p > * {margin-bottom: 6px}
+.modal div.facebox-resources-filter > p + p {margin: -10px 0 5px 0}
+.modal div.facebox-resources-filter input#resource_name {display: inline-block; width: 150px; height: 28px; margin-top: 4px}
+.modal div.facebox-resources-filter label {width: 115px; line-height: 36px; float: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap}
+.modal div.facebox-resources-filter select {width: 50%; padding: 1px 4px; height: 28px}
+.modal form#resources_form .facebox-content label {display: inline; margin-left: -2px}
+.modal form#resources_form .no-mlol label {margin-left: 0px}
+.modal form#resources_form .search-item i {margin: -3px 5px 0 0}
+
+/* Preview Resource popup */
+.modal .resource_popup {display: flex}
+.modal .resource_popup .resource_content {flex: 1; width: 100%; max-width: 575px; max-height: 500px; overflow: auto; overflow: auto; position: relative; vertical-align: middle}
+/*.modal .resource_popup .resource_content iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%}.modal .resource_popup .resource_content iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%}*/
+.modal .resource_popup .resource_content *[class*='resource-flowplayer-'] {position: relative; top: 50%; transform: translateY(-50%)}
+.modal .resource_popup .resource_content.resource_img {display: flex; justify-content: center; background-image: linear-gradient(45deg,#efefef 25%,transparent 0,transparent 75%,#efefef 0,#efefef),linear-gradient(45deg,#efefef 25%,transparent 0,transparent 75%,#efefef 0,#efefef); background-size: 21px 21px; background-position: 0 0,10px 10px}
+.modal .resource_popup .resource_content.resource_img {display: flex; justify-content: center; background-image: linear-gradient(45deg,#efefef 25%,transparent 0,transparent 75%,#efefef 0,#efefef),linear-gradient(45deg,#efefef 25%,transparent 0,transparent 75%,#efefef 0,#efefef); background-size: 21px 21px; background-position: 0 0,10px 10px}
+[data-theme="dark"] .modal .resource_popup .resource_content > img {background-image: linear-gradient(45deg,#000000 25%,transparent 0,transparent 75%,#000000 0,#000000),linear-gradient(45deg,#000000 25%,transparent 0,transparent 75%,#000000 0,#000000)}
+.modal .resource_popup .resource_content > img {max-width: 100%; object-fit: contain}
+.modal .resource_popup .tableFixed {table-layout: auto}
+.modal .resource_popup .gs-table .table-head {top: 0}
+.modal .resource_popup .gs-table.no-edit .table-content {margin-top: 34px}
+.modal .resource_popup .gs-table.no-edit:has(.table-head) .table-content {
+    margin-top: 5px;
+}
+.modal .resource_popup aside {width: 249px}
+.modal .resource_popup aside ul li i {position: absolute}
+.modal .resource_popup aside ul li span:not(.ratingStatic) i {margin-top: 0}
+
+body.evo .modal #assignment_form .facebox-content input + label {
+    width: 100% !important;
+}
+/* Add Tool */
+.modal .tool_row {display: flex; align-items: center; margin: 10px 0; position: relative}
+body:not(.portal):not(.edu2) .modal .facebox-content .tool_row label {width: auto !important}
+.modal .tool_row .tool_img {border: 1px solid #e2e0e0; border-right: 1px solid var(--table-border-color); margin: 0 10px; width: 100px; display: flex; align-items: center; padding: 5px; flex-shrink: 0; border-radius: 3px}
+.modal .tool_row .tool_img img {width: 100%}
+.modal .tool_row strong {font-size: 15px}
+.modal .tool_row p {margin: 0; padding: 0; font-size: 13px}
+@supports (-webkit-line-clamp: 2) {
+    .modal .tool_row p {
+        display: -webkit-box !important; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden
+    }
+}
+
+/* User Listing Table */
+.modal .facebox-content table.userListingTable {margin: -5px 0 0}
+.modal .facebox-content table.userListingTable td {border: 0}
+.modal .facebox-content table.userListingTable td img {float: none; margin: auto}
+
+/* Add event */
+.modal form#event_form .facebox-content {min-height: 130px}
+.modal form#event_form .facebox-content input[type="checkbox"] + label {-webkit-user-select: none}
+
+/* Share */
+.modal .facebox_share a {word-wrap: break-word}
+
+/* Member Popup */
+.modal .name_search {
+    background: url("../images/search-btn.gif") no-repeat 2px 1px #F4F4F4;
+    border: 1px solid #d6d6d6;
+    cursor: pointer;
+    outline: none;
+    width: 24px;
+    height: 19px
+}
+.modal .member_block_heading td {
+    border: 1px solid #d6d6d6;
+    border-collapse: collapse;
+    vertical-align: middle;
+    padding: 3px
+}
+.modal .member_block_heading + .member_block_heading td {
+    border-left: 0
+}
+.modal .member_block_heading td a {
+    line-height: 15px;
+    display: inline-block;
+    padding: 0 0 1px;
+    margin: 0;
+    width: 16px;
+    float: left
+}
+.modal table.member_table + table.member_table td {
+    border-left: 0;
+    padding-left: 6px
+}
+.modal table.member_table td {
+    border: 1px solid #d6d6d6;
+    border-top: 0;
+    border-collapse: collapse;
+    padding: 5px;
+    vertical-align: middle
+}
+.modal .member_table tr td:nth-child(2) {
+    border-right: 0;
+    padding-right: 0
+}
+.modal .member_table tr td:nth-child(3) {
+    border-left: 0;
+    padding-left: 0
+}
+.modal table.member_table td a {
+    display: block;
+    width: 113px;
+    word-wrap: break-word;
+    float: right
+}
+.modal table.member_table td img {
+    float: left
+}
+.modal table.member_table input[type="checkbox"] {
+    width: 13px;
+    height: 13px
+}
+
+/* School Portal Search Popup */
+.modal .schoolsFacebox.facebox-content {
+    max-width: 400px
+}
+.modal .schoolsFacebox.facebox-content .schoolsHolder {
+    display: table;
+    width: 100%
+}
+.modal .schoolsFacebox.facebox-content a {
+    display: table-row
+}
+.modal .schoolsFacebox.facebox-content a > div {
+    display: table-cell;
+    vertical-align: middle;
+    border-bottom: 1px solid #e2e0e0; border-bottom: 1px solid var(--divider-border-color);
+    padding: 13px 13px 9px 3px
+}
+.modal .schoolsFacebox.facebox-content a div.logoWrapper {
+    max-width: 90px;
+    height: 50px;
+    text-align: center
+}
+.modal .schoolsFacebox.facebox-content a div.logoWrapper img {
+    margin: auto;
+    box-shadow: none;
+    float: none
+}
+.modal .schoolsFacebox.facebox-content a div.logoWrapper + div {
+    padding-right: 15px;
+    padding-top: 9px;
+    word-break: break-all;
+    margin-top: -1px
+}
+.modal .schoolsFacebox.facebox-content a:first-child > div {
+    padding-top: 3px !important
+}
+.modal .schoolsFacebox.facebox-content a:last-child > div {
+    border-bottom: 0;
+    padding-bottom: 2px
+}
+.modal .schoolsFacebox.facebox-content + .footer span {
+    font-size: 15px;
+    margin: 2px 12px 3px
+}
+
+/* All multiselect dropdowns */
+body:not(.portal):not(.edu2) .modal .facebox-content .multiSelectOptions label {width: auto !important; display: inline-block; margin: 0; overflow: hidden; text-overflow: ellipsis; vertical-align: bottom; font-size: 15px}
+
+/* Add report */
+#report_form .multiSelectOptions {min-width: 198px; max-width: 500px; width: auto !important}
+@media screen and (max-width: 650px) {
+    #report_form .multiSelectOptions {max-width: calc(100% - 20px)}
+}
+
+/* Add report widget */
+.select_report_popup {margin-bottom: 5px; line-height: 1.7}
+
+/* Toggle Expand / Contract */
+a.toggleForm {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    position: relative
+}
+a.toggleForm:before {
+    border-top: 1px solid #C6C5C5;
+    content: "";
+    left: 0; top: 50%;
+    position: absolute;
+    width: 99%
+}
+a.toggleForm span {
+    display: inline-block;
+    background: #fff;
+    position: relative;
+    padding: 0 20px
+}
+a.toggleForm i {
+    margin-top: -4px
+}
+#remaining_toggleForm {
+    display: none
+}
+/* Help Centre */
+
+.modal .modal__container.help_centre {
+    max-width: 95%;
+    width: 70%;
+    height: 90%;
+}
+
+.modal .facebox-content.help_centre {
+    background: var(--content-bg-color);
+}
+
+.modal .help_centre ul.helpList li {
+    background: var(--bg-color);
+    padding: 20px;
+    margin-bottom: 5px;
+    border-radius: var(--main-border-r);
+    border: 1px solid var(--bg-color);
+}
+
+.modal .help_centre ul.helpList li:hover{
+    border-color:var(--active-color);
+}
+
+.modal .help_centre .helpList .hc-topic-icon-title a {
+    font-size: 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--main-text-color);
+}
+
+.modal .help_centre .hc-topic-icon-title i {
+    margin-top: 0px;
+}
+
+.modal .help_centre .hc-topic-description {
+    padding-left: 24px;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.modal .help_centre .help_centre_content h2{
+    color: var(--active-color);
+}
+
+.modal .help_centre #hc_content_selector{
+    height: 100% !important;
+}
+
+.modal .help_centre .help_centre_content {
+    margin: 0;
+    overflow-y: scroll;
+}
+
+.modal .help_centre div#popup_help_center_overview {
+    height: 100% !important;
+}
+
+.modal .help_centre {
+    width: 940px
+}
+
+.modal .help_centre .hc-topic-icon-title {
+    margin-bottom: 0
+}
+
+.modal .help_centre .hc-topic-icon-title i {
+    margin-top: 0px;
+}
+
+.modal .help_centre .hc-topic-icon-title a {
+    font-size: 18px
+}
+
+.modal .help_centre ul.helpLis .hc-topic-icon-title i{
+    line-height:14px;
+}
+
+.modal .help_centre ul.inlineList.helpList {
+    margin: 0px 10px;
+}
+
+.modal .help_centre form.search-form {
+    margin: 0 17px .7rem 0 !important;
+}
+
+.modal .facebox-content.help_centre {
+    min-height: 600px;
+    overflow: hidden;
+}
+
+.modal .help_centre form.search-form input[type="text"] {
+    width: 145px
+}
+
+.modal .help_centre .help_centre_heading {
+    padding: 13px 17px;
+    margin-top: 40px;
+}
+
+.modal .help_centre .hc-topic-icon-title i{
+    height:20px;
+}
+
+.modal .help_centre .optionsRibbon ul li {
+    padding: 0px 5px;
+}
+
+
+.modal .help_centre .help_centre_content.help_overview {
+    margin-bottom:13px;
+    margin-top:0px;
+    padding: 0 17px 5px
+}
+
+.modal .help_centre .help_centre_content .optionsRibbon {
+    margin-left: -2px;
+    display: inline-block
+}
+
+.modal .help_centre .help_centre_content .hc-edit {
+    text-align: left !important;
+    width: 99.5%
+}
+
+.modal .help_centre .help_centre_heading h1 {
+    font-weight: 600;
+}
+
+
+.modal .modal__container.help_centre #helpTabs {
+    margin-bottom: 10px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .modal .help_centre #helpTabs {
+        padding-bottom: 3.5rem;
+    }
+}
+
+.modal .facebox-content.help_centre{
+    box-shadow: none;
+    background-color: var(--content-bg-color);
+    display: flex !important;
+    flex-direction: column;
+    min-height: 500px;
+    overflow: hidden;
+    height: 100% !important;
+    border-radius: var(--main-border-r);
+    padding-top: 1rem;
+}
+
+.modal .help_centre .contentBlock .sideText h3:first-child {
+    line-height: 1.1;
+    margin-bottom: 5px;
+    color: var(--main-text-color);
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 0px;
+}
+
+
+.modal .help_centre .help_centre_content{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.modal .help_centre .help_centre_content, .modal .help_centre .help_centre_heading{
+    background-color: var(--bg-color);
+}
+
+.modal .help_centre .help_centre_content{
+    border-radius: 0 0 20px 20px;
+}
+
+.modal .help_centre .help_centre_heading{
+    border-radius: 20px 20px 0 0;
+}
+
+.modal .help_centre .contentBlock .sideText h3:first-child {
+    line-height: 1.1;
+    margin-bottom: 5px;
+    color: var(--main-text-color);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.modal .contentBlock .sideText .hc-limit-lines {
+    max-height: 48px;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+
+.modal .help_centre .contentBlock {
+    border-radius: var(--main-border-r);
+    transition: all .4s ease-in-out;
+    background:var(--bg-color);
+    border:1px solid var(--bg-color);
+}
+
+.modal .help_centre form.search-form input{
+    background: var(--bg-color);
+}
+
+.modal .help_centre .contentBlock:hover{
+    background:var(--bg-color);
+    border-color: var(--active-color);
+}
+
+.modal .help_centre #popup_help_center_overview,
+.modal .help_centre #popup_help_center_general,
+.modal .help_centre #popup_help_center_teachers,
+.modal .help_centre #popup_help_center_students,
+.modal .help_centre #popup_help_center_assistants,
+.modal .help_centre #popup_help_center_managers,
+.modal .help_centre #popup_help_center_parents,
+.modal .help_centre #popup_help_center_developers,
+.modal .help_centre #popup_help_center_administrators{
+    background-color: transparent;
+}
+/* Help Centre */
+.modal .help_centre {overflow: hidden}
+.modal .help_centre .help_center_flex {display: flex; flex-flow: row wrap; justify-content: space-between}
+.modal .help_centre .contentBlock {box-shadow:var(--box-shadow); width: 48.7%; margin-bottom: 10px; float: none; display: flex; align-items: center; border: 1px solid #e2e0e0; border: 1px solid var(--table-border-color); border-radius: 15px; transition: all .4s ease-in-out}
+.modal .help_centre .contentBlock:hover {box-shadow: var(--box-shadow-hover); border-color: #dfdfdf; border-color: var(--main-border-color)}
+.modal .help_centre .contentBlock:nth-child(1), .modal .help_centre .contentBlock:nth-child(2) {margin-top: 10px}
+.modal .help_centre .contentBlock .sideImg img {vertical-align: bottom}
+.modal .help_centre .contentBlock .sideText *:first-child {line-height: 1.1; margin-bottom: 5px}
+
+.modal .help_centre form {text-align: right; padding-bottom: 12px}
+.modal .help_centre form.search-form input[type="text"] {width: 261px; height: 29px; margin: 0; padding: 3px 5px 2px; border-radius: 3px 0 0 3px}
+.modal .help_centre form.search-form button:not(.not-btn) {margin: 0 0 0 -4px; border-radius: 0 3px 3px 0; height: 29px; vertical-align: top; position: relative}
+.modal .help_centre form.search-form button i {margin-top: -3px}
+.modal .help_centre img.screenshot {float: none !important; border: 1px solid #cccccc; display: block; margin: 0 auto !important; box-shadow: none}
+
+.modal .help_centre .optionsRibbon {width: auto; left: 3px; top: 0}
+.modal .help_centre .optionsRibbon.mr0 {margin: 0}
+.modal .help_centre .optionsRibbon + .clearfix.mobile_only {display: none}
+.modal .facebox-content.help_centre .optionsRibbon i {
+    height: 15px;
+    line-height: 15px;
+}
+.modal .facebox-content.help_centre .optionsRibbon i:after{
+    color: var(--main-text-color);
+}
+.modal .help_centre .help_centre_content {margin:0}
+.modal:not(.portal):not(.edu2) .help_centre .help_centre_content p {padding-right: 8px; width: 100%; box-sizing: border-box}
+.modal .help_centre .help_centre_content h2 span[style*="color"] {color: var(--link-hover-text-color) !important; font-size: 22px !important}/*overwrite inline colour for now*/
+.modal .help_centre .help_centre_content p:last-child {margin-bottom: 0}
+.modal .help_centre .help_centre_content code {font-family: inherit}
+
+.modal .help_centre .search-item {margin-top: 0}
+.modal .help_centre .search-description {margin-bottom: 20px}
+.modal .hc-topic-icon-title {width: 100%; overflow: hidden}
+
+.modal .help_centre .help_centre_content h3{
+    color: var(--main-text-color);
+    font-weight:600;
+    margin-top:10px;
+}
+
+.modal .help_centre .help_centre_content {
+    padding: 13px 17px;
+    overflow-y: scroll;
+}
+
+/* --------- Fix for the Add Class for existing scroll click bug -------- */
+.facebox-content .search-item {position: relative}
+.facebox-content h2 + .search-item {margin-top: 10px}
+
+.preview-game-badge div {display: inline-block; margin-top: 8px; margin-bottom: 8px; padding: 5px; border: 1px solid #C6C5C5}
+
+/* --------- Wizard -------- */
+.modal .wizard_wrapper {padding: 0; margin-bottom: -5px; border-radius: 0 0 8px 8px; overflow: hidden}
+.wizard_wrapper {display: flex}
+.wizard_nav {padding: 10px; width: 150px; background-color: #f5f5f5; flex-shrink: 0}
+.wizard_nav button {font-size: 15px}
+.wizard_nav button:focus:enabled, .wizard_nav button:hover:enabled {box-shadow: none; opacity: 1}
+.wizard_nav button i {margin: 0 5px 0 0}
+.wizard_nav button.selected, .wizard_nav button:hover:enabled {color: #fff}
+.wizard_nav button.selected i:after, .wizard_nav button:hover:enabled i:after {left: -40px}
+.wizard_content {flex: 1; padding: 20px 17px 17px; box-sizing: border-box}
+.wizard_content .flex_container {display: flex; flex-direction: column; height: 100%}
+.wizard_content[aria-hidden="true"] {display: none}
+.wizard_content h3 {font-size: 18px; margin-bottom: 15px}
+.wizard_content form .wizard_row {margin-bottom: 20px; width: 100%}
+.wizard_content form select, .wizard_content form textarea, .wizard_content form label, .wizard_content form input {margin: 0}
+.wizard_content form label {clear: both; margin-bottom: 4px; width: 100% !important}
+.wizard_content form label + p {margin-top: 0}
+.wizard_content form select {width: 100% !important}
+.wizard_content form p, .wizard_content form fieldset label {font-size: 15px}
+.wizard_content form input {width: 100% !important}
+.wizard_content form a.link_button i {margin-top: -2px}
+.wizard_content form .required {font-size: 14px}
+.wizard_content form .required i {width: auto; height: auto; overflow: visible !important}
+.wizard_content form .required i:after {display: none}
+@media screen and (max-width: 600px) {
+    .wizard_wrapper {flex-direction: column}
+    .wizard_nav {width: 100%}
+    .wizard_nav a {display: inline-block}
+}
+
+.get_started_wizard {width: 900px; max-width: 100%; height: 490px; overflow: auto}
+.get_started_wizard .wizard_nav {box-sizing: border-box; position: relative; display: flex}
+.get_started_wizard .wizard_nav:before {position: absolute; content: ''; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(rgba(0,0,0,0.2) 20%, rgba(0,0,0,0) 90%)}
+.get_started_wizard .wizard_nav button {background-color: #3d464e; position: relative; border-radius: 6px; margin: 3px 0 7px; padding: 0 11px; transition: all .3s ease; min-height: 34px}
+.get_started_wizard .wizard_nav button span {display: flex; align-items: center; justify-content: space-between}
+.get_started_wizard .wizard_nav button .wizard-menu-number {display: none}
+.get_started_wizard .wizard_nav button .wizard-menu-text {white-space: nowrap; overflow: hidden;}
+.get_started_wizard .wizard_nav button:not(.selected):not(.completed) span {color: #fff}
+.get_started_wizard .wizard_nav button:not(.selected):not(.completed):hover:enabled span,
+.get_started_wizard .wizard_nav button:not(.selected):not(.completed):focus:enabled span {color: #222}
+.get_started_wizard .wizard_nav button i {display: none; margin: 0 -3px 0 5px}
+.get_started_wizard .wizard_nav button.selected + button i {display: none}
+.get_started_wizard .wizard_nav button.selected i.forward,
+.get_started_wizard .wizard_nav button.completed:not(.selected) i.tickCircle {display: block}
+.get_started_wizard .wizard_nav button.selected i.forward:after,
+.get_started_wizard .wizard_nav button.completed:not(.selected) i.tickCircle:after {left: 0}
+.get_started_wizard .wizard_nav button.selected,
+.get_started_wizard .wizard_nav button.completed,
+.get_started_wizard .wizard_nav button:hover:enabled,
+.get_started_wizard .wizard_nav button:focus:enabled {background-color: #fff; background-image: none; color: #222}
+
+.get_started_wizard form {display: flex; flex-direction: column; height: 100%; overflow: auto}
+.get_started_wizard .scroll {display: flex; flex-wrap: wrap; overflow: auto; width: 100%; padding: 0 3px; box-sizing: border-box}
+.no-touch .get_started_wizard .scroll::-webkit-scrollbar {-webkit-appearance: none; width: 5px; height: 20px}
+.no-touch .get_started_wizard .scroll::-webkit-scrollbar-thumb {border-radius: 4px; background-color: rgba(0, 0, 0, .5); -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5)}
+.get_started_wizard .setup_language > * > div {width: 100%; height: 31px; position: relative}
+.get_started_wizard .setup_language img {margin: 7px 0 0 23px !important; position: absolute; width: 16px}
+.get_started_wizard .setup_language input[type="radio"] + label:before {margin-right: 28px}
+.get_started_wizard .setup_language label {font-size: 15px}
+.get_started_wizard input[type='radio'] + label {position: relative; z-index: 1}
+.get_started_wizard .theme_list > div {height: 34px; position: relative}
+.get_started_wizard .theme_list > div div {width: 80px; height: 20px; border-radius: 20px; margin: 1px 0 0 23px !important; position: absolute; border: 1px solid #e2e0e0; border: 1px solid var(--table-border-color)}
+.get_started_wizard .theme_neo div {background: linear-gradient(90deg, #B54376, #B54376 25%, #5E656B 25%, #5E656B 50%, #378A98 50%, #378A98 75%, #5FB4B7 75%)}
+.get_started_wizard .theme_matrix div {background: linear-gradient(90deg, #02bfae, #02bfae 25%, #3a5268 25%, #3a5268 50%, #4394d0 50%, #4394d0 75%, #2e75a9 75%)}
+.get_started_wizard .theme_indie div {background: linear-gradient(90deg, #519286, #519286 25%, #58ad9d 25%, #58ad9d 50%, #6161A0 50%, #6161A0 75%, #293546 75%)}
+.get_started_wizard .theme_1 div {background: linear-gradient(90deg, #fca538, #fca538 25%, #d96436 25%, #d96436 50%, #3d577d 50%, #3d577d 75%, #666679 75%)}
+.get_started_wizard .theme_2 div {background: linear-gradient(90deg, #fca538, #fca538 25%, #d96436 25%, #d96436 50%, #3d577d 50%, #3d577d 75%, #fff 75%)}
+.get_started_wizard .theme_3 div {background: linear-gradient(90deg, #569a96, #569a96 25%, #64cac2 25%, #64cac2 50%, #CA6760 50%, #CA6760 75%, #515a63 75%)}
+.get_started_wizard .theme_4 div {background: linear-gradient(90deg, #2a7fd4, #2a7fd4 25%, #2d89e6 25%, #2d89e6 50%, #579125 50%, #579125 75%, #fff 75%)}
+.get_started_wizard .theme_5 div {background: linear-gradient(90deg, #12a8d9, #12a8d9 25%, #f78e1e 25%, #f78e1e 50%, #a9bd29 50%, #a9bd29 75%, #e20177 75%)}
+.get_started_wizard .theme_6 div {background: linear-gradient(90deg, #2ac09e, #2ac09e 25%, #ef6268 25%, #ef6268 50%, #45617d 50%, #45617d 75%, #517494 75%)}
+.get_started_wizard .theme_7 div {background: linear-gradient(90deg, #2ac09e, #2ac09e 25%, #ef6268 25%, #ef6268 50%, #45617d 50%, #45617d 75%, #fff 75%)}
+.get_started_wizard .theme_8 div {background: linear-gradient(90deg, #5b87a4, #5b87a4 25%, #a3d5f6 25%, #a3d5f6 50%, #3b996c 50%, #3b996c 75%, #505861 75%)}
+.get_started_wizard .theme_9 div {background: linear-gradient(90deg, #5b636b, #5b636b 25%, #3e464e 25%, #3e464e 50%, #3a919e 50%, #3a919e 75%, #57b3bb 75%)}
+.get_started_wizard .theme_10 div {background: linear-gradient(90deg, #428769, #428769 25%, #505050 25%, #505050 50%, #327d86 50%, #327d86 75%, #408e94 75%)}
+.get_started_wizard .theme_11 div {background: linear-gradient(90deg, #5eb34c, #5eb34c 25%, #545253 25%, #545253 50%, #3E95C1 50%, #3E95C1 75%, #fff 75%)}
+.get_started_wizard .theme_12 div {background: linear-gradient(90deg, #6161a0, #6161a0 25%, #3b3b46 25%, #3b3b46 50%, #519286 50%, #519286 75%, #58ad9d 75%)}
+.get_started_wizard .theme_13 div {background: linear-gradient(90deg, #6161a0, #6161a0 25%, #3b3b46 25%, #3b3b46 50%, #519286 50%, #519286 75%, #fff 75%)}
+.get_started_wizard .theme_14 div {background: linear-gradient(90deg, #1d8c7a, #1d8c7a 25%, #55b9a5 25%, #55b9a5 50%, #fba231 50%, #fba231 75%, #f18a2f 75%)}
+.get_started_wizard .theme_15 div {background: linear-gradient(90deg, #02bfae, #02bfae 25%, #3a5268 25%, #3a5268 50%, #4394d0 50%, #4394d0 75%, #2e75a9 75%)}
+.get_started_wizard .theme_16 div {background: linear-gradient(90deg, #02bfae, #02bfae 25%, #3a5268 25%, #3a5268 50%, #4394d0 50%, #4394d0 75%, #fff 75%)}
+.get_started_wizard .theme_list > div input[type="radio"] + label:before {margin-right: 100px}
+.get_started_wizard .theme_list > div .btn_tooltip i {margin-top: -4px}
+.get_started_wizard .theme_list > div .btn_tooltip .tooltip_content {left: 0}
+.get_started_wizard fieldset div {position: relative; margin: 4px 8px}
+.get_started_wizard fieldset label {padding-left: 25px; width: auto !important}
+.get_started_wizard fieldset input[type="checkbox"] + label:before {position: absolute; top: 1px; left: 0}
+.get_started_wizard .info_indent {display: flex; margin: 20px 0}
+.get_started_wizard .info_indent i {flex-shrink: 0}
+.get_started_wizard .info_indent div {font-size: 14px; color: #707070; color: var(--dark-grey-text-color)}
+.get_started_wizard .wizard_image_demo {overflow: hidden; width: 100%}
+.get_started_wizard #UploaderWrapper {width: calc(100% - 11px)}
+.get_started_wizard .wizard_complete {position: relative; max-width: 460px; margin: auto}
+.get_started_wizard .wizard_complete div {position: absolute; top: 30%; width: 100%; height: 16%; display: flex; align-items: center; justify-content: center}
+.get_started_wizard .wizard_complete div h3 {color: #fff; margin: 0; font-size: 33px}
+.get_started_wizard .wizard_complete ~ strong {font-size: 19px}
+.get_started_wizard .wizard_footer {display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding: 15px 3px 3px}
+.get_started_wizard .wizard_footer > *[excalibur-click] {margin: 0}
+.get_started_wizard .wizard_footer > *[excalibur-click] i {margin: -3px -6px 0 0}
+.get_started_wizard .wizard_footer > *[excalibur-click] i.arrowLeft {margin: -3px 0 0 -6px}
+.get_started_wizard .wizard_footer > *:only-child {margin-left: auto}
+@media screen and (min-width: 980px) {
+    .get_started_wizard .setup_language > * > div {width: 33%}
+    .get_started_wizard .theme_list {columns: 2; width: 100%}
+}
+@media screen and (max-width: 900px) {
+    .get_started_wizard .wizard_complete div h3 {font-size: 28px}
+}
+@media screen and (max-width: 750px) {
+    .get_started_wizard .wizard_complete div h3 {font-size: 4vw}
+}
+@media screen and (min-width: 601px) {
+    .get_started_wizard .wizard_nav {padding: 20px; width: 250px; background: no-repeat 50% bottom/cover #02BFAE url('/images/wizard/left-menu-shapes.svg'); background-color: var(--left-bar-bg); flex-direction: column}
+    .get_started_wizard .wizard_nav_img {width: 100%; height: 100%; max-height: 170px; background: no-repeat center/contain; margin: 20px 0}
+    .get_started_wizard #panel1.selected ~ .wizard_nav_img {background-image: url('/images/wizard/select-your-language.svg')}
+    .get_started_wizard #panel2.selected ~ .wizard_nav_img {background-image: url('/images/wizard/about-yourself.svg')}
+    .get_started_wizard #panel3.selected ~ .wizard_nav_img {background-image: url('/images/wizard/about-organization.svg')}
+    .get_started_wizard #panel4.selected ~ .wizard_nav_img {background-image: url('/images/wizard/select-theme.svg')}
+    .get_started_wizard #panel5.selected ~ .wizard_nav_img {background-image: url('/images/wizard/upload-logo.svg')}
+
+    .wizard_content form .wizard_row.wizard_row_2_col {display: flex; justify-content: space-between}
+    .wizard_content form .wizard_row.wizard_row_2_col > div {width: calc(50% - 10px)}
+    .get_started_wizard .setup_language > * > div {width: 50%}
+}
+@media screen and (max-width: 600px) {
+    .get_started_wizard .wizard_nav {width: 100%; justify-content: space-between; padding: 10px 15px; background: #02BFAE; background: var(--header-bg-color)}
+    .get_started_wizard .wizard_nav:after {content: ''; top: 50%; left: 20px; right: 20px; height: 1px; background: rgba(255,255,255,.4); position: absolute; z-index: 0; margin-top: -1px}
+    .get_started_wizard .wizard_nav button {width: 34px; box-sizing: border-box; border-radius: 50%; flex-shrink: 0; z-index: 1; margin: 3px 0}
+    .get_started_wizard .wizard_nav button:disabled {opacity: 1}
+    .get_started_wizard .wizard_nav button:disabled span {opacity: .5}
+    .get_started_wizard .wizard_nav button span:first-child {display: flex; height: 100%; justify-content: center}
+    .get_started_wizard .wizard_nav button span:last-child,
+    .get_started_wizard .wizard_nav_img {display: none}
+
+    .get_started_wizard .wizard_content {max-height: calc(100% - 60px)}
+    .wizard_content form .wizard_row.wizard_row_2_col div:not(:last-child) {margin-bottom: 20px}
+    .get_started_wizard .wizard_complete div h3 {font-size: 6vw}
+}
+
+/* ------------------------ Badge creator ------------------------- */
+body.evo .modal .modal__container:has(#badge_form) {
+    width: 900px !important;
+    max-width: 900px !important;
+}
+body.evo .modal #badge_form .badge_tabnav {
+    margin-left: -15px;
+}
+body.evo .modal #badge_form .badge_tabnav .tabnav__tab > a {
+    margin: 0px !important;
+}
+body.evo .modal #badge_form .badge_tabnav .width-wrap {
+    box-shadow: none !important;
+}
+.modal #badge_form > div {position: relative}
+.modal #badge_form .tabnav .tabnav__tab a {margin: 0 6px 1px}
+.modal #badge_form .tabnav .tabnav__tab:first-child a {margin-left: 0}
+.modal .badgeWrapper {min-height: 270px; margin-top: 20px}
+.modal .badgeWrapper > p {
+    height: 22px;
+    text-align: center;
+    padding: 0 0 10px 0 !important;
+    margin-bottom: 0;
+    border-bottom: 1px solid #e2e0e0; border-bottom: 1px solid var(--table-border-color)
+}
+.badgeHolder {width: 220px; height: 240px; position: relative; padding: 10px 0 0 0; margin: auto}
+.badgeHolder .finalMessage {margin: 220px 0 0 0}
+.badgeHolder > div:not(.finalMessage), .badgeHolder .finalBanner p, .badgeHolder .finalBanner img, .badgeHolder .finalBanner div {
+    position: absolute;
+    width: 220px
+}
+.badgeHolder .finalBanner p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    top: 170px;
+    font-size: 15px;
+    z-index: 3;
+    padding: 5px 0 !important
+}
+.badgeHolder .finalBanner img {z-index: 2; width: auto}
+.badgeHolder .finalBanner div {z-index: 1}
+.modal .badgeHolder .finalMessage p {
+    height: 155px;
+    padding: 0 15px;
+    margin: 15px 0 0;
+    overflow: auto
+}
+.badgeOptions:not(.badgeOverview) {display: none}
+.badgeOptions .owl-item {text-align: center}
+.badgeOptions .owl-item a {display: inline-block; width: 90px; height: 90px; border-radius: 6px; overflow: hidden}
+.badgeOptions .owl-item a img {width: 100%}
+.modal .badgeImages .owl-item a img {width: 126px; height: 126px; margin: -16px 0 0 -19px}
+.modal .badgeImages .badgeImages_btn_holder {display: flex; justify-content: center; align-items: center; padding: 5px 15px 0; text-align: center}
+.modal .badgeImages .badgeImages_btn_holder input {margin-top: 0; width: auto !important}
+.modal .badgeGallery .owl-item a img {width: 70px; height: 70px; margin: 10px 0 0 -3px}
+.modal .badgeGallery .owl-buttons {margin-top: 5px}
+.badgeOptions .owl-theme .owl-controls .owl-buttons div {border-radius: 3px; border: 1px solid #c8c8c8; background-color: transparent; padding: 5px 9px 5px 10px; opacity: 1}
+.badgeOptions .owl-theme .owl-controls .owl-buttons div:hover i:after {left: -20px}
+.badgeColors input {width: 200px; padding: 4px 5px 5px}
+.modal .facebox-content .badgeText textarea {height: 123px; resize: none}
+.modal .facebox-content .badgeLibraryCheckboxes p {line-height: 2}
+.modal .facebox-content .badgeColors label {width: 130px}
+.modal .facebox-content .badgeColors .color_recommendations input {color: #fff; width: 46.5% !important; margin-bottom: 5px}
+@media screen and (min-width: 980px) {
+    .modal .facebox-content .badgeColors .color_recommendations > *:first-child {width: 148px}
+}
+
+/* ------------------------ Assignment popup form------------------------- */
+.modal .assignment_pop .toggleForm {display: block; margin-top: -5px; margin-bottom: 3px}
+.modal .assignment_pop label, .modal .assignment_pop legend {width: auto}
+.modal .assignment_pop .title_container label,
+.modal .assignment_pop label.min-w-80,
+.modal .assignment_pop legend.min-w-80 {min-width: 80px}
+.modal .assignment_pop label.min-w-76,
+.modal .assignment_pop legend.min-w-76 {min-width: 76px}
+.modal .assignment_pop #assignment_name {width: 688px; margin-right: 0}
+.modal .assignment_pop span.max-info {margin-right: 21px}
+.modal .assignment_pop #timer input {padding: 0px 5px}
+.modal .assignment_pop .modal-textarea p {padding: 0; margin: 0 0 5px}
+.modal .class_pop hr, .modal .assignment_pop hr {display: block; height: 1px; border: 0; border-top: 1px dashed #C6C5C5; padding: 0; margin-bottom: 0}
+.modal .class_pop hr {margin-bottom: 8px}
+input#randomize + label {min-width: 20px !important}
+.modal .assignment_pop #assignment_width, .modal .assignment_pop #assignment_height {width: 100px}
+.modal .assignment_pop label[for*="items_to_sync_"] {width: 200px !important}
+.modal .assignment_pop input#assignment_gateway {width: 20px}
+.modal .assignment_pop .col-2 > * {vertical-align: top; margin: 0; user-select: none}
+.modal .assignment_pop .col-2 > * > *:first-child {margin-bottom: 5px}
+.modal .assignment_pop .col-2 > * > label:not(:first-child) {margin: 0 14px 5px 0}
+
+.modal table.attendance span {display: none}
+
+.modal .oneLine {clear: both; margin-top: 15px}
+.modal .oneLine p {display: inline-block; margin-top: 0}
+
+/* ----------------- Minor tweak for the Import Qty/Ccf popup ----------------- */
+#UploadCCF {
+    min-width: 0 !important
+}
+#UploadCCF .optionsRibbon, #UploadQTI .optionsRibbon {
+    width: 99%!important;
+    margin: 0 auto;
+    display: block;
+    height: auto
+}
+
+/* ----------------- Language Selection Form ----------------- */
+.modal form.langForm .facebox-content {padding-left: 15px; padding-right: 15px}
+.modal form.langForm .facebox-content div {padding: 4px 0; min-height: 24px; position: relative}
+.modal form.langForm .facebox-content img {margin: 7px 0 0 22px; position: absolute; width: 16px}
+.modal form.langForm .facebox-content input[type="radio"] + label:before {margin-right: 28px}
+
+/* ----------------- New Tool Provider select overwrite default 180px width ----------------- */
+.tp-select-facebox {width: auto}
+
+/* ----------------- People Picker ----------------- */
+.modal .section-intro {padding: 0 10px; overflow: hidden}
+.modal .section-intro .contentBlock {margin-bottom: 10px}
+.modal .section-intro .contentBlock .sideText p {width: auto}
+.modal .section-intro .contentBlock .sideText p.number {line-height: 1.3; width: 30px; margin-top: -15px !important}
+.modal .section-intro .contentBlock .sideText p:not(.number) {padding-left: 50px;}
+.modal .section-intro .contentBlock .sideImg {margin-bottom: 4px}
+.modal .section-intro .contentBlock .sideImg img {border: 1px solid #c7c7c7}
+
+.modal #PeoplePicker .pp_filter {display: flex}
+.modal #PeoplePicker .pp_filter input, .modal #PeoplePicker .pp_filter select {width: calc(100% - 5px) !important; margin-right: 5px}
+.modal #PeoplePicker .pp_filter input, .modal #PeoplePicker .pp_filter select {
+    font-size: 12px;
+    color: var(--main-text-color) !important;
+}
+
+.modal #PeoplePicker .pp_filter .select2-container-multi .select2-choices{
+    min-height: 33px !important;
+    background-color: var(--input-bg) !important;
+}
+.modal #PeoplePicker .pp_filter input#name {
+    min-height: 33px;
+}
+
+.modal #PeoplePicker .pp_filter .select2-container-multi .select2-choices .select2-search-choice {
+    font-size: 11px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+
+.modal #PeoplePicker p.search-navigation>span,
+.modal #PeoplePicker p.search-navigation>a{
+    margin-bottom: 5px;
+    display: inline-block;
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    line-height: 18px;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--button-color-2);
+}
+
+.modal #PeoplePicker p.search-navigation>a.next {
+    border: 0px;
+    box-shadow: none;
+    margin-bottom:0px;
+}
+
+.modal #PeoplePicker .pp_filter .select2-result-label {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.modal #PeoplePicker p.search-navigation>a.previous {
+    width: 60px;
+}
+
+.modal #PeoplePicker .pp_filter .pp_name {margin-bottom: 10px}
+.modal #PeoplePicker .pp_filter select {padding-top: 3px}
+.modal #PeoplePicker .select2-container {flex: 1; margin: 0 5px 10px 0; align-self: flex-start}
+.modal #PeoplePicker .select2-container:last-of-type {margin-right: 0}
+.modal #PeoplePicker .select2-container .select2-choices {border-radius: 3px}
+.modal #PeoplePicker .tab-content {width: 50%; float: left}
+.modal #PeoplePicker .tab-content .half {width: 100%; position: relative; min-height: 430px}
+.modal #PeoplePicker .half.left {float: left}
+.modal #PeoplePicker .half.right {float: right}
+.modal #PeoplePicker .half#people_selected {overflow: hidden}
+.modal #PeoplePicker .people_scroller {overflow: auto}
+.modal #PeoplePicker .half.right .search-navigation {padding: 5px}
+.modal #PeoplePicker .search-navigation {margin-top: 5px; margin-bottom: 0}
+.modal #PeoplePicker table {width: 100%;margin: 0;border: none !important;padding: 0px;background:transparent;}
+.modal #PeoplePicker table td {border-width: 0 0 1px 0}
+.modal #PeoplePicker table th.title_column {width: 409px}
+.modal #PeoplePicker .table-header table {width: 100%; border-bottom: 1px solid #e2e0e0; border-bottom: 1px solid var(--table-border-color)}
+
+body.evo .modal #PeoplePicker table tr.highlight td {
+    background: var(--table-selected) !important;
+}
+.modal#PeoplePicker table td {
+    border-width: 0 0 1px 0;
+    background: transparent !important;
+}
+
+.modal #PeoplePicker .pp_filter input,
+.modal #PeoplePicker .pp_filter select{
+    border-color:var(--main-border-color) !important;
+}
+
+.modal .messageSendPopup .select2-choices a.select2-search-choice-close {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    margin-left: 10px;
+}
+
+body.evo .replyPopup.biggerHeight {
+    height: auto !important;
+}
+
+@media screen and (max-width: 996px) {
+    .modal #PeoplePicker {min-width: 740px}
+    .modal #PeoplePicker .select2-container input {margin: 1px 0}
+}
+@media screen and (min-width: 769px) {
+    .modal #PeoplePicker .tab-content.first {border-right: 1px solid #e2e0e0; border-right: 1px solid var(--table-border-color); box-sizing: border-box}
+}
+@media screen and (max-width: 768px) {
+    .modal #PeoplePicker {min-width: 0px}
+    .modal #PeoplePicker .pp_filter {display: block}
+    .modal #PeoplePicker .pp_filter span {float: left; width: 50%; margin-bottom: 10px}
+    .modal #PeoplePicker .tabnav {display: block}
+    .modal #PeoplePicker .half {min-height: 0}
+    .modal #PeoplePicker:not(.transfer_seats) table th:last-child {padding: 0}
+    .modal #PeoplePicker table th.title_column {width: auto}
+    .modal #PeoplePicker .tab-content {width: 100%; float: left}
+    .modal #PeoplePicker .tab-content.first {border-right: 0 none}
+    .modal #PeoplePicker .tab-content.second {display: none}
+    .modal #PeoplePicker .search-navigation {margin-top: 10px}
+    .modal #PeoplePicker .search-navigation a {margin: 0 5px}
+    .modal{height: 100% !important;width: 100% !important;}
+    .modal .facebox-content{/* height: 100% !important; */width: 100% !important; max-height: 100%;}
+}
+
+/* Transfer seats */
+.modal #PeoplePicker.transfer_seats .transfer_quantity select {width: 50px !important; margin-right: 0}
+@media screen and (min-width: 768px) {
+    .modal #PeoplePicker.transfer_seats .tabs-extra-class span {margin-bottom: 10px}
+}
+@media screen and (min-width: 980px) {
+    .modal #PeoplePicker.transfer_seats {min-width: 796px}
+}
+
+/* Proficiency Picker */
+.modal #ProficiencyPicker {min-width: 980px; height: auto; max-height: none}
+.modal #ProficiencyPicker .pp_filter {display: flex}
+.modal #ProficiencyPicker .pp_filter input, .modal #ProficiencyPicker .pp_filter select {width: calc(100% - 5px) !important; margin-right: 5px}
+.modal #ProficiencyPicker .pp_filter select {padding-top: 3px}
+.modal #ProficiencyPicker .select2-container {flex: 1; margin: 0 5px 10px 0}
+.modal #ProficiencyPicker .select2-container:last-of-type {margin-right: 0}
+.modal #ProficiencyPicker .select2-container .select2-choices {border-radius: 3px}
+.modal #ProficiencyPicker .tabnav {display: none}
+.modal #ProficiencyPicker .tab-content {width: 50%; float: left}
+.modal #ProficiencyPicker .tab-content .half {width: 100%; position: relative; min-height: 430px}
+.modal #ProficiencyPicker .half.left {float: left}
+.modal #ProficiencyPicker .half.right {float: right}
+.modal #ProficiencyPicker .half#proficiency_selected {overflow: hidden}
+.modal #ProficiencyPicker .proficiency_scroller {overflow: auto}
+.modal #ProficiencyPicker .half.right .search-navigation {padding: 5px}
+.modal #ProficiencyPicker .search-navigation {margin-top: 5px; margin-bottom: 0}
+.modal #ProficiencyPicker table {width: 100%; margin: 0}
+.modal #ProficiencyPicker table td {border-width: 0 0 1px 0}
+.modal #ProficiencyPicker table th.title_column {width: 409px}
+.modal #ProficiencyPicker .table-header table {width: 100%; border-bottom: 1px solid #e2e0e0; border-bottom: 1px solid var(--table-border-color)}
+
+@media screen and (max-width: 996px) {
+    .modal #ProficiencyPicker {min-width: 740px}
+    .modal #ProficiencyPicker .select2-container input {margin: 1px 0}
+}
+@media screen and (min-width: 769px) {
+    .modal #ProficiencyPicker .tab-content.first {border-right: 1px solid #e2e0e0; border-right: 1px solid var(--table-border-color); box-sizing: border-box}
+}
+@media screen and (max-width: 768px) {
+    .modal #ProficiencyPicker {min-width: 0px}
+    .modal #ProficiencyPicker .pp_filter {display: block}
+    .modal #ProficiencyPicker .pp_filter span {float: left; width: 50%; margin-bottom: 10px}
+    .modal #ProficiencyPicker .tabnav {display: block}
+    .modal #ProficiencyPicker .half {min-height: 0}
+    .modal #ProficiencyPicker:not(.transfer_seats) table th:last-child {padding: 0}
+    .modal #ProficiencyPicker table th.title_column {width: auto}
+    .modal #ProficiencyPicker .tab-content {width: 100%; float: left}
+    .modal #ProficiencyPicker .tab-content.first {border-right: 0 none}
+    .modal #ProficiencyPicker .tab-content.second {display: none}
+    .modal #ProficiencyPicker .search-navigation {margin-top: 10px}
+    .modal #ProficiencyPicker .search-navigation a {margin: 0 5px}
+}
+
+/* ----------------- Assignment three columns ----------------- */
+.modal .columns-display {clear: both}
+.modal .columns-display:before, .modal .columns-display:after {content: " "; display: table}
+.modal .columns-display:after {clear: both}
+.modal .columns-display br {display: none}
+.modal .columns-display label, .modal .columns-display legend {width: 100%; margin: 0 0 2px; font-size: 14px}
+.modal .columns-display select,
+.modal .columns-display input,
+.modal .columns-display textarea {width: 100%; margin-right: 0}
+.modal .columns-display .title_container input {width: 100% !important; margin-right: 0}
+
+.modal .columns-display .column {height: 135px; float: left; border-right: 1px solid #e2e0e0; border-right: 1px solid var(--table-border-color)}
+.modal .columns-display .column.auto-height {height: auto}
+.modal .columns-display .column > div {margin-bottom: 10px; height: 55px}
+.modal .columns-display .column > div#duration {margin-bottom: 0; height: auto}
+.modal .columns-display .column > div#duration > div {margin-bottom: 10px; height: 55px}
+.modal .columns-display .column p {margin: 0; padding: 0}
+.modal .columns-display .column div.half {width: 45%; margin-right: 5%; float: left}
+.modal .class_pop .columns-display .column div.half:nth-child(2) {width: 45%; margin-right: 0%; margin-left: 4%; float: left}
+.modal .columns-display .column div.half.max-submissions {width: 53%; margin-right: 4%; float: left}
+.modal .columns-display .column div.half.max-submissions + div.half {width: 42%; margin-right: 0; float: left}
+
+.modal .columns-display .column input + label {margin-top: 5px}
+.modal .columns-display .column #threshold input {height: 27px}
+
+.modal .columns-display .column div .half label {display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis}
+
+.modal .columns-display .column.one input {width: 80px; margin-right: 0}
+.modal .columns-display .column.one div:nth-child(2) p label {display: block; width: 100%}
+.modal .columns-display .column.three input#assignment_begin_at,
+.modal .columns-display .column.three input#assignment_end_at {
+    width: 100%;
+    min-width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    min-width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+}
+.modal .columns-display .column.four div p {margin: 0; padding: 0}
+
+.modal .columns-display .column.one {width: 27%; padding-right: 1.5%}
+.modal .columns-display .column.two {width: 21%; padding-left: 1.5%; padding-right: 1.5%}
+.modal .columns-display .column.three {width: 28%; padding-left: 1.5%; padding-right: 1.5%}
+.modal .columns-display .column.four {width: 23%; padding-left: 1.5%; border-right: 0 none}
+
+.modal .columns-display .column.indie {height: auto}
+.modal .columns-display .column.one.cols1 {width: 100%; border: 0}
+
+.modal .columns-display .column.one.cols2 {width: 46%; padding-right: 3.8%}
+.modal .columns-display .column.two.cols2 {width: 46%; padding-left: 3.8%; padding-right: 0; border-right: 0 none}
+
+.modal .columns-display .column.one.cols3 {width: 30%; padding-right: 3%}
+.modal .columns-display .column.two.cols3 {width: 27%; padding-left: 3%; padding-right: 3%}
+.modal .columns-display .column.two.cols2 input[type="text"].hasDatepicker,
+.modal .columns-display .column.two.cols3 input[type="text"].hasDatepicker {width: 100%}
+.modal .columns-display .column.three.cols3,
+.modal .columns-display .column.four.cols3 {width: 30%; padding-left: 3%; padding-right: 0; border-right: 0 none}
+
+.modal .columns-display + .modal-textarea p {font-size: 14px}
+
+.modal .columns-display .group-name p,
+.modal .columns-display .group-description p {padding-top: 0}
+.modal .columns-display .group-description p {margin-bottom: 5px}
+.modal .columns-display .group-name input,
+.modal .columns-display .group-description textarea {width: 100%}
+
+/* Feeds select */
+.modal #multipost td {position: relative}
+.modal #multipost td input[type="checkbox"] + label:before {position: absolute; top: 13px; left: 8px}
+
+/* Gradebook popup */
+.modal .gradebook_column_width input {width: auto !important}
+
+.modal .grading-thread-comment-list {margin: 0 0 10px !important}
+.modal .grading-thread-comment-list .comment .content {display: block}
+.modal .grading-thread-comment-textarea {margin: 0 0 3px}
+.modal .avatarHolder img.avatar {border-radius: 50%; border: 1px solid #e2e2e2}
+.modal table.rubric tr td {font-size: 13px}
+
+/* Google Fonts popup */
+.fonts_holder .fonts_loading {text-align: center}
+.fonts_holder .fonts_loading img {width: 100px}
+.fonts_holder li {margin-bottom: 10px; border-top: 1px solid #e2e0e0; border-top: 1px solid var(--table-border-color); padding-top: 7px; position: relative}
+.fonts_holder li span {display: block; margin: 5px 0 0 28px; font-size: 17px}
+.fonts_holder li span.no-results {text-align: center}
+.modal .fonts_holder li input[type="checkbox"] + label:before {top: 13px; position: absolute}
+.google_fonts_top {display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 10; background: var(--popup-bg-container); padding: 10px 0 12px; margin-bottom: 5px; border-bottom: 1px solid var(--table-border-color)}
+.google_fonts_top span.catalog_search_holder {position: static; margin-left: 0}
+.modal .facebox-content .google_fonts_top input[type="text"] {width: 260px; height: 34px; border-radius: 20px; padding: 0 14px; font-size: 14px; border: 1px solid var(--main-border-color)}
+
+.modal .facebox-content .people_picker_top {margin-bottom: 0}
+.modal .facebox-content .people_picker_top #s2id_proficiency_picker_search {width: 100%}
+
+@media only screen and (max-width: 459px) {
+    .modal, .modal.modal__container, .modalContent {width: 100%}
+
+    .loginOptions {margin-bottom: 15px}
+    .difSignIn {margin-left: -10px; margin-right: -10px; padding-left: 15px; padding-right: 15px}
+    .modal .loginPopup {padding-bottom: 0}
+
+    .badgeOptions {padding: 10px 0}
+    .badgeOptions .owl-item a {width: 50px; height: 50px}
+    .modal .badgeImages .owl-item a img {width: 70px; height: 70px; margin: -8px 0 0 -10px}
+    .modal .badgeGallery .owl-item a img {width: 40px; height: 40px; margin: 5px 0 0 0}
+    .modal div.facebox-resources-filter > p > * {width: 100% !important}
+}
+@media only screen and (min-width: 460px) {
+    .modal .facebox-content, .modal div.error {width: 420px}
+    .modal .help_centre .help_centre_content.help_overview {padding-right: 8px}
+
+    /* Main Site */
+    .modal form#signup_form .facebox-content, .modal .header.signup_form ~ #alerts, .modal .header.signup_form ~ div.error {width: 400px}
+    .modal form#signup_form .facebox-content input#captcha {width: 310px}
+
+    .owl-carousel .owl-wrapper-outer {padding-top: 10px}
+    .badgeHolder {padding: 10px 15px 0}
+    .badgeHolder .finalMessage {margin: 30px 0 0 250px}
+    .modal .facebox-content .badgeOptions input:not([type*='radio']), .modal .facebox-content .badgeOptions textarea {width: 290px; margin-right: 0}
+
+    .modal .row.col-2:not(.hide) {display: flex; flex-flow: nowrap; justify-content: space-between}
+    .modal .row.col-2 > * {width: 48%}
+    .modal .assignment_pop .row.col-2 > * {width: 48% !important}
+}
+@media only screen and (max-width: 479px) {
+    /* People Picker */
+    .modal .section-intro .contentBlock .sideText {margin-top: -123px}
+    .modal .section-intro .contentBlock .sideText p.number {margin: 42px 0 60px 210px !important}
+    .modal .section-intro .contentBlock .sideText p:not(.number) {padding: 0}
+    /* Add Tool */
+    .modal .tool_row .tool_img {width: 60px; padding: 2px; margin-top: -3px}
+}
+@media screen and (min-width: 560px) {
+    /* Global */
+    .modal .facebox-content, .modal #alerts, .modal div.error {width: 500px}
+    .modal .loginPopup #alerts{width: auto}
+    .modal .header h4 {font-size: 19px; max-width: 468px}
+    .modal form.langForm .facebox-content div {width: 50%; float: left}
+    .modal nav.tabnav .tabnav__tab .dropDown {right: 5px}
+    /* Logged In */
+    .modal form#enroll_form .facebox-content, .modal form#group_join_form .facebox-content,
+    .modal .header.access_code ~ #alerts, .modal .header.access_code ~ div.error {width: 342px}
+    .modal .header.access_code h4 {width: 310px}
+    .modal .facebox_share, .modal div.facebox-resources-filter {width: 500px}
+}
+@media screen and (min-width: 769px) {
+    /* Global */
+    .modal .facebox-content, .modal #alerts, .modal div.error, .modal div.facebox-resources-filter {width: 700px}
+    .modal .loginPopup #alerts{width: auto}
+    .modal .header h4 {max-width: 668px}
+    .modal form.langForm .facebox-content div {width: 33%}
+    .modal .sml_popup {width:600px}
+    .modal .xsml_popup {width:400px !important}
+    .modal .xl_popup, .modal .xxl_popup {width:700px}
+    .modal .header.sml_popup h4 {width: 468px}
+    .modal .header.xsml_popup h4 {width: 368px}
+    /* Portal */
+    .modal form#join_form .facebox-content, .modal .header.join_form ~ #alerts, .modal .header.join_form ~ div.error {width: 615px}
+    /* Logged In */
+    .modal form#class_list .facebox-content, .modal .header.class_list ~ #alerts, .modal .facebox-content select.fullWidth {width: 500px}
+    .modal .header.class_list h4 {width: 468px}
+    .modal form#class_form .facebox-content, .modal .header.class_form ~ #alerts, .modal .header.class_form ~ div.error {width: 730px}
+    .modal .header.class_form h4 {width: 638px}
+    .modal .assignment_list, .modal form#enroll_form .facebox-content, .modal form#group_join_form .facebox-content {width:600px}
+
+    .modal #badge_form nav.tabnav {padding-right: 240px}
+    .badgeWrapper {position: absolute; top: 10px; right: 25px}
+    body:not(.portal):not(.edu2) .modal .facebox-content .badgeWrapper > p {padding: 4px 15px 13px !important; width: auto !important; border-bottom: 0}
+    .badgeWrapper .badgeHolder {height: 400px; border-left: 1px solid #e2e0e0; border-left: 1px solid var(--table-border-color)}
+    .badgeWrapper .badgeHolder .finalMessage {margin: 225px 0 0 0}
+    .badgeOptions {height: 394px; margin-right: 230px; padding: 0 15px 0 0}
+    .modal .badgeWrapper {margin-top: 0}
+}
+@media screen and (max-width: 600px) {
+    .modal .assignment_pop .columns-display .column.one,
+    .modal .assignment_pop .columns-display .column.two,
+    .modal .assignment_pop .columns-display .column.three,
+    .modal .assignment_pop .columns-display .column.four {width: 100%; padding: 0; border: 0}
+
+    .modal .assignment_pop .columns-display .column.one,
+    .modal .assignment_pop .columns-display .column.three,
+    .modal .assignment_pop .columns-display .column.two,
+    .modal .assignment_pop .columns-display .column.four {padding-right: 0}
+}
+@media screen and (max-width: 979px) {
+    /* Resets for tags in logged-in view */
+    body:not(.portal):not(.edu2) .modal .facebox-content label, .modal .labelGap,
+    body:not(.portal):not(.edu2) .modal .facebox-content legend {display: block; width: 100% !important}
+    body:not(.portal):not(.edu2) .modal .facebox-content input[type="checkbox"]:not(.emptyLabel) + label,
+    body:not(.portal):not(.edu2) .modal .facebox-content input[type="radio"]:not(.emptyLabel, [name="language"]) + label {line-height: 30px}
+    body:not(.portal):not(.edu2) .modal .facebox-content .search-item input[type="radio"]:not(.emptyLabel) + label {line-height: 21px}
+    .modal .modalContent span.max-info + label,
+    body:not(.portal):not(.edu2) .modal .facebox-content select + label,
+    body:not(.portal):not(.edu2) .modal .facebox-content [type="checkbox"] + label + label,
+    body:not(.portal):not(.edu2) .modal .facebox-content input[type="hidden"] + label {margin-top: 10px}/* type=hidden for Lesson and Quiz assignment popups */
+
+    body:not(.portal):not(.edu2) .modal .facebox-content input[type="password"],
+    body:not(.portal):not(.edu2) .modal .facebox-content input[type="text"],
+    body:not(.portal):not(.edu2) .modal .facebox-content input[type="file"],
+    body:not(.portal):not(.edu2) .modal .facebox-content textarea,
+    body:not(.portal):not(.edu2) .modal .facebox-content legend,
+    .modal .facebox-content:not(.help_centre) .optionsRibbon {max-width: 100%; box-sizing: border-box; margin: 0}
+    body:not(.portal):not(.edu2) .modal .facebox-content select,
+    .modal .facebox-content input[type="text"].hasDatepicker,
+    .modal form#action_form .select2-container {width: 100% !important; display: block}
+    body:not(.portal):not(.edu2) .modal .facebox-content p {width: 100% !important; padding: 0}
+
+    .modal form label br{display:none}
+
+    .modal .facebox-content p.mb0 + p.mt0,
+    .modal .facebox-content #assignmentScore + label,
+    .modal form#resources_form .facebox-content .search-item {margin-top: 10px}
+    /*.modal .facebox-content .optionsRibbon {margin-left: 3px; width: auto}*/
+
+    body:not(.portal):not(.edu2) .modal .facebox-content .badgeLibraryCheckboxes label:not(:first-child) {display: inline-block; width: auto !important}
+
+    /* Attendance Table */
+    .modal table.attendance, .modal table.attendance tr, .modal table.attendance td, .modal table.attendance span {display: block; text-align: left}
+    .modal table.attendance th, .modal table.attendance td.highlight {display: none}
+    .modal table.attendance td {line-height: 20px; height: auto; border-width: 0; padding: 5px 0}
+
+    .modal .help_centre .contentBlock {padding: 10px 15px; width: 100%}
+    .modal .help_centre .contentBlock:nth-child(1), .modal .help_centre .contentBlock:nth-child(2) {margin-top: 0}
+    .modal .help_centre .contentBlock, .modal .help_centre .contentBlock:nth-child(2n+2), .modal .help_centre .contentBlock:nth-last-child(2) {margin-bottom: 10px}
+    .modal .help_centre .contentBlock:last-child {margin-bottom: 0}
+    .modal .help_centre .help_centre_content img {height: auto !important}
+
+    /* People Picker */
+    .modal .section-intro .contentBlock .sideText p.number {width: 30px !important; line-height: 30px; display: block}
+    .modal .section-intro .contentBlock .sideText p:not(.number) {width: auto !important}
+
+
+    /* Action form */
+    .modal form#action_form select#rule_action_execute_when {margin-bottom: 10px}
+}
+@media screen and (min-width: 980px) {
+    /* Global */
+    .modal .facebox-content {overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    .modal .no_max_height {max-height: 100%}
+    .modal .modalContent, .modal #alerts {min-width: 100%}
+    .modal div.error {width: auto}
+    .modal .header h4 {max-width: 100%}
+    .modal form.langForm .facebox-content {width: 820px}
+    .modal form.langForm .facebox-content div {width: 205px}
+
+    .modal .xl_popup {
+        width: 840px;
+        max-width: 950px !important;
+    }
+    .modal .xxl_popup {width: 950px;}
+
+    /* Logged In */
+    .modal form#assignment_form .facebox-content {
+        width: 850px
+    }
+
+    .modal .sml_popup_inline_input {
+        width: 720px;
+    }
+
+    .modal .sml_popup input[type='text']:not([style*='width']) {margin: 0}
+    .modal .sml_popup input[type='text'].sml_popup_inline_input {width: calc(100% - 130px); margin: 0}
+
+    .modal div.facebox-resources-filter, .modal form#resources_form .facebox-content {width: 775px}
+    .modal div.facebox-resources-filter label {width: auto; margin: 0 3px 0 0}
+    .modal div.facebox-resources-filter select {width: 140px; margin-right: 5px; margin-left: 5px; display: inline-block}
+
+    .modal .facebox-content .row.col-2 input[type="text"],
+    .modal .facebox-content .row.col-2 label,
+    .modal .facebox-content .row.col-2 legend {width: 100%; margin-right: 0}
+    .modal .facebox-content .row.col-2 .emptyLabel + label,
+    .modal .facebox-content .row.col-2 input[type="checkbox"] + label,
+    .modal .facebox-content .row.col-2 input[type="radio"] + label {width: auto}
+
+    .modal .facebox-content .inline_form_elements,
+    .modal .facebox-content .badgeLibraryCheckboxes p {display: table}
+    .modal #badge_form .facebox-content .badgeOverview .badgeLibraryCheckboxes p {
+        display: block;
+    }
+    .modal #badge_form.facebox-content input[type=radio] + label{width:auto;}
+    .modal .facebox-content .inline_form_elements > *:first-child,
+    .modal .facebox-content .badgeLibraryCheckboxes p label:first-child {display: table-cell; width: 128px}
+    .modal .facebox-content .inline_form_elements > p {display: inline-block; margin: 0}
+    .modal .facebox-content .badgeColors .color_recommendations {margin-top: 10px}
+
+    .modal .halfColumnForm {width: 323px; float: left; margin-top: 0}
+    .modal .halfColumnForm input[type="text"],
+    .modal form#action_form .select2-container {width: 180px}
+
+    .modal #ResourceLibraryFilterWrapper .facebox-content {max-height: 60vh !important; width: auto; max-width: 925px}
+
+    .modal p.inline_form_elements {margin-bottom: 0}
+    .modal .inline_form_elements select#rule_action_execute_when,
+    .modal .inline_form_elements select#rule_action_execute_when ~ * select {margin-bottom: 10px}
+    .modal .inline_form_elements select#rule_action_execute_when ~ .after .time_wrap {display: inline-block}
+}
+@media screen and (min-width: 1280px) {
+    .modal .help_centre {width: 1033px}
+    .modal .xxl_popup {width: 1100px; max-width:1200px !important;}
+}
+.modal .nav, .modal .footer{
+    background: transparent !important;
+}
+.modal .nav i:after{
+    left: 0;
+}
+.modal .nav *{
+    color: var(--main-text-color);
+}
+.modal.add-popup {
+    background: var(--popup-bg) !important;
+    backdrop-filter: blur(6px);
+}
+.modal form .footer {
+    background-color: var(--popup-bg) !important;
+    z-index: 2;
+}
+.modal .facebox-content {
+    width: 100% !important;
+}
+
+.modal .facebox-content p > input:not(:has(+ *)), .facebox-content p > textarea:not(:has(+ *)), .facebox-content p > select:not(:has(+ *)) {
+    width: 100%;
+}
+
+.modal div#alerts {
+    width: 100% !important;
+}
+.modal .facebox-content {
+    min-height: 100px;
+    margin-bottom: 10px;
+    max-height: min(80dvh, 100dvh - 150px);
+}
+body.evo .modal #multipost.facebox-content:has(#classes) {
+    max-height: 65vh;
+}
+body.evo[class*="_game_admin"] .modal .facebox-content,
+body.evo[class*="_teacher_game"] .modal .facebox-content,
+body.evo .modal .messagePopup .facebox-content{
+    max-height: 70dvh;
+}
+
+body.evo .modal #resources_uploader_form .facebox-content.resources-scroll{
+    max-height: calc(100dvh - 350px) !important;
+}
+
+body.evo .modal #multipost.facebox-content:has(#classes) table tr:first-child th {
+    position: relative !important;
+}
+body.evo .modal .facebox-content.xxl_popup.two-columns {
+    max-height: 65vh;
+}
+@media screen and (min-height: 600px) {
+    body.evo .modal .facebox-content.xxl_popup.two-columns {
+        max-height: 80vh;
+    }
+}
+.modal .modal__conten {
+    padding: 12px 19px;
+}
+.modal .facebox-content dl dt {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.modal .facebox-content dl dd {
+    font-size:13px;
+}
+
+.modal .facebox-content dl i {
+    margin-top:0px;
+}
+
+.modal .facebox-content dl dt {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.modal .facebox-content dl dd {
+    font-size: 13px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding:0px 10px;
+    max-height: calc(3 * 1lh); /* grow with line-height so WCAG 1.4.12 text spacing doesn't clip the 3 visible lines */
+    white-space: normal;
+}
+
+.modal .facebox-content dl > dt:not(:has(i)) {
+    height: 110px;
+}
+
+.modal .facebox-content dl > dt:not(:has(i)) + dd {
+    margin-top: 60px !important;
+}
+
+.modal .facebox-content dl i {
+    margin-top: 0px;
+}
+
+body.evo .modal .facebox-content i:after {
+    color: var(--active-color);
+}
+body.evo .modal .facebox-content .alert_icon i:after {
+    color: #fff;
+}
+
+.modal .modal__container .footer button:not(.not-btn), #facebox .footer .link_button, .modal .resource_popup .link_button,
+body.evo .modal form#grade_form a#GradebookPostButton{
+    background: var(--active-color);
+    color: #fff;
+    font-weight: 500;
+    padding: 3px 20px !important;
+    font-size: 12px;
+    border-radius: 20px;
+    align-items: center;
+    color: #fff;
+    transition: all .2s ease-in-out;
+    line-height: 20px !important;
+}
+
+.modal .modal__container .footer button:not(.not-btn):focus,
+.modal .modal__container .footer button:not(.not-btn):focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px var(--active-color, #007bff);
+}
+
+.modal .modal__container.grade_pop:has(.rubric-mode) {
+    width: 80% !important;
+    max-width: 80%;
+}
+
+.modal .facebox-content.grade_pop {
+    width: 100% !important;
+}
+
+/* Kades edits */
+.modal .facebox-content label, .modal .facebox-content fieldset legend, .modal .labelGap {
+    font-weight: 600;
+}
+
+.modal .footer span {
+    font-size: 13px;
+}
+
+body.evo input[type="checkbox"]+label:before, input[type="radio"]+label:before {
+    border: 1px solid var(--input-border-color);
+}
+
+[data-theme="dark"] body.evo input[type="checkbox"]+label:before, [data-theme="dark"] input[type="radio"]+label:before {
+    background-color: #414147;
+}
+
+.modal .facebox-content .optionsRibbonTable_separate + table{
+    padding: 0px;
+}
+
+.modal .facebox-content .optionsRibbonTable_separate{
+    margin-bottom:10px;
+}
+
+.modal .facebox-content dl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0 !important;
+    padding: 0;
+}
+
+.modal .facebox-content .dl-item, .modal .facebox-content dl > dt {
+    flex: 0 0 calc(33.333% - 4px);
+    text-align: center;
+    background: var(--popup-widget-bg);
+    height: 139px;
+    padding: 10px;
+    position: relative;
+    border-radius: var(--main-border-r);
+    overflow: hidden;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.modal .facebox-content dt a, .modal .facebox-content dt a i {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal .facebox-content dd {
+    margin: 0;
+    font-size: 11px !important;
+    line-height: 14px;
+}
+
+
+.modal .facebox-content dt i {
+    font-size: 20px;
+    width: auto;
+    background: var(--bg-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    padding-top: 7px;
+    margin: 0 auto;
+    margin-bottom: 8px !important;
+    display: block;
+    box-shadow: var(--box-shadow);
+}
+.modal .facebox-content dl > dt {
+    padding-top: 17px;
+    margin: 0;
+}
+.modal .facebox-content .dl-item dt a:after, .modal .facebox-content dl > dt a:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.modal .facebox-content dl dt a:hover:after {
+    background: #0000000d;
+}
+.modal .facebox-content dl dt a{
+    color: var(--main-text-color) !important;
+}
+.facebox-content dl > dt + dd{
+    /* display: none; */
+    position: relative;
+    margin-top: 85px !important;
+    width: calc(33% - 6px);
+    margin-left: calc(-33% + 0px) !important;
+    text-align: center;
+}
+
+.modal .resource_popup aside ul li {
+    padding-left: 25px !important;
+}
+
+.modal .contentBlock .sideText .hc-limit-lines {
+    max-height: 48px;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.modal .help_centre .contentBlock {
+    border-radius: var(--main-border-r);
+    transition: all .4s ease-in-out;
+    background:var(--bg-color);
+    border:1px solid var(--bg-color);
+}
+
+.modal .help_centre form.search-form input{
+    background: var(--bg-color);
+}
+
+.modal .help_centre .contentBlock:hover{
+    background:var(--bg-color);
+    border-color: var(--active-color);
+}
+div.modal .modal__container:not(:last-child) {
+    z-index: 999;
+}
+
+.modal #coupon_apply_form a{
+    color: var(--main-text-color);
+    font-size:13px;
+    font-weight:500;
+}
+
+.modal #coupon_apply_form i{
+    line-height:16px;
+}
+
+#PeoplePicker .section-intro .contentBlock .sideImg img {
+    width: 100px;
+    height: auto;
+}
+
+
+.modal #PeoplePicker .tab-content > div {
+    padding: 0px 9px;
+}
+
+.modal .modal__container.video p{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.modal .modal__container.video .embed-container{
+    text-align: center;
+}
+
+
+/* News Settings */
+
+body.evo.ctr_home_news .modal form#feed_form dl {
+    display: block;
+}
+
+body.evo.ctr_home_news .modal form#feed_form dl > dt {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    display: block;
+    height: auto;
+    text-align: left;
+}
+
+body.evo.ctr_home_news .modal form#feed_form .facebox-content dl > dd {
+    display: inline-block;
+    margin-left: 0px;
+    margin-top: 10px !important;
+}
+
+body.evo.ctr_home_news .modal form#feed_form .facebox-content dl > dd label {
+    font-weight: 500;
+}
+
+
+/* Add Sections */
+body.evo .modal label[for="resource_description"] br {
+    display: none;
+}
+
+body.evo .modal #resource_form .options_btn {
+    background: var(--active-color);
+    color: #fff;
+    font-weight: 500;
+    padding: 5px 20px !important;
+    font-size: 12px;
+    border-radius: 20px;
+    align-items: center;
+    color: #fff;
+    transition: all .2s ease-in-out;
+    line-height: 20px !important;
+    border: 0px;
+}
+
+body.evo .modal #resource_form .options_btn i {
+    height: 20px;
+}
+
+body.evo .modal #resource_form .options_btn i::after {
+    color: #fff;
+}
+
+
+
+/* Dialog Boxes */
+
+body.evo .jconfirm .jconfirm-box, body.evo .popover-stack > .popover{
+    background: var(--popup-bg-container);
+    border-radius: var(--main-border-r);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    font-family:var(--font-primary);
+}
+
+body.evo .jconfirm .jconfirm-box .buttons{
+    background: var(--popup-bg-container);
+}
+
+
+body.evo .jconfirm .jconfirm-box div.content{
+    border-radius: var(--main-border-r);
+    min-height: auto;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0px;
+}
+
+body.evo .jconfirm .jconfirm-box div.title, body.evo .popover-stack .popover-header{
+    background:none;
+    font-size:18px;
+    color:var(--main-text-color);
+    font-weight:600;
+    font-family:var(--font-primary);
+    padding: 10px 0px;
+}
+
+body.evo .popover-stack .popover-header h2{
+    color:var(--main-text-color);
+}
+
+.jconfirm.white .jconfirm-box .buttons button.btn-default, body.evo .with-blocker.popover-stack .popover-footer button{
+    background: var(--active-color);
+    color: #fff;
+    font-weight: 500;
+    padding: 3px 20px !important;
+    font-size: 13px !important;
+    border-radius: 20px;
+    align-items: center;
+    color: #fff;
+    transition: all .2s ease-in-out;
+    line-height: 20px !important;
+}
+
+
+/* Kades Popup edits to be reviewed by Keenan */
+
+body.evo .modal .facebox-content dl > dt > a {
+    line-height: 13px;
+    overflow: visible;
+    white-space: pre-wrap;
+}
+
+.modal .facebox-content dt a, .modal .facebox-content dt a i {
+    line-height: 25px;
+}
+
+.modal .facebox-content .dl-item, .modal .facebox-content dl > dt{
+    height:150px;
+}
+
+.facebox-content dl > dt + dd{
+    margin-top:93px !important;
+}
+
+.modal nav.tabnav{
+    display: flex;
+    position: relative;
+}
+
+body.evo .modal .optionsRibbon ul li a i.add:after {
+    color: #fff;
+}
+
+
+
+
+/* Profile */
+
+body.evo.ctr_user .modal div#Uploader nav#helpTabs.tabnav {
+    display: inline-block;
+    height: 60px;
+}
+
+body.evo .modal #file_uploader_form .facebox-content #UploaderContainer {
+    border: 2px dashed var(--content-bg-color);
+    border-radius: 20px;
+}
+
+body.evo #file_uploader_form .facebox-content #UploaderContainer div{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+body.evo .modal #resources_file .uploader_filter_name {
+    padding: 5px 8px;
+    font-size: 14px;
+    width: auto;
+}
+
+
+
+/* Paths & Resources Library Popup */
+.modal div.facebox-resources-filter{
+    font-size:13px;
+}
+
+body.evo .modal #ResourceLibraryFilterWrapper .search-metadata {
+    background: var(--light-gray-bg);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--light-grey-text-color);
+    margin: 5px 0 10px 26px;
+    width: fit-content;
+}
+
+body.evo .modal #ResourceLibraryFilterWrapper .search-metadata i{
+    margin-top: 8px;
+}
+
+
+/* Lesson Filter Popup */
+
+body.evo[class*='_lesson'] .modal .filters-rules-wrapper select, body.evo .filters-rules-wrapper input{
+    height: 32px;
+    margin-right: 5px !important;
+}
+
+body.evo[class*='_lesson'] .modal .filters-wrapper .select2-container-multi .select2-choices .select2-search-choice{
+    line-height: 25px;
+    border-radius: 6px;
+    height: 28px;
+    margin: 2px;
+}
+
+body.evo[class*='_lesson'] .modal .filters-wrapper .select2-container-multi .select2-search-choice{
+    margin: 0px;
+}
+
+body.evo[class*='_lesson'] .modal .filters-wrapper .select2-container-multi .select2-search-choice div{
+    font-weight: 500;
+    font-size: 12px;
+}
+
+body.evo[class*='_lesson'] .modal .filters-wrapper .filters-and a {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 6px;
+    background: var(--active-color);
+    border-color: var(--active-color);
+}
+
+body.evo[class*='_lesson'] .modal .filters-wrapper .filters-and a span{
+    color: #fff;
+}
+
+body.evo[class*='_lesson'] .modal .filters-buttons i:after{
+    color: var(--main-text-color);
+    font-size: 12px;
+}
+
+body.evo[class*='_lesson'] .modal .filters-buttons a{
+    background-color: var(--bg-color);
+    border-radius: var(--border-r-rounded);
+    margin-right: 5px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+}
+
+body.evo[class*='_lesson'] .modal .filters-wrapper .filters-buttons{
+    border-right: 0px;
+}
+
+
+/* Resources */
+
+body.evo[class*="_library"] .modal .resource_popup.xl_popup{
+    max-width: 95%;
+    width: 70%;
+    box-shadow: none;
+    background-color: var(--content-bg-color);
+    border-radius: var(--main-border-r);
+}
+
+/* Add class popup */
+
+body.evo .modal #class_form .facebox-content p#duration label,
+body.evo .modal #class_form .facebox-content p:has(#lo_age):has(#hi_age) label {
+    width: 100%;
+}
+
+body.evo .modal #class_form .facebox-content #lo_age,
+body.evo .modal #class_form .facebox-content #hi_age {
+    width: 30%;
+    min-width: 200px;
+}
+
+/* Calendar */
+
+body.evo[class*="_calendar"] .modal .modal__container form#event_form .tox-editor-header {
+    position: relative !important;
+    top: 0px !important;
+}
+
+body.evo[class*="_calendar"] .modal .modal__container .optionsRibbon {
+    height: auto;
+}
+
+body.evo[class*="_calendar"] .modal .modal__container .optionsRibbon ul li {
+    padding: 5px;
+}
+
+body.evo[class*="_calendar"] .modal .modal__container .calendar_event {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+
+
+/* Vex Popups Notifications on Student Awards and Points*/
+body.evo .vex .vex-content .vex-header {
+    line-height: 44px;
+    font-size: 17px;
+    color: var(--main-text-color);
+    padding: 4px 19px;
+    width: calc(100% - 80px);
+    overflow: hidden;
+    height: 100%;
+    text-overflow: ellipsis;
+    background: transparent;
+    border: none;
+}
+
+body.evo .vex .vex-content .vex-close:before{
+    color: var(--main-text-color);
+}
+
+
+body.evo .vex .vex-content{
+    background: var(--popup-bg);
+    border-radius: var(--main-border-r);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+body.evo .vex .vex-content .vex-body{
+    background: var(--bg-color);
+    border-radius: var(--main-border-r);
+    box-shadow: var(--box-shadow);
+    padding: 10px;
+}
+
+
+body.evo .modal .modal__container.image__modal {
+    width: auto;
+}
+
+body.evo .modal .modal__container.image__modal .modal__content {
+    max-height: 80dvh;
+    overflow: hidden;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.evo .modal .modal__container.image__modal .modal__content img {
+    max-height: 80dvh;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Help Center API */
+
+.modal .help_centre .help_centre_content dl dd, .modal .help_centre .help_centre_content dl dt {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    overflow: visible;
+}
+
+
+.modal .help_centre .help_centre_content pre,
+.modal .help_centre .help_centre_content dl{
+    color: var(--main-text-color);
+    background: var(--content-bg-color);
+    border-radius: var(--main-border-r);
+    padding: 20px;
+    font-family: 'monospace', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+
+.modal .help_centre .help_centre_content dl dd, .modal .help_centre .help_centre_content dl dt{
+    color: var(--main-text-color);
+    background: var(--content-bg-color);
+    -webkit-line-clamp: unset;
+    overflow: visible;
+    white-space: unset;
+    height: auto;
+    text-align: left;
+    margin-top: 0px !important;
+    width: 100%;
+    margin-left: 0px !important;
+    padding-left:0px;
+    font-size: var(--font-size-medium) !important;
+    line-height: 20px;
+}
+
+.modal .help_centre .help_centre_content dl dd{
+    font-weight:var(--font-weight-light);
+}
+
+.modal .help_centre .help_centre_content dl{
+    color: var(--main-text-color);
+    display: inline-block;
+    font-family: 'monospace', Helvetica, Arial, sans-serif;
+}
+
+.modal .help_centre p > pre,
+.modal .help_centre p > pre code,
+.modal .help_centre li > pre code,
+.modal .help_centre dd > pre code,
+.modal .help_centre td > pre code,
+.modal .help_centre .help_centre_content pre code {
+    color: var(--main-text-color);
+    background: var(--content-bg-color);
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    max-width: 100%;
+    min-width: 100px;
+    font-size: 13px;
+    padding: 20px;
+    line-height: 1.75;
+    border-radius: 10px;
+    font-family: 'monospace', Helvetica, Arial, sans-serif;
+    font-weight:400;
+}
+
+.modal .help_centre pre:has(code){
+    margin-bottom: 10px;
+}
+
+.modal .help_centre .help_centre_content dl > dt{
+    width: 100%;
+}
+
+.modal .help_centre .help_centre_content dl {
+    margin-bottom: 20px !important;
+}
+
+
+body.evo .modal .optionsRibbon ul li:has(a) {
+    padding: 5px;
+}
+
+/* Help Center Mobile*/
+
+@media screen and (max-width: 1369px) {
+
+    body.evo .modal .modal__container.help_centre {
+        max-width: 90%;
+        width: 80%;
+        height: 90%;
+    }
+}
+
+
+@media screen and (max-width: 1025px) {
+
+    body.evo .modal .facebox-content.help_centre{
+        min-height: 95vh !important;
+    }
+
+    body.evo .modal .help_centre .help_centre_content{
+        padding:10px;
+    }
+
+    body.evo .modal .help_centre ul.inlineList.helpList{
+        margin:0px;
+    }
+
+    body.evo .modal #hc_content_selector .help_centre_heading h1 {
+        text-align: left;
+    }
+
+    body.evo .modal .help_centre .help_centre_heading {
+        padding: 10px;
+    }
+
+    body.evo .modal .help_centre .optionsRibbon ul li {
+        padding: 10px 5px;
+    }
+
+    body.evo .modal .help_centre .optionsRibbon{
+        height:70px;
+    }
+
+    body.evo .modal .help_centre .help_centre_heading{
+        margin-top:10px;
+    }
+
+    body.evo .modal .modal__container.help_centre {
+        max-width: 100%;
+        width: 100%;
+        height: 90%;
+    }
+
+    body.evo .modal .facebox-content.help_centre{
+        padding: 0px 0px 20px 0px !important;
+    }
+
+    body.evo .modal .help_centre .help_centre_heading {
+        height: 120px;
+        padding-bottom: 10px;
+    }
+
+    body.evo .modal .help_centre .optionsRibbon ul li{
+        padding: 5px 10px;
+    }
+
+    body.evo .modal .help_centre .optionsRibbon{
+        width: auto;
+        left: 0px;
+        top: 8px;
+        position: relative !important;
+        display: block;
+        height: 50px;
+    }
+
+    body.evo .modal .help_centre .help_centre_content{
+        max-height: 100% !important;
+        height: 100% !important;
+    }
+
+
+    body.evo .modal .help_centre_heading h1 {
+        display: block;
+        clear: both;
+        margin-top: 20px;
+        padding: 0px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .modal, .modal .modal__container{
+        width: 100%;
+        height: 100% !important;
+        top: 0;
+        border-radius: 0 !important;
+    }
+    .modal .modal__container{
+        animation: up-down .3s ease;
+    }
+    .modal .modal__container .modal__conten{
+        height: 100%;
+        padding-bottom: 0;
+        border-radius:15px;
+    }
+    .modal .modal__container.removing{
+        transform: translate3d(0, 100%, 0px);
+        transition: all .3s ease;
+    }
+    .modal .modal__container.grade_pop:has(.rubric-mode) {
+        width: 100% !important;
+        max-width: 100%;
+    }
+}
+
+body.evo #modal-1 .facebox-content .max_user_content_width {
+    padding: 0px;
+}
+
+/* People Picker */
+.modal #people_picker button.pp_add,
+.modal #people_picker button.pp_remove {
+    display: inline-block;
+    border: 0px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 12px;
+    background: transparent;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    text-align: center;
+    background-color: var(--active-color);
+    padding: 0;
+    margin: 0;
+}
+
+.modal #people_picker .pp_add i,
+.modal #people_picker .pp_remove i {
+    margin: 0 !important;
+}
+
+body.evo .modal #people_picker table tr th i {
+    font-size: 13px;
+}
+
+body.evo .modal #people_picker table tr th i:after{
+    color: #fff;
+}
+
+body.evo .tox-dialog-wrap button.tox-button.tox-button--secondary{
+    padding: 5px 15px;
+    display: inline-block;
+    border: 1px solid var(--button-border-color);
+    border-radius: 50px;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-small);
+    color: var(--button-color-2);
+    background: transparent;
+    font-family: var(--primary-font);
+}
+
+
+body.evo .tox .tox-button--icon, .tox .tox-button.tox-button--icon,
+.tox .tox-button.tox-button--secondary.tox-button--icon{
+    padding: 0px;
+}
+
+body.evo .tox-dialog {
+    background: var(--popup-bg) !important;
+    border-radius: var(--main-border-r) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.body.evo .tox #Uploader #dropzone{
+    background: var(--bg-color) !important;
+    border-radius: var(--main-border-r) !important;
+    box-shadow: var(--box-shadow)!important;
+    min-height: 180px;
+    margin-bottom: 10px;
+}
+
+/* Login facebox */
+#facebox:has(div.loginPopup) {
+    position: absolute;
+    z-index: 400;
+}
+
+
+body.evo.portal .header:not(.floater .header),
+body.evo.login .header {
+    width: 100%;
+    min-height: 44px;
+    position: relative;
+    margin: -10px 0 0;
+    padding: 10px 10px 3px;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 10;
+    border-radius: 8px 8px 0 0;
+}
+
+body.evo.portal .header h4,
+body.evo.login .header h4{
+    color: #fff;
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif !important;
+    padding: 0 0 7px 0;
+}
+
+body.evo.portal .close,
+body.evo.login .close{
+    width: 15px;
+    height: 15px;
+    background: url('../images/icons/icons.svg') no-repeat top right;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: 9px solid transparent;
+}
+
+body.evo.portal .loginOptions a,
+body.evo.login .loginOptions a{
+    color: var(--link-text-color);
+}
+
+body.evo.portal .difSignIn,
+body.evo.portal input[type="submit"],
+body.evo.portal input[type="button"],
+body.evo.portal button#submit_button{
+    background: var(--header-bg-color);
+}
+
+body.evo .modal .loginPopup #login_form #submit_button.in-progress .spinner {
+    filter: invert(1);
+}
+
+body.evo #facebox:has(div.loginPopup) + div#facebox_overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+body.evo .modal .facebox-content.loginPopup {
+    max-height: calc(100dvh - 150px);
+    box-shadow: unset;
+}
+
+body.evo .modal .facebox-content fieldset legend {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-medium);
+}
+
+body.evo .modal form#user_trash_popup .facebox-content i.refresh {
+    height: 15px;
+}
+
+body.evo .modal #user_trash_popup .optionsRibbon ul li {
+    padding: 10px 0px;
+}
+
+body.evo .modal .evo-popup-description{
+    display:none !important;
+}
+
+body.evo .vex.vex-theme-os .vex-content .vex-header h2 {
+    color: var(--main-text-color);
+    font-weight:var(--font-weight-bold);
+}
+
+
+body.evo .modal nav.tabnav:not(.bypass) .tabnav__tab:nth-last-child(3) a:before {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/* Onboarding Wizard */
+body.evo .get_started_wizard .wizard_nav button .wizard-menu-text,
+body.evo .get_started_wizard .wizard_nav button span{
+    font-size: .8rem;
+    font-weight: var(--font-weight-semibold);
+}
+
+body.evo .get_started_wizard .wizard_footer > *[excalibur-click] {
+    background: var(--active-color);
+    border: 1px solid var(--active-color);
+    color: #fff;
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-medium);
+}
+
+
+body.evo[class*="_onboarding"] .wizard_content .optionsRibbon{
+    width:auto;
+}
+
+body.evo.portal .modal .modal__container.loginPopup .modal__content button:not(.not-btn),
+body.evo.portal .modal .modal__container.loginPopup a,
+body.evo.loginPage .frmLogin#login_form .difSignIn:first-of-type,
+body.evo.loginPage .frmLogin .difSignIn{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+    height: 40px;
+    border-radius: var(--border-r-rounded);
+    text-align: center;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-medium) !important;
+    box-shadow: 0px 2px 6px 0px rgb(11 0 60 / 2%);
+    width:100%;
+}
+
+body.evo.portal .modal .modal__container.loginPopup a
+{
+    line-height: 33px;
+    background:var(--active-color);
+    color: #fff;
+    margin: 24px auto 0 !important;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-medium) !important;
+}
+
+body.evo.portal .modal .modal__container.loginPopup .frmLogin a:empty {
+    display: none;
+}
+
+body.evo.portal .modal .modal__container.loginPopup .frmLogin .info {
+    margin-bottom: 10px;
+}
+
+body.evo.portal .modal .modal__container.loginPopup .frmLogin .alert_block .alert_flex a {
+    background: transparent;
+    position: absolute;
+    top: -3px;
+    right: -1px;
+    width: auto;
+    padding: 3px;
+}
+
+body.evo.portal .modal .modal__container.loginPopup .frmLogin[data-active_window="password"] input#email {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px !important;
+    margin-bottom: 15px;
+}
+
+body.evo.loginPage .frmLogin#login_form .difSignIn:first-of-type,
+body.evo.loginPage #loginForm form#sso .difSignIn:not(:first-of-type){
+    line-height:40px;
+    margin-bottom:20px;
+    background:var(--button-bg-2);
+    color: #fff;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-medium) !important;
+}
+
+body.evo.loginPage .frmLogin .difSignIn{
+    color: #fff;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-medium) !important;
+    line-height:40px;
+}
+
+body.evo.loginPage #loginForm {
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+
+body.evo.loginPage #loginForm form#sso .difSignIn,
+body.evo.loginPage .frmLogin .difSignIn{
+    padding: 0px !important;
+    margin-top:0px;
+    margin-bottom:10px;
+    width:100%;
+}
+
+body.evo.loginPage #loginForm form#sso button {
+    width: 100%;
+}
+
+body.evo.loginPage #loginForm button{
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-medium) !important;
+    width: 100%;
+}
+
+body.evo.loginPage #loginForm button#submit_button {
+    margin-bottom: 10px;
+    background:var(--active-color, #24D3A5) !important;
+}
+
+body.evo.portal .modal .modal__container.loginPopup button#submit_button,
+body.evo.portal .modal .modal__container.loginPopup form#sso a.difSignIn:first-of-type
+{
+    background: var(--active-color) !important;
+    color: #fff;
+    border-color: var(--active-color);
+    opacity: 1;
+}
+
+body.evo.loginPage #loginForm{
+    max-height: 90dvh;
+    overflow-y: auto;
+}
+
+body.evo.loginPage #loginForm [data-active_window="credentials"] input[type="text"],
+body.evo.loginPage #loginForm [data-active_window="admin"] input[type="text"],
+body.evo.loginPage #loginForm input[type="password"],
+body.evo.loginPage #loginForm input#password, #facebox .frmLogin input[type="password"],
+body.evo.loginPage #loginForm input[type="text"]{
+    font-size: var(--font-size-small);
+    padding: 8px;
+    border-radius: 8px !important;
+    margin-bottom: 15px;
+}
+
+body.evo.loginPage #login_form input[type="text"]#userid{
+    margin-bottom:15px;
+}
+
+body.evo.loginPage #loginForm .frmLogin label[for="userid"],
+body.evo.loginPage #loginForm .frmLogin label[for="password"]{
+    color:var(--main-text-color);
+}
+
+body.evo.loginPage .loginOptions a{
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-medium);
+}
+
+body.evo.loginPage .loginOptions label[for="checkboxName"] span{
+    color:var(--main-text-color);
+}
+
+body.evo.portal .modal .modal__container.loginPopup .separator{
+    margin:5px 0px 15px 0px;
+}
+
+body.evo.portal .modal .modal__container.loginPopup .modal__content button:not(.not-btn),
+body.evo.loginPage #loginForm button:not(#submit_button)
+{
+    background: var(--bg-color) !important;
+    color: var(--main-text-color);
+    border: 1px solid var(--button-border-color);
+    color:var(--main-text-color);
+}
+
+body.evo.loginPage #loginForm button:not(#submit_button):hover{
+    background: var(--button-hover-bg-2);
+}
+
+body.evo.portal .modal .modal__container.loginPopup button:not(.not-btn) i:after {
+    line-height: 25px;
+}
+
+body.loginPage.evo .powered_by a {
+    color: #fff;
+    font-weight: var(--font-weight-semibold);
+}
+
+body.evo.portal .modal .modal__container.loginPopup button:not(.not-btn):hover
+{
+    filter: brightness(97%);
+}
+
+
+body.evo.portal .modal .modal__container.loginPopup #login_form .loginOptions a{
+    color: var(--link-color);
+    background: none;
+    padding:0px;
+    text-align: right;
+    line-height: normal;
+    height: auto;
+    margin-top:3px !important;
+    box-shadow: none;
+}
+
+body.evo.portal .modal .modal__container.loginPopup {
+    width: 25vw !important;
+    min-width: 400px;
+    position: fixed;
+}
+
+body.evo.portal .modal .modal__container.loginPopup .modal__content {
+    min-height: unset;
+}
+
+@media screen and (max-width: 768px) {
+    body.evo.portal .modal .modal__container.loginPopup {
+        min-width: auto;
+        width: 100% !important;
+    }
+}
+
+body.evo.portal .modal .modal__container.loginPopup form#login_form label {
+    display: block;
+    width: auto;
+}
+
+body.evo.portal .modal .modal__container.loginPopup form#login_form input,
+body.evo.portal .modal__container.loginPopup form.frmLogin input{
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px !important;
+    margin-bottom: 15px;
+}
+
+body.evo.portal .modal .modal__container.loginPopup .loginOptions {
+    margin: 10px 0 30px 0;
+    display: flex;
+    align-items: start;
+    font-size: var(--font-size-small);
+}
+
+body.evo.portal .modal .modal__container.loginPopup form#login_form .loginOptions label {
+    width: 80% !important;
+}
+
+body.evo.portal .modal .modal__container.loginPopup .loginOptions label span {
+    font-weight: var(--font-weight-medium);
+}
+
+body.evo.portal .modal .modal__container.loginPopup a.difSignIn,
+body.evo.loginPage #loginForm form#sso .difSignIn:not(:first-of-type){
+    background: var(--button-bg-2);
+    opacity: .9;
+}
+
+body.evo.portal .modal .modal__container.loginPopup a.difSignIn:hover,
+body.evo.loginPage #loginForm form#sso .difSignIn:not(:first-of-type):hover{
+    opacity: 1;
+}
+
+
+body.evo.portal .modal .modal__container.loginPopup button_btn i,
+body.evo.loginPage #loginForm button i,
+body.evo.portal .modal .modal__container.loginPopup button i{
+    margin-top: 0px;
+    vertical-align: middle;
+    width: auto;
+    height: auto;
+    font-size: 18px;
+}
+
+body.evo.portal .modal .modal__container.loginPopup button i:after {
+    vertical-align: middle;
+}
+
+body.evo.portal .modal .modal__container.loginPopup button#google_apps_btn i:not(.rotateClockwiseThick):after,
+body.evo.loginPage #loginForm button#google_apps_btn i:after
+{
+    font-family: 'Font Awesome 5 Brands';
+}
+
+body.evo.portal .modal .modal__container.loginPopup button#saml2_btn i:after,
+body.evo.loginPage #loginForm button#saml2_btn i:after{
+    color: #57286f;
+}
+
+body.evo.portal .modal .modal__container.loginPopup button#clever_btn i:after,
+body.evo.loginPage #loginForm button#clever_btn i:after
+{
+    color: #27548c;
+    content: '\e266';
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 800;
+}
+
+body.evo.portal .modal .modal__container.loginPopup button#google_apps_btn i:after,
+body.evo.loginPage #loginForm button#google_apps_btn i:after{
+    color: #c33b2b;
+    content:'\f1a0';
+}
+
+body.evo.portal .modal .modal__container.loginPopup button#office365_sso_btn i:after,
+body.evo.loginPage #loginForm button#office365_sso_btn i:after{
+    color: #0067B8;
+}
+
+body.evo.portal .modal .modal__container.loginPopup button i.rotateClockwiseThick,
+body.evo.loginPage #loginForm button i.rotateClockwiseThick{
+    display:none;
+}
+
+body.evo.loginPage #loginForm a.difSignIn i{
+    display:none;
+}
+
+body.evo .modal .facebox-content span#star_rating label {
+    width: auto;
+}
+
+/* Specific and targeted popup settings */
+
+body.evo .modal .modal__container:has(.facebox-content.gradebook-export-popup) {
+    max-width: 500px;
+}
+
+
+body.evo .modal .modal__container:has(.alert_block[role="alert"]) .facebox-content:not(.loginPopup) {
+    max-height: calc(100dvh - 300px) !important;
+}
+
+body.evo .modal .modal__container:has(.facebox-content.add-assignment) {
+    max-width: 700px !important;
+}
+
+body.evo .modal .modal__container .facebox-content.assignment_pop {
+    max-height: calc(100dvh - 220px) !important;
+}
+
+body.evo .modal .modal__container:has(.alert_block[role="alert"]) .facebox-content.assignment_pop {
+    max-height: calc(100dvh - 300px) !important;
+}
+
+/* Reports */
+body.evo .ui-datepicker .ui-datepicker-buttonpane button {
+    background: var(--active-color);
+    border-radius: 50px;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-small);
+    padding: 0px 10px;
+    font-family: var(--font-family);
+}
+/* RTL */
+[dir="RTL"] .modal .section-intro .contentBlock .sideText p:not(.number) {
+    padding-left: 0px;
+    padding-right: 50px;
+}
+
+[dir="RTL"] .modal #PeoplePicker .tab-content.first {
+    float: right !important;
+}
+
+[dir="RTL"] body.evo .modal #people_picker table tr th i{
+    height:25px;
+}
+
+[dir="RTL"] .modal #PeoplePicker .tab-content.first {
+    float: right !important;
+}
+
+[dir="RTL"] body.evo .modal #people_picker table tr th i{
+    height:25px;
+}
+
+body.evo .modal .facebox-content .rule_class_name {
+    margin: 6px 0 0 0 !important;
+}
+
+body.evo .modal #level_form .facebox-content p > input:not(:has(+ *)) {
+    width: auto;
+}
+
+body.evo .modal #report_form .report-popup select {
+    width: 20%;
+}
+
+body.evo .modal #report_form .report-popup label {
+    width: 130px;
+}
+
+body.evo .modal input,
+body.evo .modal select,
+body.evo .modal textarea{
+    font-size: var(--font-size-medium);
+}
+
+body:not(.portal):not(.edu2) .modal .facebox-content .multiSelectOptions label {
+    font-size: var(--font-size-medium);
+}
+
+
+body.evo.portal.public_profile .modal header {
+    height: 50px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+body.evo.portal.public_profile .modal header .modal__title {
+    padding: 0.5rem;
+}
+
+body.evo.portal.public_profile .modal .langForm .facebox-content {
+    overflow-y: visible;
+}
+
+body.evo #post_form .facebox-content label[for="posting_allow_comments"],
+body.evo #post_form .facebox-content label[for="notification"] {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+/* Temporary Tailwind holder */
+.tw-btn {
+    background-color: var(--active-color) !important;
+    color: var(--text-white) !important;
+  }
+  
+.tw-btn .refresh::after {
+    color: var(--text-white) !important;
+}
+
+/* ===== Course Creation Wizard ===== */
+
+.modal .ccw-popup-wide { width: 680px; }
+.modal__container:has(.ccw-popup-wide) { max-width: 680px; }
+/* Width must not transition: the shell is flex-centred, so animating it re-centres
+   every frame and drifts the content. Step motion is the translateX on .ccw-step. */
+
+.ccw-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    /* Scroll overflow inside the cards area so the modal height and footer stay put. */
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    /* Natural row height, else a step with fewer cards stretches its tiles. */
+    align-content: start;
+    grid-auto-rows: min-content;
+}
+
+/* Two cards at the 3-column tile size, left-aligned so they do not drift centre. */
+.ccw-cards.ccw-cards--pair {
+    grid-template-columns: repeat(2, minmax(0, calc((100% - 1.5rem) / 3)));
+    justify-content: start;
+}
+
+
+.ccw-card {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 1rem 0.85rem;
+    border: 2px solid var(--main-border-color, #ededf3);
+    border-radius: var(--radius-border-md, 0.8rem);
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    background: var(--light-gray-bg, #f3f4f9);
+    position: relative;
+}
+.ccw-card:hover {
+    border-color: var(--input-border-color, #e1e1eb);
+    background: var(--hover-color, #f8f8fc);
+}
+.ccw-card.active {
+    border-color: var(--active-color, #24D3A5);
+    background: var(--popup-bg, #fff);
+    box-shadow: var(--box-shadow-hover, 0px 5px 6px 0px rgb(11 0 60 / 8%));
+}
+.ccw-card:focus-visible {
+    outline: 2px solid var(--active-color, #24D3A5);
+    outline-offset: 2px;
+}
+
+#ccw-container .ccw-card {
+    display: flex;
+    height: auto;
+    line-height: normal;
+    padding: 1.5rem 1rem 1.25rem;
+    margin: 0;
+}
+#ccw-container .ccw-card--row {
+    padding: 0.75rem 1rem;
+}
+
+.ccw-card-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 50%;
+    background: var(--popup-bg, #fff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    box-shadow: var(--box-shadow, 0px 5px 6px 0px rgb(11 0 60 / 4%));
+    overflow: hidden;
+}
+.ccw-card-icon i {
+    line-height: 1;
+}
+.ccw-step .ccw-card-icon i,
+.ccw-step .ccw-card-icon i:after {
+    height: 20px;
+    width: 20px;
+    margin-top: 1px;
+}
+.ccw-card-icon svg {
+    width: 22px;
+    height: 22px;
+}
+.ccw-card.active .ccw-card-icon {
+    box-shadow: var(--box-shadow-hover, 0px 5px 6px 0px rgb(11 0 60 / 8%));
+}
+
+.ccw-card-title {
+    font-weight: 700;
+    font-size: var(--font-size-large, 0.9rem);
+    color: var(--main-text-color, #0f0f0f);
+    margin: 0 0 0.35rem;
+    line-height: 1.3;
+}
+
+.ccw-cards:not(.ccw-cards--list) .ccw-card-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(var(--font-size-large, 0.9rem) * 1.3 * 2);
+}
+
+.ccw-card-desc {
+    font-size: var(--font-size-small, 0.75rem);
+    color: var(--color-gray-accessible, #575F7A);
+    line-height: 1.35;
+    margin: 0;
+}
+
+/* Reserve two description lines so cards match height when one wraps further. */
+.ccw-cards:not(.ccw-cards--list) .ccw-card-desc {
+    min-height: calc(var(--font-size-small, 0.75rem) * 1.35 * 2);
+}
+
+
+.ccw-footer {
+    padding: 1.25rem 0 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.25rem;
+}
+.modal .ccw-footer button.button1 {
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 8px 20px !important;
+    line-height: 1;
+}
+.ccw-footer button.button1 span {
+    color: var(--text-white) !important;
+}
+.ccw-footer .button1:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+.modal .modal__container .ccw-footer button {
+    height: 30px;
+}
+
+/* ---- Step indicator (stepper) ---- */
+.ccw-stepper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin: 0 0 1.5rem;
+    padding: 0 1rem;
+}
+.ccw-stepper-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    flex-shrink: 0;
+}
+.ccw-stepper-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: 2px solid var(--main-border-color, #ededf3);
+    color: var(--color-gray, #757D9E);
+    background: var(--popup-bg, #fff);
+    transition: all 0.3s ease;
+}
+.ccw-stepper-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--color-gray, #757D9E);
+    transition: all 0.3s ease;
+}
+.ccw-stepper-line {
+    flex: 1;
+    height: 2px;
+    background: var(--main-border-color, #ededf3);
+    margin: 0 0.5rem;
+    margin-bottom: 1.5rem;
+    transition: background 0.3s ease;
+    min-width: 40px;
+}
+.ccw-stepper-line--active {
+    background: var(--active-color, #24D3A5);
+}
+.ccw-stepper-step--active .ccw-stepper-circle {
+    border-color: var(--active-color, #24D3A5);
+    background: var(--active-color, #24D3A5);
+    color: var(--text-white, #fff);
+}
+.ccw-stepper-step--active .ccw-stepper-label {
+    color: var(--main-text-color, #0f0f0f);
+    font-weight: 700;
+}
+.ccw-stepper-step--completed .ccw-stepper-circle {
+    border-color: var(--active-color, #24D3A5);
+    background: var(--active-color, #24D3A5);
+    color: var(--text-white, #fff);
+}
+.ccw-stepper-step--completed .ccw-stepper-label {
+    color: var(--active-color, #24D3A5);
+}
+
+/* ---- Step container & transitions ---- */
+.ccw-steps {
+    position: relative;
+    overflow: hidden;
+}
+.ccw-step {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* Fill vertically so the footer sits at the bottom, not under short content. */
+    display: flex;
+    flex-direction: column;
+    height: 440px;
+}
+#ccw-step-3.ccw-step {
+    height: auto;
+}
+.ccw-step > .ccw-footer,
+.ccw-step > form > .ccw-footer {
+    margin-top: auto;
+}
+/* Step 3 content is inside a <form>; extend the flex column into it. */
+.ccw-step > form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.ccw-step--active {
+    transform: translateX(0);
+    opacity: 1;
+    position: relative;
+}
+.ccw-step--before {
+    transform: translateX(60px);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+.ccw-step--after {
+    transform: translateX(-60px);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+/* ---- Step 1: Row-style cards ---- */
+.ccw-cards--list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.ccw-card--row {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 0.75rem 1rem;
+}
+.ccw-card--row .ccw-card-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    margin-bottom: 0;
+    margin-right: 0.85rem;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+.ccw-card--row .ccw-card-icon svg {
+    width: 20px;
+    height: 20px;
+}
+.ccw-card--row .ccw-card-text {
+    flex: 1;
+    min-width: 0;
+}
+.ccw-card--row .ccw-card-title {
+    margin: 0 0 0.15rem;
+}
+.ccw-card--row .ccw-card-desc {
+    margin: 0;
+}
+
+/* ---- Back button ---- */
+.modal .ccw-back,
+.modal .ccw-back:hover,
+.modal .ccw-back:focus {
+    margin-right: auto;
+    font-size: var(--font-size-medium, 0.85rem);
+    font-weight: var(--font-weight-semibold, 600);
+    color: var(--main-text-color, #0f0f0f);
+    text-decoration: none;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.4rem 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+.modal .ccw-back i {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+}
+
+.ccw-footer .copilot-prompt {
+    margin: 0;
+    display: inline-flex !important;
+    align-items: center;
+    vertical-align: middle;
+    line-height: normal !important;
+}
+
+[dir="rtl"] .ccw-card--row {
+    text-align: right;
+}
+
+[dir="rtl"] .ccw-card--row .ccw-card-icon {
+    margin-right: 0;
+    margin-left: 0.85rem;
+}
+
+[dir="rtl"] .modal .ccw-back {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+[dir="rtl"] .modal .ccw-back i {
+    transform: scaleX(-1);
+}
+
+[dir="rtl"] .ccw-step--before {
+    transform: translateX(-60px);
+}
+[dir="rtl"] .ccw-step--after {
+    transform: translateX(60px);
+}
+
+/* ---- Mobile ---- */
+@media screen and (max-width: 767px) {
+    .modal .ccw-popup-wide { 
+        width: 100%;
+    }
+    
+    .modal__container:has(.ccw-popup-wide) { 
+        max-width: 100%;
+    }
+
+    .ccw-steps {
+        height: auto
+    }
+
+    .ccw-step { 
+        height: min(450px, 72dvh);
+    }
+
+    #ccw-step-3.ccw-step {
+        height: auto;
+    }
+    
+    .ccw-cards,
+    .ccw-cards.ccw-cards--pair { 
+        grid-template-columns: 1fr;
+    }
+
+    #ccw-step-2 .ccw-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ccw-footer .copilot-prompt label {
+        max-width: 120px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}

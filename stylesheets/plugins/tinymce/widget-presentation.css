@@ -1,0 +1,1649 @@
+/* ========================================
+   WIDGET PRESENTATION STYLES
+   
+   These styles are for widget display in both:
+   - TinyMCE editor (with admin controls)
+   - Student view (without admin controls)
+   
+   Admin-only controls are in widget-editor-controls.css
+   - Admin controls or toolbars
+   - Editor-specific hover states
+   - Placeholders or editing hints
+   - Component badges or context menus
+   
+   Created: 2025-12-17
+   ======================================== */
+
+/* Theme variables - inherit from parent (body.evo) which has the school's theme colors.
+   We don't set --active-color here so it inherits from body.evo's theme.
+   The fallback values in var() calls throughout this file handle cases where
+   the variable isn't defined. */
+
+/* NOTE: Lesson builder CSS variables are defined in
+   tinymce-custom-components.css as the single source of truth
+   for all views (editor, preview, saved). */
+
+/* Hide admin-only elements in student/preview view */
+.drag-handle {
+    display: none !important;
+}
+
+/* Empty/zero-height table rows collapse on reload — beat the inline
+   height:0 saved by TinyMCE and give empty cells visible content height. */
+tr[style*="height: 0"],
+td[style*="height: 0"],
+th[style*="height: 0"] {
+    height: auto !important;
+}
+td:empty::after,
+th:empty::after {
+    content: "\200B";
+}
+
+/* ========================================
+   WIDGET SPACING (Saved/Student View)
+   ======================================== */
+
+.ui-component {
+    margin: 20px 0;
+}
+
+.ui-component + .ui-component {
+    margin-top: 30px;
+}
+
+.grid-cell > .ui-component,
+.flex-column > .ui-component {
+    margin: 0 !important;
+}
+
+.grid-cell > .ui-component + .ui-component,
+.flex-column > .ui-component + .ui-component {
+    margin-top: 0 !important;
+}
+
+/* ========================================
+   BASE TYPOGRAPHY
+   ======================================== */
+
+body,
+.preview-content,
+#lesson-preview,
+.widget-view-mode {
+    font-family: var(--primary-font, 'Poppins', sans-serif) !important;
+    font-size: 13.6px !important;
+    font-weight: 400 !important;
+    line-height: 1.5;
+    color: var(--main-text-color, #1d1d1f);
+    letter-spacing: -0.022em;
+}
+
+.preview-content,
+#lesson-preview {
+    background: var(--content-bg-color, #ffffff);
+    padding: 20px !important;
+}
+
+/* Prevent global b/strong rules from overriding font in lesson content areas */
+.preview-content b, .preview-content strong,
+#lesson-preview b, #lesson-preview strong,
+.widget-view-mode b, .widget-view-mode strong {
+    font-family: inherit;
+    font-weight: bold;
+}
+
+/* Match TinyMCE body text to editor — overrides evo.css and default-styles.css */
+.preview-content p,
+.preview-content li,
+#lesson-preview p,
+#lesson-preview li,
+.widget-view-mode p,
+.widget-view-mode li,
+body.evo .micro-card-container .micro-card .materialStyle > p,
+body.evo[class*="_lesson"] #mainContent #centreColumn p {
+    font-size: 13.6px !important;
+}
+
+/* Default line height, but respect user-applied inline line-height from TinyMCE */
+.preview-content p:not([style*="line-height"]),
+.preview-content li:not([style*="line-height"]),
+#lesson-preview p:not([style*="line-height"]),
+#lesson-preview li:not([style*="line-height"]),
+.widget-view-mode p:not([style*="line-height"]),
+.widget-view-mode li:not([style*="line-height"]),
+body.evo .micro-card-container .micro-card .materialStyle > p:not([style*="line-height"]),
+body.evo[class*="_lesson"] #mainContent #centreColumn p:not([style*="line-height"]) {
+    line-height: 1.5 !important;
+}
+
+.preview-content .ui-component p,
+#lesson-preview .ui-component p,
+.widget-view-mode .ui-component p {
+    font-family: var(--primary-font, 'Poppins', sans-serif) !important;
+    font-size: 13.6px !important;
+    font-weight: 400 !important;
+    margin: 0;
+}
+
+.preview-content .flipbox-content p,
+#lesson-preview .flipbox-content p,
+.widget-view-mode .flipbox-content p {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Paragraph spacing in lesson content and edit view */
+.preview-content p,
+#lesson-preview p,
+.widget-view-mode p,
+.mce-content-body p {
+    margin: 0.65rem 0 !important;
+}
+
+/* No extra spacing between paragraphs inside flipbox */
+.preview-content .flipbox-content p + p,
+#lesson-preview .flipbox-content p + p,
+.widget-view-mode .flipbox-content p + p,
+.mce-content-body .flipbox-content p + p {
+    margin: 0 !important;
+}
+
+/* Heading sizes for saved view — override evo.css page-level heading rules */
+#lesson-preview h1, .widget-view-mode h1 { font-size: 25px !important; }
+#lesson-preview h2, .widget-view-mode h2 { font-size: 21px !important; }
+#lesson-preview h3, .widget-view-mode h3 { font-size: 19px !important; }
+#lesson-preview h4, .widget-view-mode h4 { font-size: 17px !important; }
+#lesson-preview h5, .widget-view-mode h5 { font-size: 16px !important; }
+#lesson-preview h6, .widget-view-mode h6 { font-size: 13px !important; }
+
+#lesson-preview h1, #lesson-preview h2, #lesson-preview h3,
+#lesson-preview h4, #lesson-preview h5, #lesson-preview h6,
+.widget-view-mode h1, .widget-view-mode h2, .widget-view-mode h3,
+.widget-view-mode h4, .widget-view-mode h5, .widget-view-mode h6 {
+    font-weight: 600 !important;
+    color: var(--main-text-color, #0f0f0f) !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Match TinyMCE heading styles (scoped to widgets only) */
+.preview-content .ui-component h1,
+.preview-content .ui-component h2,
+.preview-content .ui-component h3,
+.preview-content .ui-component h4,
+.preview-content .ui-component h5,
+.preview-content .ui-component h6,
+#lesson-preview .ui-component h1,
+#lesson-preview .ui-component h2,
+#lesson-preview .ui-component h3,
+#lesson-preview .ui-component h4,
+#lesson-preview .ui-component h5,
+#lesson-preview .ui-component h6,
+.widget-view-mode .ui-component h1,
+.widget-view-mode .ui-component h2,
+.widget-view-mode .ui-component h3,
+.widget-view-mode .ui-component h4,
+.widget-view-mode .ui-component h5,
+.widget-view-mode .ui-component h6 {
+    font-family: var(--primary-font, 'Poppins', sans-serif) !important;
+    margin: 0 !important;
+    padding-top: 0 !important;
+}
+
+.preview-content .ui-component h3:not([style*="line-height"]),
+#lesson-preview .ui-component h3:not([style*="line-height"]),
+.widget-view-mode .ui-component h3:not([style*="line-height"]) {
+    line-height: 1.2 !important;
+}
+
+/* Hide <br> immediately after a heading in widget areas */
+.preview-content .ui-component h1 + br,
+.preview-content .ui-component h2 + br,
+.preview-content .ui-component h3 + br,
+.preview-content .ui-component h4 + br,
+.preview-content .ui-component h5 + br,
+.preview-content .ui-component h6 + br,
+#lesson-preview .ui-component h1 + br,
+#lesson-preview .ui-component h2 + br,
+#lesson-preview .ui-component h3 + br,
+#lesson-preview .ui-component h4 + br,
+#lesson-preview .ui-component h5 + br,
+#lesson-preview .ui-component h6 + br,
+.widget-view-mode .ui-component h1 + br,
+.widget-view-mode .ui-component h2 + br,
+.widget-view-mode .ui-component h3 + br,
+.widget-view-mode .ui-component h4 + br,
+.widget-view-mode .ui-component h5 + br,
+.widget-view-mode .ui-component h6 + br {
+    display: none;
+}
+
+/* Card header title should keep its smaller size in preview */
+.preview-content .card-header h3,
+#lesson-preview .card-header h3,
+.widget-view-mode .card-header h3 {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
+
+.preview-content .card-header h3:not([style*="line-height"]),
+#lesson-preview .card-header h3:not([style*="line-height"]),
+.widget-view-mode .card-header h3:not([style*="line-height"]) {
+    line-height: 1.5 !important;
+}
+
+/* Tab header should keep consistent font size across all views */
+.preview-content .tab-header,
+#lesson-preview .tab-header,
+.widget-view-mode .tab-header {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.003em !important;
+}
+
+/* Tab content h3 should keep its smaller size across all views */
+.preview-content .tab-content h3,
+#lesson-preview .tab-content h3,
+.widget-view-mode .tab-content h3 {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
+
+.preview-content .tab-content h3:not([style*="line-height"]),
+#lesson-preview .tab-content h3:not([style*="line-height"]),
+.widget-view-mode .tab-content h3:not([style*="line-height"]) {
+    line-height: 1.5 !important;
+}
+
+/* ========================================
+   ACCORDION COMPONENT
+   ======================================== */
+
+.ui-accordion {
+    border: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.1));
+    border-radius: 12px;
+    margin: 1rem 0;
+    overflow: hidden;
+    background: var(--popup-bg, rgba(255, 255, 255, 0.8));
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.05));
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    background: transparent;
+    padding: 16px 24px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--main-text-color);
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    letter-spacing: -0.003em;
+    gap: 8px;
+}
+
+.accordion-header i {
+    color: var(--active-color);
+    font-size: 14px;
+    width: 16px;
+    text-align: center;
+}
+
+.accordion-content {
+    padding: 16px 24px 24px;
+    background: transparent;
+    display: none;
+    transition: all 0.3s ease;
+    color: var(--main-text-color);
+}
+
+.accordion-content.active {
+    display: block;
+}
+
+.accordion-arrow {
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: -moz-transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    color: var(--active-color);
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.accordion-header.active {
+    background: var(--active-color-bg-light, rgba(0, 122, 255, 0.06));
+    box-shadow: inset 3px 0 0 var(--active-color, #007aff);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.accordion-header.active .accordion-arrow {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+/* ========================================
+   TABS COMPONENT
+   ======================================== */
+
+.ui-tabs {
+    border: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.1));
+    border-radius: 12px;
+    margin: 1rem 0;
+    overflow: hidden;
+    background: var(--popup-bg, rgba(255, 255, 255, 0.8));
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.tab-headers {
+    display: flex;
+    background: var(--content-bg-color, rgba(0, 0, 0, 0.02));
+    border-bottom: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.05));
+}
+
+.tab-header {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    border-right: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.05));
+    background: transparent;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 500;
+    color: var(--light-grey-text-color, #86868b);
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-size: 14px;
+    letter-spacing: -0.003em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.tab-header i {
+    color: var(--active-color);
+    font-size: 12px;
+}
+
+.tab-header:last-child {
+    border-right: none;
+}
+
+.tab-header.active {
+    background: transparent;
+    color: var(--active-color);
+    position: relative;
+}
+
+.tab-header.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--active-color);
+}
+
+.ui-tabs .tab-content {
+    padding: 1.5rem .5rem;
+    background: transparent;
+    display: none;
+    line-height: 1.5;
+    color: var(--main-text-color, #1d1d1f);
+}
+
+.ui-tabs .tab-content.active {
+    display: block;
+}
+
+/* Ensure tab content padding in preview and saved view */
+.preview-content .tab-content,
+#lesson-preview .tab-content,
+.ui-tabs .tab-content {
+    padding: 24px 8px !important;
+}
+
+/* Responsive tabs inside grid cells and columns —
+   equal-width columns via CSS Grid; overflow rows match the width above */
+.grid-cell .ui-tabs .tab-headers,
+.flex-column .ui-tabs .tab-headers,
+.column .ui-tabs .tab-headers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+}
+
+.grid-cell .ui-tabs .tab-header,
+.flex-column .ui-tabs .tab-header,
+.column .ui-tabs .tab-header {
+    padding: 10px 8px;
+    font-size: 13px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Hide grid and column borders/backgrounds in saved view (not in editor) */
+body:not(.lesson-builder-active) .grid-cell,
+body:not(.lesson-builder-active) .flex-column {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Allow box shadows on nested widgets to display without clipping in saved view */
+body:not(.lesson-builder-active) .flex-columns,
+body:not(.lesson-builder-active) .flex-column {
+    overflow: visible !important;
+}
+
+/* Dark mode - still transparent in saved view */
+[data-theme="dark"] body:not(.lesson-builder-active) .grid-cell,
+[data-theme="dark"] body:not(.lesson-builder-active) .flex-column,
+body[data-theme="dark"]:not(.lesson-builder-active) .grid-cell,
+body[data-theme="dark"]:not(.lesson-builder-active) .flex-column {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Hide icons in saved view */
+body:not(.lesson-builder-active) .card-header i,
+body:not(.lesson-builder-active) .tab-header i,
+body:not(.lesson-builder-active) .accordion-header i {
+    display: none !important;
+}
+
+/* ========================================
+   CARD COMPONENT
+   ======================================== */
+
+.ui-card {
+    border: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.1));
+    border-radius: 12px;
+    margin: 1rem 0;
+    overflow: hidden;
+    background: var(--popup-bg, rgba(255, 255, 255, 0.8));
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.ui-card[data-type="info"] {
+    border-left: 3px solid var(--active-color);
+}
+
+.ui-card[data-type="warning"] {
+    border-left: 3px solid #ff3b30;
+}
+
+.ui-card[data-type="success"] {
+    border-left: 3px solid #34c759;
+}
+
+.ui-card[data-type="danger"] {
+    border-left: 3px solid #ff3b30;
+}
+
+.card-header {
+    background: var(--content-bg-color, rgba(0, 0, 0, 0.02));
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.05));
+}
+
+.card-header h3 {
+    margin: 0;
+    color: var(--main-text-color);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.003em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-header h3 i {
+    color: var(--active-color);
+    font-size: 16px;
+}
+
+.card-content {
+    padding: 1.5rem;
+    background: transparent;
+    line-height: 1.5;
+    color: var(--main-text-color);
+}
+
+/* ========================================
+   CALLOUT COMPONENT
+   ======================================== */
+
+.ui-callout {
+    margin: 1rem 0;
+    position: relative;
+}
+
+.callout-container {
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 3px solid;
+    position: relative;
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    line-height: 1.5;
+    display: block;
+}
+
+.callout-container i {
+    display: none !important;
+}
+
+/* New teacher-focused callout types */
+.callout-container[data-type="tip"],
+.ui-callout .callout-container[data-type="tip"] {
+    background: rgba(var(--active-color-hover, 36, 211, 165), 0.1);
+    border-color: var(--active-color);
+    color: var(--main-text-color);
+}
+
+.callout-container[data-type="note"],
+.ui-callout .callout-container[data-type="note"] {
+    background: var(--lb-highlight-bg, rgba(0, 122, 255, 0.1));
+    border-color: #007aff;
+    color: var(--main-text-color);
+}
+
+.callout-container[data-type="warning"],
+.ui-callout .callout-container[data-type="warning"] {
+    background: rgba(255, 59, 48, 0.1);
+    border-color: #ff3b30;
+    color: var(--main-text-color);
+}
+
+.callout-container[data-type="example"],
+.ui-callout .callout-container[data-type="example"] {
+    background: rgba(52, 199, 89, 0.1);
+    border-color: #34c759;
+    color: var(--main-text-color);
+}
+
+/* Backwards compatibility - map old types to new types */
+.callout-container[data-type="info"],
+.ui-callout .callout-container[data-type="info"] {
+    background: rgba(var(--active-color-hover, 36, 211, 165), 0.1);
+    border-color: var(--active-color);
+    color: var(--main-text-color);
+}
+
+.callout-container[data-type="success"],
+.ui-callout .callout-container[data-type="success"] {
+    background: rgba(52, 199, 89, 0.1);
+    border-color: #34c759;
+    color: var(--main-text-color);
+}
+
+.callout-container[data-type="danger"],
+.ui-callout .callout-container[data-type="danger"] {
+    background: rgba(255, 59, 48, 0.1);
+    border-color: #ff3b30;
+    color: var(--main-text-color);
+}
+
+.callout-content {
+    margin: 0;
+}
+
+.callout-content p {
+    margin: 0 0 1rem 0;
+    color: inherit;
+    line-height: 1.5;
+}
+
+.callout-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Dark mode - More opaque callout backgrounds */
+/* Tip/Info use the active/accent color (inherits from theme) */
+[data-theme="dark"] .callout-container[data-type="tip"],
+[data-theme="dark"] .callout-container[data-type="info"],
+[data-theme="dark"] .ui-callout .callout-container[data-type="tip"],
+[data-theme="dark"] .ui-callout .callout-container[data-type="info"] {
+    background: var(--active-color-bg-light, rgba(213, 68, 7, 0.2)) !important;
+}
+
+/* Note uses blue */
+[data-theme="dark"] .callout-container[data-type="note"],
+[data-theme="dark"] .ui-callout .callout-container[data-type="note"] {
+    background: rgba(0, 122, 255, 0.2) !important;
+}
+
+[data-theme="dark"] .callout-container[data-type="warning"],
+[data-theme="dark"] .ui-callout .callout-container[data-type="warning"] {
+    background: rgba(255, 59, 48, 0.25) !important;
+}
+
+[data-theme="dark"] .callout-container[data-type="example"],
+[data-theme="dark"] .callout-container[data-type="success"],
+[data-theme="dark"] .ui-callout .callout-container[data-type="example"],
+[data-theme="dark"] .ui-callout .callout-container[data-type="success"] {
+    background: rgba(52, 199, 89, 0.25) !important;
+}
+
+[data-theme="dark"] .callout-container[data-type="danger"],
+[data-theme="dark"] .ui-callout .callout-container[data-type="danger"] {
+    background: rgba(255, 59, 48, 0.25) !important;
+}
+
+/* ========================================
+   TIMELINE COMPONENT
+   ======================================== */
+
+.ui-timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin: 1rem 0;
+}
+
+.ui-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--active-color, #24D3A5), rgba(var(--active-color-hover, 36, 211, 165), 0.3));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -0.5rem;
+    top: 0.5rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--active-color);
+    border: 2px solid var(--content-bg-color, #f5f5f7);
+    box-shadow: 0 2px 8px var(--lb-shadow-accent, rgba(0, 122, 255, 0.3));
+}
+
+.timeline-content {
+    background: var(--popup-bg, rgba(255, 255, 255, 0.8));
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.1));
+}
+
+.timeline-title {
+    font-weight: 600;
+    color: var(--main-text-color);
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+    letter-spacing: -0.003em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.timeline-title i {
+    color: var(--active-color);
+    font-size: 14px;
+}
+
+/* ========================================
+   FLIP BOX COMPONENT
+   ======================================== */
+
+.ui-flipbox {
+    margin: 1rem 0 3rem 0;
+    position: relative;
+    z-index: 1;
+    clear: both;
+    min-height: auto;
+    overflow: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.flipbox-container,
+.ui-flipbox .flipbox-container {
+    perspective: 1000px;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    min-height: 120px;
+    margin: 0 auto 2rem auto;
+    cursor: pointer;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Rectangular flipbox variant */
+.ui-flipbox[data-shape="rectangular"] .flipbox-container,
+.ui-flipbox.flipbox-rectangular .flipbox-container {
+    max-width: 600px;
+}
+
+/* Vertical alignment */
+.flipbox-container[data-valign="top"] .flipbox-front,
+.flipbox-container[data-valign="top"] .flipbox-back { justify-content: flex-start; }
+.flipbox-container[data-valign="center"] .flipbox-front,
+.flipbox-container[data-valign="center"] .flipbox-back { justify-content: center; }
+.flipbox-container[data-valign="bottom"] .flipbox-front,
+.flipbox-container[data-valign="bottom"] .flipbox-back { justify-content: flex-end; }
+
+.flipbox-inner,
+.ui-flipbox .flipbox-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+}
+
+.flipbox-container.flipped .flipbox-inner,
+.ui-flipbox .flipbox-container.flipped .flipbox-inner {
+    transform: rotateY(180deg);
+}
+
+.flipbox-front,
+.ui-flipbox .flipbox-front,
+.flipbox-back,
+.ui-flipbox .flipbox-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.1));
+    overflow: hidden;
+}
+
+.flipbox-front,
+.ui-flipbox .flipbox-front {
+    z-index: 2;
+    top: 0;
+    background: var(--popup-bg, white);
+}
+
+.flipbox-back,
+.ui-flipbox .flipbox-back {
+    top: 0;
+    transform: rotateY(180deg);
+    background: var(--active-color-bg-light);
+    border: 3px solid var(--active-color);
+}
+
+/* Firefox fallback: backface-visibility:hidden is unreliable in Firefox,
+   so explicitly hide the inactive face with visibility, timed to the
+   midpoint (0.4s) of the 0.8s flip animation */
+.flipbox-container:not(.flipped) .flipbox-back,
+.ui-flipbox .flipbox-container:not(.flipped) .flipbox-back,
+.flipbox-container.flipped .flipbox-front,
+.ui-flipbox .flipbox-container.flipped .flipbox-front {
+    visibility: hidden;
+    transition: visibility 0s linear 0.4s;
+}
+
+.flipbox-container:not(.flipped) .flipbox-front,
+.ui-flipbox .flipbox-container:not(.flipped) .flipbox-front,
+.flipbox-container.flipped .flipbox-back,
+.ui-flipbox .flipbox-container.flipped .flipbox-back {
+    visibility: visible;
+    transition: visibility 0s linear 0.4s;
+}
+
+.flipbox-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--main-text-color, #1d1d1f);
+    padding: 0.5rem;
+    text-align: center;
+    width: 100%;
+    min-height: 0;
+}
+
+/* Flipbox list alignment */
+.flipbox-content ul,
+.flipbox-content ol {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    text-align: left;
+}
+
+.flipbox-content li {
+    margin: 0.25rem 0;
+    text-align: left;
+    list-style-position: outside;
+}
+
+/* Flipbox images - resize proportionally to fit */
+.flipbox-content img {
+    max-width: 100%;
+    max-height: 120px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0.25rem auto;
+    border-radius: 4px;
+    flex-shrink: 1;
+}
+
+.flipbox-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    color: var(--main-text-color);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.preview-content .flipbox-content h3,
+#lesson-preview .flipbox-content h3,
+.widget-view-mode .flipbox-content h3 {
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    margin: 0 0 1rem 0 !important;
+    text-align: center !important;
+}
+
+.preview-content .flipbox-content h3:not([style*="line-height"]),
+#lesson-preview .flipbox-content h3:not([style*="line-height"]),
+.widget-view-mode .flipbox-content h3:not([style*="line-height"]) {
+    line-height: 1.2 !important;
+}
+
+.flipbox-content p,
+.flipbox-content div {
+    font-family: var(--primary-font, 'Poppins', sans-serif) !important;
+    font-size: 13.6px !important;
+    font-weight: 400 !important;
+    color: var(--main-text-color) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.flipbox-content p:not([style*="line-height"]),
+.flipbox-content div:not([style*="line-height"]) {
+    line-height: 1.5 !important;
+}
+
+.flipbox-content strong {
+    font-family: inherit !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Hide TinyMCE trailing bogus elements that create extra bottom space */
+.flipbox-content br[data-mce-bogus],
+.flipbox-content > p:last-child:empty,
+.flipbox-content > br:last-child {
+    display: none;
+}
+
+.flipbox-hint {
+    font-size: 0.875rem;
+    color: var(--light-grey-text-color, #86868b);
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0.75rem;
+    background: var(--lb-highlight-bg, rgba(0, 122, 255, 0.05));
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    border: 1px solid var(--lb-highlight-border, rgba(0, 122, 255, 0.1));
+}
+
+/* ========================================
+   GRID COMPONENT
+   ======================================== */
+
+.ui-grid {
+    border: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.1));
+    border-radius: 12px;
+    margin: 1rem 0;
+    overflow: hidden;
+    background: var(--popup-bg, rgba(255, 255, 255, 0.8));
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+    padding: 1.5rem;
+}
+
+.widget-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    align-items: start;
+    gap: 1rem;
+    min-height: 120px;
+}
+
+/* Grid cell base structure - editor styles in widget-editor-controls.css */
+.grid-cell {
+    border: none;
+    border-radius: 8px;
+    min-height: 120px;
+    position: relative;
+    transition: all 0.2s ease;
+    background: transparent;
+    padding: 1.5rem;
+    overflow: visible;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.grid-cell .ui-component,
+.flex-column .ui-component {
+    margin: 0;
+    border-radius: 6px;
+    max-width: 100%;
+    overflow: visible;
+}
+
+/* Prevent content overflow in grid cells */
+.grid-cell img,
+.grid-cell video,
+.grid-cell table {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Allow TinyMCE iframe preview objects to be resizable in grid cells */
+.grid-cell iframe {
+    max-width: 100%;
+}
+
+.grid-cell .mce-preview-object {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+}
+
+.grid-cell .mce-preview-object iframe {
+    display: block;
+}
+
+.grid-cell pre,
+.grid-cell code {
+    max-width: 100%;
+    overflow-x: auto;
+    word-wrap: break-word;
+}
+
+.grid-cell .ui-card {
+    height: auto;
+    max-height: 100%;
+    margin: 0;
+}
+
+/* ========================================
+   COLUMNS COMPONENT
+   ======================================== */
+
+.ui-columns {
+    border: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.1));
+    border-radius: 12px;
+    margin: 1rem 0;
+    overflow: hidden;
+    background: var(--popup-bg, rgba(255, 255, 255, 0.8));
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.columns-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    align-items: stretch;
+    min-height: 200px;
+}
+
+.flex-columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--columns-gap, 1rem);
+    min-height: 200px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.flex-columns[data-columns-gap="0.5rem"] {
+    gap: 0.5rem;
+}
+
+.flex-columns[data-columns-gap="1rem"] {
+    gap: 1rem;
+}
+
+.flex-columns[data-columns-gap="1.5rem"] {
+    gap: 1.5rem;
+}
+
+.flex-columns[data-columns-gap="2rem"] {
+    gap: 2rem;
+}
+
+.flex-columns[data-columns-direction="column"] {
+    flex-direction: column;
+}
+
+.flex-columns[data-columns-direction="row"] {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex: 1 1 0%;
+    min-width: 0;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    transition: all 0.2s ease;
+    position: relative;
+    min-height: 120px;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+}
+
+/* Prevent content overflow in columns */
+.flex-column img,
+.flex-column video,
+.flex-column table {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Allow TinyMCE iframe preview objects to be resizable in columns */
+.flex-column iframe {
+    max-width: 100%;
+}
+
+.flex-column .mce-preview-object {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+}
+
+.flex-column .mce-preview-object iframe {
+    display: block;
+}
+
+.flex-column pre,
+.flex-column code {
+    max-width: 100%;
+    overflow-x: auto;
+    word-wrap: break-word;
+}
+
+.flex-column p,
+.grid-cell p {
+    margin: 0;
+    color: var(--main-text-color);
+}
+
+.flex-column h1, .grid-cell h1 { font-size: 25px; }
+.flex-column h2, .grid-cell h2 { font-size: 21px; }
+.flex-column h3, .grid-cell h3 { font-size: 19px; }
+.flex-column h4, .grid-cell h4 { font-size: 17px; }
+.flex-column h5, .grid-cell h5 { font-size: 16px; }
+.flex-column h6, .grid-cell h6 { font-size: 13px; }
+
+.flex-column h1, .flex-column h2, .flex-column h3,
+.flex-column h4, .flex-column h5, .flex-column h6,
+.grid-cell h1, .grid-cell h2, .grid-cell h3,
+.grid-cell h4, .grid-cell h5, .grid-cell h6 {
+    margin: 0;
+    font-weight: 600;
+    color: var(--main-text-color);
+}
+
+.grid-cell > p:empty,
+.flex-column > p:empty,
+.grid-cell > p:has(> br:only-child),
+.flex-column > p:has(> br:only-child) {
+    display: none;
+}
+
+/* Editor-only :has() styles moved to widget-editor-controls.css */
+
+.column {
+    flex: 1;
+    background: var(--popup-bg, rgba(255, 255, 255, 0.5));
+    border-radius: 8px;
+    padding: 1.25rem;
+    border: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.05));
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+}
+
+.column h3 {
+    margin: 0 0 1rem 0;
+    color: var(--main-text-color, #1d1d1f);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.003em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.preview-content .column h3,
+#lesson-preview .column h3,
+.widget-view-mode .column h3 {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    margin: 0 0 1rem 0 !important;
+}
+
+.column h3 i {
+    color: var(--active-color);
+    font-size: 16px;
+}
+
+.column p {
+    margin: 0;
+    line-height: 1.5;
+    color: var(--main-text-color, #1d1d1f);
+}
+
+/* ========================================
+   QUOTE COMPONENT
+   ======================================== */
+
+.ui-quote {
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+/* Classic Quote Style */
+.ui-quote[data-style="classic"] .quote-container {
+    background: var(--active-color-bg-light);
+    border-left: 4px solid var(--active-color);
+    padding: 1.5rem 2rem;
+    border-radius: 0 8px 8px 0;
+    position: relative;
+}
+
+.ui-quote[data-style="classic"] .quote-content {
+    font-size: 18px;
+    font-style: italic;
+    color: var(--main-text-color);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.ui-quote[data-style="classic"] .quote-content::before {
+    content: '"';
+    font-size: 2rem;
+    color: var(--active-color);
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    font-family: Georgia, serif;
+}
+
+.ui-quote[data-style="classic"] .quote-author {
+    text-align: right;
+    font-weight: 500;
+    color: var(--light-grey-text-color, #666);
+    font-size: 14px;
+}
+
+/* Modern Quote Style */
+.ui-quote[data-style="modern"] .quote-container {
+    background: var(--active-color-bg-light);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 16px var(--active-color-bg-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.ui-quote[data-style="modern"] .quote-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--active-color, #24D3A5), rgba(var(--active-color-hover, 36, 211, 165), 0.7));
+}
+
+.ui-quote[data-style="modern"] .quote-content {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--main-text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    position: relative;
+}
+
+.ui-quote[data-style="modern"] .quote-content::before {
+    content: '"';
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--active-color-bg-light);
+    position: absolute;
+    top: -0.5rem;
+    left: -1rem;
+    line-height: 1;
+    opacity: 0.3;
+}
+
+.ui-quote[data-style="modern"] .quote-author {
+    font-weight: 600;
+    color: var(--active-color);
+    font-size: 16px;
+}
+
+/* Minimal Quote Style */
+.ui-quote[data-style="minimal"] .quote-container {
+    padding: 1rem 0;
+    border-top: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.1));
+    border-bottom: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.1));
+}
+
+.ui-quote[data-style="minimal"] .quote-content {
+    font-size: 18px;
+    color: var(--main-text-color);
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.ui-quote[data-style="minimal"] .quote-author {
+    text-align: center;
+    font-size: 14px;
+    color: var(--light-grey-text-color, #666);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Dark mode - More opaque quote backgrounds */
+[data-theme="dark"] .ui-quote[data-style="classic"] .quote-container,
+[data-theme="dark"] .ui-quote[data-style="modern"] .quote-container {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Dark mode editor styles moved to widget-editor-controls.css */
+
+/* ========================================
+   QUIZ COMPONENT
+   ======================================== */
+
+.ui-quiz {
+    border: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.1));
+    border-radius: 12px;
+    margin: 1rem 0;
+    overflow: hidden;
+    background: var(--popup-bg, rgba(255, 255, 255, 0.8));
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.quiz-header {
+    background: var(--content-bg-color, rgba(0, 0, 0, 0.02));
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.05));
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quiz-header i {
+    color: var(--active-color);
+    font-size: 1.25rem;
+}
+
+.quiz-header h3 {
+    margin: 0;
+    color: var(--main-text-color, #1d1d1f);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.preview-content .quiz-header h3,
+#lesson-preview .quiz-header h3,
+.widget-view-mode .quiz-header h3 {
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+}
+
+.quiz-question {
+    padding: 1.5rem;
+    background: transparent;
+    line-height: 1.5;
+    color: var(--main-text-color, #1d1d1f);
+}
+
+.quiz-options {
+    padding: 0 1.5rem;
+}
+
+.quiz-option {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--main-border-color, rgba(0, 0, 0, 0.1));
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quiz-option.selected {
+    background: var(--lb-highlight-bg, rgba(0, 122, 255, 0.1));
+    border-color: var(--active-color);
+}
+
+.quiz-submit {
+    margin: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--active-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--primary-font, 'Poppins', sans-serif);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quiz-feedback {
+    padding: 1rem 1.5rem;
+    background: var(--lb-highlight-bg, rgba(0, 122, 255, 0.05));
+    border-top: 1px solid var(--lb-highlight-border, rgba(0, 122, 255, 0.1));
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* ========================================
+   RESPONSIVE STYLES FOR SAVED/PREVIEW VIEW ONLY
+   These @media queries check the viewport width.
+   They are scoped with body:not(.lesson-builder-active) to prevent
+   them from applying in the TinyMCE editor iframe where the iframe
+   width would trigger them incorrectly.
+   ======================================== */
+
+/* Mobile: ≤ 600px - Single column layout (saved/preview only) */
+@media (max-width: 600px) {
+    body:not(.lesson-builder-active) .widget-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem;
+        min-height: auto;
+    }
+
+    body:not(.lesson-builder-active) .grid-cell {
+        min-height: 80px;
+    }
+
+    body:not(.lesson-builder-active) .flex-columns {
+        flex-direction: column !important;
+    }
+
+    body:not(.lesson-builder-active) .flex-column {
+        min-height: 80px;
+        width: 100% !important;
+        flex: none !important;
+    }
+
+    body:not(.lesson-builder-active) .columns-container {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    body:not(.lesson-builder-active) .flipbox-container {
+        max-width: 100%;
+    }
+
+    body:not(.lesson-builder-active) .flipbox-front,
+    body:not(.lesson-builder-active) .flipbox-back {
+        padding: 1rem;
+    }
+
+    body:not(.lesson-builder-active) .flipbox-content h3 {
+        font-size: 1rem;
+    }
+
+    body:not(.lesson-builder-active) .flipbox-content p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Tablet: 601px - 900px - Two column max (saved/preview only) */
+@media (min-width: 601px) and (max-width: 900px) {
+    body:not(.lesson-builder-active) .widget-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem;
+        min-height: 200px;
+    }
+
+    body:not(.lesson-builder-active) .grid-cell {
+        min-height: 100px;
+    }
+
+    body:not(.lesson-builder-active) .flex-columns {
+        flex-wrap: wrap;
+    }
+
+    body:not(.lesson-builder-active) .flex-column {
+        min-height: 100px;
+        min-width: calc(50% - 0.5rem);
+        flex: 1 1 calc(50% - 0.5rem);
+    }
+
+    body:not(.lesson-builder-active) .columns-container {
+        gap: 0.75rem;
+    }
+
+    body:not(.lesson-builder-active) .flipbox-container {
+        max-width: 100%;
+    }
+
+    body:not(.lesson-builder-active) .flipbox-front,
+    body:not(.lesson-builder-active) .flipbox-back {
+        padding: 1.5rem;
+    }
+
+    body:not(.lesson-builder-active) .flipbox-content h3 {
+        font-size: 1.1rem;
+    }
+
+    body:not(.lesson-builder-active) .flipbox-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Laptop: 901px - 1200px - Stack columns sooner (saved/preview only) */
+@media (min-width: 901px) and (max-width: 1200px) {
+    body:not(.lesson-builder-active) .widget-grid[style*="grid-template-columns: repeat(4"] {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    body:not(.lesson-builder-active) .widget-grid[style*="grid-template-columns: repeat(3"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    body:not(.lesson-builder-active) .flex-columns[data-columns-count="3"],
+    body:not(.lesson-builder-active) .flex-columns[data-columns-count="4"] {
+        flex-wrap: wrap;
+    }
+
+    body:not(.lesson-builder-active) .flex-columns[data-columns-count="3"] .flex-column,
+    body:not(.lesson-builder-active) .flex-columns[data-columns-count="4"] .flex-column {
+        min-width: calc(50% - 0.5rem);
+        flex: 1 1 calc(50% - 0.5rem);
+    }
+}
+
+/* Smaller laptop: 768px - 900px (saved/preview only) */
+@media (min-width: 768px) and (max-width: 900px) {
+    body:not(.lesson-builder-active) .flex-columns {
+        flex-wrap: wrap;
+    }
+
+    body:not(.lesson-builder-active) .flex-columns .flex-column {
+        min-width: calc(50% - 0.5rem);
+        flex: 1 1 calc(50% - 0.5rem);
+    }
+
+    body:not(.lesson-builder-active) .flex-columns[data-columns-count="3"] .flex-column,
+    body:not(.lesson-builder-active) .flex-columns[data-columns-count="4"] .flex-column {
+        min-width: 100%;
+        flex: 1 1 100%;
+    }
+}
+
+/* ========================================
+   GRID CELL & COLUMN ALIGNMENT STYLES
+   Per-cell/column alignment via data attributes
+   Affects both text AND widgets inside cells/columns
+   ======================================== */
+
+/* Grid cells - horizontal alignment (text + widgets) */
+.grid-cell[data-halign="left"] {
+    text-align: left;
+    align-items: flex-start;
+}
+.grid-cell[data-halign="center"] {
+    text-align: center;
+    align-items: center;
+}
+.grid-cell[data-halign="right"] {
+    text-align: right;
+    align-items: flex-end;
+}
+.grid-cell[data-halign="justify"] {
+    text-align: justify;
+    align-items: stretch;
+}
+
+/* Grid cells - vertical alignment */
+.grid-cell[data-valign="top"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.grid-cell[data-valign="center"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.grid-cell[data-valign="bottom"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Widgets inside aligned cells - don't affect their internal controls */
+.grid-cell[data-halign] > .ui-component,
+.flex-column[data-halign] > .ui-component {
+    text-align: initial;
+}
+.grid-cell[data-halign] > .ui-component .component-topbar,
+.grid-cell[data-halign] > .ui-component [contenteditable="false"],
+.flex-column[data-halign] > .ui-component .component-topbar,
+.flex-column[data-halign] > .ui-component [contenteditable="false"] {
+    text-align: left;
+}
+
+/* Flex columns - horizontal alignment (text + widgets) */
+.flex-column[data-halign="left"] {
+    text-align: left;
+    align-items: flex-start;
+}
+.flex-column[data-halign="center"] {
+    text-align: center;
+    align-items: center;
+}
+.flex-column[data-halign="right"] {
+    text-align: right;
+    align-items: flex-end;
+}
+.flex-column[data-halign="justify"] {
+    text-align: justify;
+    align-items: stretch;
+}
+
+/* Flex columns - vertical alignment */
+.flex-column[data-valign="top"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.flex-column[data-valign="center"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.flex-column[data-valign="bottom"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}

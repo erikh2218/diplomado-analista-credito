@@ -1,0 +1,175 @@
+:root {
+  --link-text-color: #13B2BD;
+  --link-hover-text-color: #D86698;
+  --subheading-color: #13B2BD;
+  --header-bg-color: #3A909D;
+  --checkout-left-bar-bg: #337782;
+  --left-bar-bg: #2e3957;
+  --left-bar-border-color: #3e464e;
+  --tile1-bg-color: #B54376;
+  --tile2-bg-color: #5E656B;
+  --tile3-bg-color: #378A98;
+  --tile4-bg-color: #5FB4B7
+}
+[data-theme="dark"], [data-theme="dark"] .grey_background, .dark_editor {
+  --link-text-color: #68ffff;
+  --link-hover-text-color: #ffbbed;
+  --subheading-color: #fff;
+  --checkout-left-bar-bg: #28292d;
+  --left-bar-bg: #28292d;
+  --left-bar-border-color: #3B3D44;
+  --tile1-bg-color: #28292d;
+  --tile2-bg-color: #28292d;
+  --tile3-bg-color: #28292d;
+  --tile4-bg-color: #28292d
+}
+
+/* navigation */
+
+nav.mainNav ol > li > a, nav.mainNav .dropDown ul li a:hover, body.loginPage .loginOptions label, body.loginPage .loginOptions a {
+  color: #5E5F5F
+}
+
+.portal header nav.mainNav li.loginHolder a, .portal header nav.mainNav li.loginHolder a:hover {
+background-color: #5B636B
+}
+
+/* links */
+
+a, .optionsRibbon ul li a:hover, footer a.language:hover, dt, .primaryColorText, a.secondaryColorText:hover {
+  color: #13B2BD; color: var(--link-text-color)
+}
+
+@media screen and (max-width: 559px) {
+  .floating_text a.options_btn.inverted {
+    color: #13B2BD; color: var(--link-text-color)
+  }
+}
+
+/* hover */
+
+a:hover, h3, h5, .secondaryColorText {
+  color: #D86698; color: var(--link-hover-text-color)
+}
+
+/* buttons, popups */
+
+.difSignIn, input[type="submit"], input[type="button"], button, #facebox .header, #contentBody .centreBtn, .optionsRibbon ul.inverted li a, .portal #contentHeader, .jconfirm .jconfirm-box div.title, header .mobileBar, .options_btn.inverted, #fullscreen_msg_holder .header, .link_button, ul.tabnav li a.selected:after {
+  background: #3A909D
+}
+
+/* Top tab selector */
+
+ul.tabnav li a.selected:after, table.calendar_small .current div, table.calendar .current, .calendar-agenda-day .current, .optionsRibbon ul li.selected a:before {
+  background: #57b3bb
+}
+
+/* Inverted options links */
+
+.optionsRibbon ul.inverted li a, .options_btn.inverted {
+  background: #5B636B
+}
+
+/* footer and wrapper */
+
+footer, .portal #wrapper {
+  background: #5B636B
+}
+
+/* thin strip at top */
+
+@media screen and (min-width: 980px) {
+  header {
+    border-top: 4px solid #3A909D
+  }
+}
+body.loginPage {
+  border-color: #3A909D !important
+}
+
+/* h2 */
+
+body.portal #contentBody h2, #centreColumn h2, body.portal .customHome h2 {
+  color: #13B2BD
+}
+
+/* Message box */
+
+nav.mainNav ol > li.portalCart a .newAlert {
+  background-color: #B54376
+}
+
+/* Tinymce */
+
+.mce-window-head, .mce-foot .mce-btn button, .mce-menu-item:hover, .mce-menu-item.mce-selected, .mce-menu-item:focus {
+  background: #3A909D !important
+}
+
+/* Fonts */
+
+h1:not(.customLogo), h2, h3, h4, h5, h6, #centreColumn .centerHeading, .jconfirm .title, .mce-window-head .mce-title, .heading_font {
+  font-family: 'Roboto Slab', Helvetica, Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+/* Panels */
+
+.colorBtn {
+  background-color: #5B636B
+}
+
+.panel1 .clearBtn, .panel4 .clearBtn {
+  border-color: #5B636B;
+  color: #5B636B
+}
+
+  .panel1.stripe > div .block {
+    border-top-color: #B54376
+  }
+  .panel1.stripe > div .block:nth-child(4n+2) {
+    border-top-color: #5E656B
+  }
+  .panel1.stripe > div .block:nth-child(4n+3) {
+    border-top-color: #378A98
+  }
+  .panel1.stripe > div .block:nth-child(4n+4) {
+    border-top-color: #5FB4B7
+  }
+
+/* Tile backgrounds */
+
+.catalog_boxes .tile_color_1, html:not([dir=rtl]) .catalog_class.tile_color_1 #contentWrap:before, [dir=rtl] .catalog_class.tile_color_1 #contentWrap:after, .catalog_class.tile_color_1 #leftColumn, .modern_module_list > table:nth-of-type(4n+1) .modern_module_row td {
+  background-color: #B54376; background-color: var(--tile1-bg-color)
+}
+.catalog_boxes .tile_color_2, html:not([dir=rtl]) .catalog_class.tile_color_2 #contentWrap:before, [dir=rtl] .catalog_class.tile_color_2 #contentWrap:after, .catalog_class.tile_color_2 #leftColumn, .modern_module_list > table:nth-of-type(4n+2) .modern_module_row td {
+  background-color: #5E656B; background-color: var(--tile2-bg-color)
+}
+.catalog_boxes .tile_color_3, html:not([dir=rtl]) .catalog_class.tile_color_3 #contentWrap:before, [dir=rtl] .catalog_class.tile_color_3 #contentWrap:after, .catalog_class.tile_color_3 #leftColumn, .modern_module_list > table:nth-of-type(4n+3) .modern_module_row td {
+  background-color: #378A98; background-color: var(--tile3-bg-color)
+}
+.catalog_boxes .tile_color_4, html:not([dir=rtl]) .catalog_class.tile_color_4 #contentWrap:before, [dir=rtl] .catalog_class.tile_color_4 #contentWrap:after, .catalog_class.tile_color_4 #leftColumn, .modern_module_list > table:nth-of-type(4n+4) .modern_module_row td {
+  background-color: #5FB4B7; background-color: var(--tile4-bg-color)
+}
+[data-theme="dark"] .catalog_boxes *[class*='tile_color_'], [data-theme="dark"] .modern_module_list > table .modern_module_row td {
+  background-color: var(--tile1-bg-color) !important
+}
+
+
+
+
+
+
+
+/* Profile_header - Background */
+
+.profile_header .profile_background {
+  background-color: #57b3bb
+}
+
+/* Catalog call to action - Background */
+
+.catalog_item .profile_header .profile_info .alignR .link_button {
+  background-color: #3A909D
+}
+

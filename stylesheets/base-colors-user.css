@@ -1,0 +1,236 @@
+/* ===================
+  Index:
+    1. Colors
+    2. Backgrounds
+    3. Borders
+ ===================*/
+
+/*------------------- Colors -------------------*/
+.highlight,
+#wrapper,
+#loginForm .loginOptions a:hover,
+h1,
+h2,
+h4,
+p,
+ul,
+span,
+dl dd,
+label,
+input,
+select,
+textarea,
+.optionsRibbon ul li a,
+header .dropDown a,
+nav.mainNav .dropDownHeading,
+nav#leftColumn a:not(.normalLink),
+.rightColumn,
+.rightColumn ul li a+a:not(.inline_link_lrg):not(.inline_link),
+#facebox .footer,
+.facebox-content,
+table,
+table a:hover,
+table a:hover span,
+table span a:hover,
+table .highlight,
+.tooltip,
+.tooltipBot,
+nav#leftColumn ol.thinMainNav.hoverMainNav>li>a,
+#centreColumn .rightColumn h2,
+#centreColumn .rightColumn h3.playerLevel,
+.contentBlock .sideText,
+a.tableLink2,
+a.tableLink2 *,
+table.plansComparisonHeader th h3,
+.centerHeading a,
+.centerHeading a:hover,
+#centreColumn .day-heading {
+  color: #222;
+  color: var(--main-text-color)
+}
+
+.grading-thread-comment-list .at {
+  color: #707070 !important;
+  color: var(--dark-grey-text-color) !important
+}
+
+input.placeholder,
+.rightColumn ul li a.dueLink span:last-child,
+.rightColumn .event_date,
+.rightColumn .leaderboardSml.no-players li,
+.calendar-agenda-day .event-heading span,
+.remainingPts,
+.remainingPts span,
+ul.playerStatusSml li.level span {
+  color: #a8a8a8;
+  color: var(--light-grey-text-color)
+}
+
+input[type="submit"],
+input[type="button"],
+button,
+button.button-spinner:not(.inverted) span,
+header .site_name a,
+nav.mainNav ol>li>a,
+.quickLinks a.username,
+footer a,
+footer a:hover,
+a.back-to-top span,
+footer .powered_by {
+  color: #fff
+}
+
+/*------------------- Backgrounds -------------------*/
+nav .icon {
+  fill: #5e5f5f
+}
+
+.quiz_match_connect:before {
+  background: #acacac
+}
+
+.quiz_match_choices.quiz_match_over,
+.quiz_match_dropzone.quiz_match_over {
+  background: #e8e8e8
+}
+
+table .tableDropdown>a:hover,
+table .tableDropdown>a.highlight,
+table .dropDown a:hover,
+li.ms-holder:hover,
+.tooltipContactLinks,
+.tooltip .arrow:after,
+ul.quiz_blocks li,
+.quiz_match_choices,
+.linksHolder .dropDown a:hover,
+.linksHolder .dropDown a:focus {
+  background: #f5f5f5;
+  background: var(--highlight-bg-color)
+}
+
+.grey_background #wrapper,
+.grey_background #fixedSectionHeader,
+.grey_background #courseToolbar,
+.grey_background .fullColumn:nth-child(2n+2),
+.grey_background .dropDown .cta,
+.grey_background .profileTable td {
+  background: #f5f5f5;
+  background: var(--content-bg-color)
+    /* IE11 */
+}
+
+html#popupBackground,
+#wrapper,
+#courseToolbar,
+.dropDown .cta,
+.widget_edit .available_widgets,
+.widget_edit .scrollable {
+  background: #fff;
+  background: var(--content-bg-color)
+}
+
+header .dropDown,
+table .dropDown {
+  background: #fff;
+  background: var(--bg-color)
+}
+
+.difSignIn:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:not(.options_btn):hover,
+nav.mainNav .cta a:hover,
+nav.mainNav .cta a:focus,
+nav#leftColumn ol li a.centreIcon:hover,
+footer a:hover,
+.catalog_boxes .footer>a:hover,
+.catalog_boxes .header>a:hover i {
+  opacity: .7
+}
+
+.catalog_boxes div.price.red,
+.catalog_boxes .footer div.label.box.red,
+.user_progress.red {
+  background: #DB0000
+}
+
+.custom_report_table span.related {
+  background: #d2d2d2;
+  background: var(--td-row-bg-color1)
+}
+
+.custom_report_table tr.custom_report_table_highlight_1 td {
+  background: #c0efaf;
+  background: var(--td-row-bg-color2)
+}
+
+.custom_report_table tr.custom_report_table_highlight_2 td {
+  background: #dcf5d2;
+  background: var(--td-row-bg-color3)
+}
+
+/*------------------- Borders -------------------*/
+.quiz_match_dropzone {
+  border: 1px solid #9c9c9c
+}
+
+#contentWrap.hasThinNav.hasLeftColumn:before,
+.quiz_match_option,
+.quiz_match_choice,
+.quiz_match_choice.ui-draggable-dragging {
+  border: 1px solid #acacac
+}
+
+.hasLeftColumn:before,
+nav#leftColumn h3,
+nav#leftColumn ol li hr,
+nav#leftColumn ol>li>a:not(.centreIcon):hover,
+nav#leftColumn ol>li>ul li a:hover,
+nav#leftColumn a.highlight,
+nav#leftColumn a.selected,
+.dropDownHolder .dropDown,
+.tooltip,
+.tooltipBot,
+.tooltip .arrow:after,
+.tooltipBot .arrow:after,
+table .tableDropdown>a:hover,
+table .tableDropdown>a.highlight,
+a.contentBlock,
+a.tableLink2:hover,
+#user-menu h3 {
+  border: 1px solid #c8c8c8;
+  border: 1px solid var(--main-border-color);
+}
+
+.dropDown .cta {
+  border-top: 1px solid #e2e0e0;
+  border-top: 1px solid var(--table-border-color)
+}
+
+header .dropDownHolder .dropDown,
+.widget_edit .available_widgets,
+.widget_edit .available_widgets>h2,
+.widget_buttons,
+.widget_edit .widgets .scrollable {
+  border: 1px solid #e2e0e0;
+  border: 1px solid var(--table-border-color)
+}
+
+footer .footerLinks a[rel="facebox"]:not(:first-child),
+footer .powered_by {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/*------------------- Input Placeholders -------------------*/
+input::-webkit-input-placeholder {
+  color: #5e5f5f
+}
+
+input::-moz-placeholder {
+  color: #5e5f5f;
+  opacity: 1
+}
+
+input:-ms-input-placeholder {
+  color: #5e5f5f
+}

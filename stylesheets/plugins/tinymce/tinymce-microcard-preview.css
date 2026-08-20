@@ -1,0 +1,39 @@
+/***** TinyMCE preview styles *****/
+
+.tiny-template-layout {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.tiny-template-column {
+    flex: 1;
+    padding: 10px;
+    min-height: 100px;
+    max-width: 50%;
+}
+
+.tiny-template-column img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+}
+
+.tiny-template-column iframe,
+.tiny-template-column video {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .tiny-template-layout {
+        flex-direction: column;
+    }
+
+    .tiny-template-column {
+        max-width: 100%;
+    }
+}

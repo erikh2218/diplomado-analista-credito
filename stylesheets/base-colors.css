@@ -1,0 +1,121 @@
+/* ===================
+  Index:
+    1. Colors
+    2. Backgrounds
+    3. Borders
+ ===================*/
+
+/*------------------- Colors -------------------*/
+footer a.language,
+.bjqs-caption a {
+  color: #222
+}
+
+.highlight,
+body,
+input,
+select,
+textarea,
+.optionsRibbon ul li a,
+.facebox-content,
+form,
+.bjqs-caption a:hover,
+#socialBlocks a,
+header .customLogo a:not(:hover),
+body.loginPage h1 span,
+.materialStyle h2,
+body.portal #contentBody .rightColumn h2,
+body.portal #centreColumn .rightColumn h2,
+header.transparentNav nav.mainNav ol>li>a,
+table.plansComparisonHeader th h3,
+.newSite nav.footerNav div ol a {
+  color: #222;
+  color: var(--main-text-color)
+}
+
+input.placeholder,
+textarea.placeholder {
+  color: #a8a8a8;
+  color: var(--light-grey-text-color)
+}
+
+#contentHeader h1,
+h2,
+input[type="submit"],
+input[type="button"],
+button,
+button.button-spinner:not(.inverted) span,
+nav.footerNav div ol a,
+nav.footerNav div h2 a,
+#socialBlocks li a:hover,
+.bjqs-caption p {
+  color: #fff
+}
+
+/*------------------- Backgrounds -------------------*/
+#socialBlocks li a:hover,
+body:not(.portal) .navButtons a.button.mid {
+  background: #5e5f5f
+}
+
+body:not(.portal) #socialBlocks li a:not(:hover) {
+  background: #e8e8e8
+}
+
+.bjqs-caption a:hover {
+  background: #fff;
+  background-color: var(--bg-color)
+}
+
+#contentWrap {
+  background: #fff;
+  background-color: var(--content-bg-color)
+}
+
+.grey_background #contentWrap {
+  background: #f5f5f5;
+  background-color: var(--content-bg-color);
+  /*IE11*/
+}
+
+.newSite footer,
+#socialBlocks li a {
+  background: #fff
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+nav.footerNav div ol a:hover,
+nav.footerNav div h2 a:hover,
+nav.footerNav div.footerBase a:hover,
+.optionsRibbon ul.inverted li a:hover,
+.colorBtn:hover {
+  opacity: .7
+}
+
+.custom_report_table span.related {
+  background: #d2d2d2;
+  background: var(--td-row-bg-color1)
+}
+
+.custom_report_table tr.custom_report_table_highlight_1 td {
+  background: #c0efaf;
+  background: var(--td-row-bg-color2)
+}
+
+.custom_report_table tr.custom_report_table_highlight_2 td {
+  background: #dcf5d2;
+  background: var(--td-row-bg-color3)
+}
+
+/*------------------- Borders -------------------*/
+.dropDownHolder .dropDown {
+  border: 1px solid var(--main-border-color)
+}
+
+table.plansComparisonHeader td,
+table.plansComparisonBody td {
+  border: 1px solid #efefef;
+  /* main site */
+}

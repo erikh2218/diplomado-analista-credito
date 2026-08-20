@@ -1,0 +1,214 @@
+/* Mobile app search portal */
+body.mobileApp form button,
+body.mobileApp .difSignIn {
+    background-color: #22d3a5
+}
+
+body.mobileApp #loginForm.hasDomainSwitch {
+    padding-bottom: 20px
+}
+
+body.mobileApp #loginForm:not(.hasDomainSwitch) {
+    padding-bottom: 35px
+}
+
+/* Mobile app search results */
+body.mobileApp #portalSelect {
+    max-width: 582px;
+    padding: 20px 0 0;
+    margin: 0;
+}
+
+body.mobileApp #portalSelect h1 {
+    margin: 0 15px 20px;
+    font-size: 24px;
+    font-family: 'RobotoLightNew', 'Ubuntu', helvetica, sans-serif
+}
+
+body.mobileApp #portalSelect h2 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: inherit;
+}
+
+body.mobileApp #portalSelect .portalResults {
+    height: 350px;
+    overflow: auto;
+    margin: 0 auto;
+    -webkit-overflow-scrolling: touch
+}
+
+body.mobileApp #portalSelect .portalResults::-webkit-scrollbar {
+    -webkit-appearance: none
+}
+
+body.mobileApp #portalSelect .portalResults::-webkit-scrollbar:vertical {
+    width: 11px
+}
+
+body.mobileApp #portalSelect .portalResults::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid #fff;
+    background-color: rgba(0, 0, 0, .5)
+}
+
+body.mobileApp #portalSelect .portalResults::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 8px
+}
+
+/* Used within mobile app and main site search results. Doesn't use #portalSelect on main site. */
+.portalListing {
+    width: 100%;
+    display: table;
+    padding: 9px 0;
+    border-bottom: 1px solid #e0e0e0;
+    height: 60px
+}
+
+.portalListing:first-child {
+    padding-top: 4px
+}
+
+.portalListing:hover .portalDetails {
+    opacity: .8
+}
+
+.portalListing .portalLogo {
+    display: table-cell;
+    width: 130px;
+    vertical-align: middle;
+    text-align: center
+}
+
+.portalListing .portalLogo img {
+    max-width: 90px;
+    max-height: 50px;
+    vertical-align: middle;
+    line-height: 17px
+}
+
+.portalListing .portalDetails {
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    padding: 0 10px
+}
+
+@media screen and (max-width: 360px) {
+    body.mobileApp #loginForm {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 499px), screen and (max-height: 579px) {
+    body.mobileApp .difSignIn {
+        margin: 20px 15px;
+        border-radius: 5px
+    }
+
+    body.mobileApp #loginWrap {
+        height: calc(100% - 40px)
+    }
+
+    body.mobileApp #loginForm {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        padding: 0 20px 20px
+    }
+
+    body.mobileApp #loginForm > * {
+        margin: auto;
+        width: 100%;
+        max-width: 320px
+    }
+
+    body.mobileApp #loginForm .difSignIn.switchMobileDomain {
+        margin: 1px 0 0 0 !important;
+        padding: 6px 15px
+    }
+
+    body.mobileApp > .language {
+        color: #18ADE8
+    }
+
+    body.mobileApp #portalSelect {
+        padding: 0
+    }
+
+    body.mobileApp #portalSelect h1 {
+        font-weight: bold;
+        margin-top: 2rem;
+    }
+
+    body.mobileApp #portalSelect .portalResults {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+
+    body.mobileApp #portalSelect .difSignIn {
+        margin: 10px auto;
+        width: 150px;
+    }
+
+    .portalListing .portalLogo {
+        width: 100px
+    }
+
+    .portalListing .portalDetails {
+        word-break: break-word;
+        padding: 0 0 0 20px
+    }
+}
+
+@media screen and (min-width: 500px) and (min-height: 580px) {
+    body.mobileApp #loginForm.hasDomainSwitch {
+        padding-bottom: 0
+    }
+
+    body.mobileApp #portalSelect h1 {
+        margin: 0 20px 17px;
+        text-align: left
+    }
+
+    body.mobileApp #portalSelect .difSignIn {
+        margin-left: 0;
+        margin-right: 0
+    }
+
+    .portalListing > * {
+        position: relative
+    }
+
+    .portalListing .portalLogo:before,
+    .portalListing .portalDetails:after {
+        position: absolute;
+        bottom: -12px;
+        background-color: #fff;
+        content: '';
+        width: 10px;
+        height: 10px;
+        display: block
+    }
+
+    .portalListing .portalDetails:after {
+        right: 0
+    }
+}
+
+@media screen and (max-width: 600px) and (min-height: 680px) {
+    body.mobileApp #portalSelect.portalResults {
+        min-height: 490px
+    }
+}
+
+@media screen and (max-width: 600px) and (min-height: 760px) {
+    body.mobileApp #portalSelect.portalResults {
+        min-height: 560px
+    }
+}

@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<script type="text/javascript">window.IE = false;</script>
+<html class="no-js" lang="es" >
+<!--[if IE 11 ]><!--><script type="text/javascript">window.IE = 11;</script><!--<![endif]-->
+
+  <head>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="GfkokJeG+YFeqAFteX/FmXshKVvjTmZCaDUg0Bu/tpsuCJYGzn3pnN3xuEE7rbK1BVnwBEUJdPAkAoTimjQ1OQ==" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2, user-scalable=yes">
+
+
+
+
+
+    <meta name="revisit-after" content="5 days">
+
+  <title>Liderazgo Capacitación y Eventos</title>
+
+  <link rel="shortcut icon" type="image/png" href="/files/12196789/Copia_de_Logo_AI_1.ai_(1).png?lmsauth=c57dbf6a3b228c7f0a0cffd4c629c385b28b898b"/>
+
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet"> <!-- Ubuntu for Greek Polytonic -->
+<link href="https://fonts.googleapis.com/css?family=Bitter:400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800" rel="stylesheet">
+
+
+
+  <link rel="stylesheet" media="screen" href="/stylesheets/base-colors.css?1786067772" />
+
+
+
+  <link rel="stylesheet" media="screen" href="/stylesheets/default-styles.css?1787093786" />
+  <link rel="stylesheet" media="screen" href="/stylesheets/styles.css?1787085952" />
+  <link rel="stylesheet" media="screen" href="/stylesheets/owl.carousel-v2.css?1786067772" />
+  <link rel="stylesheet" media="screen" href="/stylesheets/mobile/portal_search.css?1786067772" />
+
+
+    <link rel="stylesheet" media="screen" href="/stylesheets/panels.css?1786067772" />
+
+      <link rel="stylesheet" media="screen" href="/files/8754207/custom_stylesheet_portal_theme_137613_v87(12).css" title="theme" />
+
+<link rel="stylesheet" media="screen" href="/stylesheets/fonts/font-all.css?1786067772" />
+
+  <script src="/javascripts/font-awesome-kit.js?1787093786"></script>
+  <link rel="stylesheet" media="screen" href="/stylesheets/evo-main-icons.css?1787093786" />
+  <link rel="stylesheet" media="screen" href="/stylesheets/evo_popup.css?1787093786" />
+    <link rel="stylesheet" media="screen" href="/files/8754207/custom_stylesheet_evo_theme_137613_v87(11).css" type="text/css" />
+
+<link rel="stylesheet" media="screen" href="/stylesheets/editor-content.css?1786067772" />
+
+
+
+
+
+
+
+
+  <script src="/javascripts/modernizr-2.8.3.min.js?1786067768"></script>
+
+<script src="/javascripts/lite.js?1786067768"></script>
+<script src="/javascripts/page_statistics.js?1787093786"></script>
+
+<link rel='stylesheet' href='/libraries/flowplayer/7.2.7/skin/skin.css?v=4'>
+<link rel='stylesheet' href='/libraries/flowplayer/7.2.7/audio/flowplayer.audio.css?v=4'>
+<script src='/libraries/flowplayer/7.2.7/flowplayer.min.js?v=4'></script>
+<script src='/libraries/flowplayer/7.2.7/audio/flowplayer.audio.min.js?v=4'></script>
+<script src='/libraries/flowplayer/7.2.7/flowplayer.speed-menu.min.js?v=4'></script>
+<script src='/javascripts/flowplayer_setup.js?v=35'></script>
+<script src='/javascripts/flowplayer_extensions.js?v=17'></script>
+
+  <script>
+    set_visitor_mode();
+  </script>
+
+  <script>
+    set_portal_mode();
+  </script>
+
+
+  <script>
+    set_new_editor();
+  </script>
+
+<script>
+  set_mobile_editor();
+</script>
+
+
+
+
+  <script>
+    set_video_recording_mode();
+  </script>
+
+  <script>
+    set_audio_recording_mode();
+  </script>
+
+
+  <script>
+    set_grey_page_mode();
+  </script>
+
+<script>
+  set_mobile_vars('/files/8754207/custom_stylesheet_user_theme_137613_v87(12).css' , '<link rel="stylesheet" media="screen" href="/files/8754207/custom_stylesheet_user_theme_137613_v87(12).css" title="theme" />', '');
+</script>
+
+  <script>
+    var bjqs_called = false; // prevent calling bjqs twice in mobile resolutions
+  </script>
+
+<!-- TODO: can we cache this in local storage? -->
+
+<script>
+  set_translations({
+    ok_text: 'Correcto',
+    cancel_text: 'Cancelar',
+    no_notifications_text: 'No tienes notificaciones.',
+    no_messages_text: 'Tu buzón de entrada está vacío.',
+    chat_request_text: 'Solicitud de chat de',
+    accept_text: 'Aceptar',
+    ignore_text: 'Ignorar',
+    you_have_selected_all_text: 'Has seleccionado todos los elementos de esta página.',
+    select_all_items_text: 'Selecciona todos los ítems en todas las páginas',
+    all_items_selected_text: 'Todos los elementos de todas las páginas han sido seleccionados.',
+    clear_selection_text: 'Quitar selección',
+    are_you_sure_text: '¿Estás seguro?',
+    chat_request_canceled_text: 'El chat solicitado ha sido cancelado.',
+    no_events_this_month_text: 'No hay eventos este mes.',
+    no_events_this_week_text: 'No hay eventos esta semana.',
+    access_code_text: 'Código de acceso',
+    email_address_text: 'Dirección de correo electrónico',
+    sticky_question_text: '¿Destacado?',
+    file_text: 'Archivo',
+    save_text: 'Guardar',
+    cancel_text: 'Cancelar',
+    comment_text: 'Comentario',
+    send_text: 'Enviar',
+    send_message_text: 'Enviar y notificar',
+    send_to_text: 'Enviar a',
+    students_text: 'Estudiantes',
+    teachers_text: 'Profesores',
+    managers_text: 'Gerentes',
+    parents_text: 'Padres',
+    monitors_text: 'Monitores',
+    administrators_text: 'Administradores',
+    close_text: 'Cerrar',
+    picker_empty_text: 'Debe haber al menos una persona en la columna seleccionada.',
+    picker_limit_text: 'No puede seleccionar más de 1000 personas',
+    alert_box_title: 'Alerta',
+    confirmation_box_title: 'Confirmar',
+    select_all_text: 'Seleccionar todo',
+    deselect_all_text: 'Anular la selección',
+    mark_as_read_text: 'Marcar como leído',
+    mark_as_unread_text: 'Marcar como no leído',
+    processing: 'Procesando...',
+    do_not_press_refresh_or_back_button: 'Por favor, no presiones actualizar o el botón Atrás.',
+    this_might_take_a_while_to_complete: 'Esta acción tomará un momento en ser completada',
+    expand_all: 'Expandir todos',
+    contract_all: 'Contraer todo',
+    set_feeds_text: 'Establecer alimentadores de noticias',
+    edit_feeds_text: 'Editar feeds',
+    picker_populate_matches_list: 'Llene la lista de Coincidencias mediante el filtro de búsqueda. A continuación, seleccione elementos y utilice > para moverlos a la lista de Seleccionados.',
+    picker_add_to_selected_list: 'Haga click en Añadir para añadir a las personas en la lista Seleccionados.',
+    like_text: 'Me gusta',
+    likes_text: 'Me gustan',
+    reset_order_text: 'Restablecer orden',
+    change_text: 'Modificar',
+    close_the_editor_text: '¿Cerrar el editor?',
+    do_not_close_button_text: 'No cerrar',
+    required_text: 'Obligatorio',
+    copilot_at_work_text: '¡El agente CYPHER está trabajando para ahorrarte tiempo!<br/><br/> Te enviará una notificación<br/> cuando el contenido esté listo para su revisión.',
+    has_value_text: 'tiene valor',
+    has_no_value_text: 'no tiene valor',
+    on_or_later_than_text: 'En o después de',
+    on_or_earlier_than_text: 'En o antes de',
+    date_range_text: 'Intervalo de fechas',
+    less_than_text: 'Menos que',
+    greater_than_text: 'Mas grande que',
+    in_text: 'En',
+    equals_text: 'Igual',
+    contains_text: 'Contiene',
+    starts_with_text: 'Comienza con',
+    ends_with_text: 'Termina con',
+    yes_text: 'Sí',
+    no_text: 'No',
+    video_not_started_text: 'Vídeo: No comenzado',
+    video_playing_text: 'Vídeo: Reproduciéndose',
+    video_started_text: 'Video: started, click here to resume',
+    video_finished_text: 'Vídeo: Terminado',
+    no_items_selected: 'Ningún ítem fue seleccionado',
+  });
+</script>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" media="screen" href="/stylesheets/jquery-confirm.css?1786067772" />
+
+<link rel="stylesheet" media="screen" href="/stylesheets/plugins/vex.css?1786067772" />
+<link rel="stylesheet" media="screen" href="/stylesheets/plugins/vex-theme-os.css?1786067772" />
+
+  <meta name="twitter:site" content="@neolms"/>
+<meta name="twitter:card" content="photo"/>
+
+
+  <meta name="twitter:image" content="https://liderazgo.neolms.com/files/12196789/Logo-AI_liderazgo_png.png?lmsauth=2e5b70fa3b508fb3e60988e1a6f8d23a0cd607a8"/>
+  <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://liderazgo.neolms.com/files/12196789/Logo-AI_liderazgo_png.png?lmsauth=2e5b70fa3b508fb3e60988e1a6f8d23a0cd607a8"/>
+
+  <meta property="og:description" content="En Liderazgo Capacitación y Eventos, somos líderes en formación profesional con más de 20 años de experiencia. Nos especializamos en ofrecer cursos, diplomados y certificaciones diseñados para sati..."/>
+
+
+
+
+
+  <link rel="stylesheet" media="screen" href="/stylesheets/evo_theme_variables.css?1787093786" />
+<link rel="stylesheet" media="screen" href="/stylesheets/components/tabnav.css?1787093786" />
+<link rel="stylesheet" media="screen" href="/stylesheets/components/fab-scrolldown.css?1786067772" />
+<link rel="stylesheet" media="screen" href="/stylesheets/plugins/tinymce/tinymce-microcard-preview.css?1786067772" />
+<link rel="stylesheet" media="screen" href="/stylesheets/evo.css?1787093786" />
+
+
+
+
+
+<script language='javascript' async='true' type='text/javascript' src='https://cdn.whatfix.com/prod/82df729f-7f48-4c5b-8258-383bb97b980f/initiator/initiator.nocache.js'></script>
+
+
+
+
+    
+  </head>
+
+  <body class="portal portal_home home-carousel updated-carousel  site_full_width  evo">
+  
+
+
+  <div id="wrapper">
+    <div id="browser_msg" style="display: none">
+  <div>
+    <h1>We no longer support Internet Explorer</h1>
+
+    <p>Please download one of these browsers:</p>
+
+    <div class="browser_msg_icons">
+      <a href="https://www.google.com/chrome/" target="_blank">
+        <img src="/images/browsers/chrome_128x128.png" loading="lazy" alt="" />
+        <span>Chrome</span>
+      </a>
+
+      <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">
+        <img src="/images/browsers/firefox_128x128.png" loading="lazy" alt="" />
+        <span>Firefox</span>
+      </a>
+
+      <a href="https://support.apple.com/downloads/safari" target="_blank">
+        <img src="/images/browsers/safari_128x128.png" loading="lazy" alt="" />
+        <span>Safari</span>
+      </a>
+
+      <a href="https://www.microsoft.com/en-us/edge" target="_blank">
+        <img src="/images/browsers/edge_128x128.png" loading="lazy" alt="" />
+        <span>Microsoft Edge</span>
+      </a>
+    </div>
+
+    <p>
+      <span>Keep your browser version up-to-date for a fast, secure, web experience.</span>
+    </p>
+  </div>
+</div>
+
+<a href="#contentWrap" role="button" class="skipToContent">Skip to content</a>
+
+<script>
+  on_ready(function() {
+      document.body.prepend(document.getElementsByClassName('skipToContent')[0])
+    });
+</script>
+      
+<header>
+  <div class="mobileBar">
+      <a href="#main-menu" class="leftMobileBar">
+        <span class="textOffScreen">View menu</span>
+      </a>
+
+    <div class="middleMobileBar">
+      <span>
+      </span>
+    </div>
+
+      <a href="/log_in/form" rel="facebox" excalibur-click="Excalibur.facebox" class="rightMobileBar" onclick="return false;">
+        Iniciar sesión
+      </a>
+  </div>
+
+    <h1 class="customLogo">
+
+  <a href="/">
+
+
+        <img src="/files/12196789/Logo-AI_liderazgo_png.png?lmsauth=2e5b70fa3b508fb3e60988e1a6f8d23a0cd607a8" alt="Liderazgo Capacitación y Eventos" class="scrolled_logo" style="max-height: calc(51px - (0px * 2))"/>
+
+  </a>
+
+      </h1>
+
+    <nav role="navigation" class="mainNav" id="main-menu">
+  <ol>
+    <li class="mobile_only selected">
+      <a href="/">Inicio</a>
+    </li>
+    
+      
+      
+        <li>
+
+      	    <a target="_blank" href="https://liderazgo-online.com/cursos-online/">Cursos online</a>
+      	
+      </li>
+      
+      
+        <li>
+
+      	    <a target="_blank" href="https://liderazgo-online.com/cursos-virtuales/">Cursos virtuales</a>
+      	
+      </li>
+      
+      
+        <li>
+
+      	    <a target="_blank" href="https://liderazgo-online.com/certificacion-por-competencias-laborales/">Certificaciones</a>
+      	
+      </li>
+      
+      
+        <li>
+
+      	    <a target="_blank" href="https://liderazgo-online.com/diplomados/">Diplomados</a>
+      	
+      </li>
+
+
+
+      <li class="loginHolder">
+        <a href="/log_in/form" rel="facebox" excalibur-click="Excalibur.facebox" class="roundedBtn" style="background-color: #5B636B" onclick="return false;">
+          Iniciar sesión
+        </a>
+      </li>
+  </ol>
+</nav>
+</header>
+
+  <div class="mobileLogo">
+    <h1 class="customLogo">
+      <a href="/">
+
+
+            <img src="/files/12196789/Logo-AI_liderazgo_png.png?lmsauth=2e5b70fa3b508fb3e60988e1a6f8d23a0cd607a8" class="scrolled_logo" style="max-height: calc(51px - (0px * 2))"/>
+
+      </a>
+    </h1>
+  </div>
+
+
+
+
+    <div id="contentWrap" role="main">
+        
+<div id="carouselWrap" data-panel-id="137920">
+  <ul class="bjqs">
+        
+
+
+
+                  
+<li style="background-image: url('/files/12196789/PORTAL_NEO_-_19_Anos(2).png?lmsauth=626535dc5599db0283dbfdeac01bbc473b28cab7')" data-slide-id="343365">
+  <img src=/images/responsive/headers/empty.png?1786067768  data-heading="<h2>20 Años<br>INSTRUYENDO, INNOVANDO &amp;POTENCIANDO TU CONOCIMIENTO<!--</h2--></h2>" data-description="<p style=&quot;font-size: 15px;&quot; data-mce-style=&quot;font-size: 15px;&quot;>Descubre nuestros cursos online/virtuales, certificaciones laborales, diplomados y eventos corporativos. Formación reconocida oficialmente y adaptada a tus necesidades profesionales.</p>" data-title-colour="##FFFFFF" data-description-colour="##FFFFFF">
+</li>
+
+        
+
+
+
+                  
+<li style="background-image: url('/files/12196789/PORTAL_NEO_-_Diplomados.png?lmsauth=2911c8b331f54c7a7f1ddcf010224c869a9115de')" data-slide-id="343366">
+  <img src=/images/responsive/headers/empty.png?1786067768  data-heading="<h2>Diplomados 2026<br>¡Tu Próximo Gran Paso!</h2>" data-description="<p style=&quot;font-size: 15px;&quot; data-mce-style=&quot;font-size: 15px;&quot;>Destaca con diplomados que combinan innovación, práctica y excelencia. Potencia tus habilidades y lleva tu perfil al siguiente nivel.</p>" data-title-colour="##FFFFFF" data-description-colour="##FFFFFF">
+</li>
+
+        
+
+
+
+                  
+<li style="background-image: url('/files/12196789/PORTAL_NEO_-_Cursos_online.png?lmsauth=8c72d6fed09f22b30b66dd305aa019b47595ed1d')" data-slide-id="478326">
+  <img src=/images/responsive/headers/empty.png?1786067768  data-heading="<h1 style=&quot;font-size: 50px; color: white;&quot; data-mce-style=&quot;font-size: 50px; color: white;&quot;><strong>¿Quieres aprender de forma práctica, flexible y en tiempo real?</strong></h1>" data-description="<p style=&quot;font-size: 15px;&quot; data-mce-style=&quot;font-size: 15px;&quot;>Cursos online con clases en vivo, expertos, práctica real y networking. Fortalece tus habilidades y avanza en tu carrera profesional.</p>" data-title-colour="##FFFFFF" data-description-colour="##FFFFFF">
+</li>
+
+        
+
+
+
+                  
+<li style="background-image: url('/files/12196789/PORTAL_NEO_-_Certificacion_por_competencias_laborales.png?lmsauth=97e0b221c74eb912250d1a211555cf0194595f90')" data-slide-id="343368">
+  <img src=/images/responsive/headers/empty.png?1786067768  data-heading="<h1 style=&quot;font-size: 55px; color: white;&quot; data-mce-style=&quot;font-size: 55px; color: white;&quot;><strong>Certifícate y respalda tu experiencia</strong></h1><p><strong><em style=&quot;font-size: 19px;&quot; data-mce-style=&quot;font-size: 19px;&quot;>¡Valida Tu Experiencia!</em></s" data-description="<p style=&quot;font-size: 15px;&quot; data-mce-style=&quot;font-size: 15px;&quot;>Impulsa tu desarrollo con certificaciones oficiales. Valida tu experiencia, destaca tus competencias y abre nuevas oportunidades laborales.</p>" data-title-colour="##FFFFFF" data-description-colour="##FFFFFF">
+</li>
+
+        
+
+
+
+                  
+<li style="background-image: url('/files/12196789/PORTAL_NEO_-_Cursos_virtuales.png?lmsauth=4a5128a49d5f21f4330576e4ca8c9d5575e3101d')" data-slide-id="343367">
+  <img src=/images/responsive/headers/empty.png?1786067768  data-heading="<h1 style=&quot;font-size: 55px; color: white;&quot; data-mce-style=&quot;font-size: 55px; color: white;&quot;><extrastrong>¿Sin tiempo para horarios fijos?</extrastrong></h1><p><strong><em style=&quot;font-size: 19px;&quot; data-mce-style=&quot;font-size: 19px;&quot;>¡Aprende A Tu Ritmo! </em>" data-description="<p style=&quot;font-size: 15px;&quot; data-mce-style=&quot;font-size: 15px;&quot;>Estudia desde cualquier lugar, a cualquier hora, y accede a contenido actualizado con expertos en la materia.</p>" data-title-colour="##FFFFFF" data-description-colour="##FFFFFF">
+</li>
+
+  </ul>
+</div>
+        
+  
+  
+  
+  
+
+
+
+<section class="panel panel1 circularImg" data-panel-id="186888">
+  <div  class="row-4-blocks">
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/1._Seleccion_por_Competencias(2).png?lmsauth=d280405779751b37f90d872462c52ffba7a147dc')"></div>
+          </div>
+
+            <p>
+              <strong>Selección por Competencias</strong>
+            </p>
+
+          <p>Perfecciona tus procesos de selección mediante entrevistas y evaluación por competencias.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/2._Manejo_Integral_de_la_Nomina(2).png?lmsauth=0d988bd9f94e465c1444845af3e210c73afa833a')"></div>
+          </div>
+
+            <p>
+              <strong>Manejo Integral de la Nómina</strong>
+            </p>
+
+          <p>Gestiona la nómina con precisión, cumplimiento legal y eficiencia administrativa.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/3._Programa_Practico_de_Importaciones_desde_Cero(2).png?lmsauth=455a9f0839a9d4809804ba1279e898a0d3359001')"></div>
+          </div>
+
+            <p>
+              <strong>Programa Práctico de Importaciones desde Cero</strong>
+            </p>
+
+          <p>Domina el proceso de importación desde la negociación hasta la nacionalización de mercancías.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/4._Cierre_Fiscal_bajo_NIIF(2).png?lmsauth=1f4abb297508161c19c52e89baac7304f739d33e')"></div>
+          </div>
+
+            <p>
+              <strong>Cierre Fiscal bajo NIIF</strong>
+            </p>
+
+          <p>Aplica correctamente las NIIF en el cierre contable y fiscal de tu organización.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+  </div>
+</section>
+
+        
+  
+  
+  
+  
+
+
+
+<section class="panel panel1 circularImg" data-panel-id="186890">
+  <div  class="row-4-blocks">
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/5._Programa_Avanzado_de_Cobranzas_Extrajudiciales(2).png?lmsauth=06652f07c497cedc12beab3246909d99044cf920')"></div>
+          </div>
+
+            <p>
+              <strong>Programa Avanzado de Cobranzas Extrajudiciales</strong>
+            </p>
+
+          <p>Optimiza la recuperación de cartera mediante estrategias efectivas de negociación.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/6._Administracion_de_Empresas(2).png?lmsauth=a8353e69f5e988060f21e837780a703b01288fc1')"></div>
+          </div>
+
+            <p>
+              <strong>Administración de Empresas</strong>
+            </p>
+
+          <p>Fortalece tus competencias para gestionar organizaciones con visión estratégica.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/7._Administracion_Gestion_y_Optimizacion_de_Inventarios_Logistica_y_Bodega(2).png?lmsauth=29b55552c6e46bc4b7a3949f3b4597014e0b080a')"></div>
+          </div>
+
+            <p>
+              <strong>Administración, Gestión y Optimización de Inventarios, Logística y Bodega</strong>
+            </p>
+
+          <p>Optimiza inventarios y operaciones logísticas para mejorar la eficiencia empresarial.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/8._Prevencion_de_Riesgos_Laborales(3).png?lmsauth=217ae589ac60c3a6a4140ca0da175de2276b2f1c')"></div>
+          </div>
+
+            <p>
+              <strong>Prevención en Riesgos Laborales</strong>
+            </p>
+
+          <p>Implementa medidas preventivas para proteger a las personas y cumplir la normativa.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+  </div>
+</section>
+
+        
+  
+  
+  
+  
+
+
+
+<section class="panel panel1 circularImg" data-panel-id="186891">
+  <div  class="row-4-blocks">
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/9._Programa_de_Formacion_de_Experto_NIIF_para_PYMES(2).png?lmsauth=1d752760a8d4ff5b49bcbe8e3af695a4fca47443')"></div>
+          </div>
+
+            <p>
+              <strong>Programa de Formación de Experto NIIF - PYMES</strong>
+            </p>
+
+          <p>Domina la aplicación práctica de las NIIF para pequeñas y medianas empresas.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/10._Analisis_Financiero_Reactivacion_Ahorro_y_Liquidez_para_Empresas(2).png?lmsauth=b4fc707dc87e0018d84cafda969e9b820e0c16c4')"></div>
+          </div>
+
+            <p>
+              <strong>Análisis Financiero: Reactivación, Ahorro y Liquidez para Empresas</strong>
+            </p>
+
+          <p>Analiza la situación financiera y fortalece la liquidez y rentabilidad empresarial.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/11._Programa_de_Formacion_de_Experto_Tributario(2).png?lmsauth=7d478659decc815842417340b6071ce59f251781')"></div>
+          </div>
+
+            <p>
+              <strong>Programa de Formación de Experto Tributario</strong>
+            </p>
+
+          <p>Especialízate en normativa tributaria y gestión fiscal con enfoque práctico.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/12._Formacion_y_Calificacion_de_Peritos_Contables(2).png?lmsauth=dc8845f14860f0419cfe38a022f5d723d77a4cd8')"></div>
+          </div>
+
+            <p>
+              <strong>Formación y Calificación de Peritos Contables</strong>
+            </p>
+
+          <p>Desarrolla competencias para actuar como perito contable en procesos judiciales.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+  </div>
+</section>
+
+        
+  
+  
+  
+  
+
+
+
+<section class="panel panel1 circularImg" data-panel-id="186892">
+  <div  class="row-4-blocks">
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/13._Formacion_de_Formadores(2).png?lmsauth=a17c6cb316cf72d46a91ddc0c534db1eef7c60dd')"></div>
+          </div>
+
+            <p>
+              <strong>Formación de Formadores</strong>
+            </p>
+
+          <p>Diseña experiencias de aprendizaje con metodologías modernas y efectivas.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/14._Planeacion_Financiera_Flujos_y_Presupuestos(2).png?lmsauth=8b4f5cff110c373962541f80385cb5ee43b18496')"></div>
+          </div>
+
+            <p>
+              <strong>Planeación Financiera: Flujos y Presupuestos</strong>
+            </p>
+
+          <p>Planifica recursos financieros mediante presupuestos y proyecciones estratégicas.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/15._Presentacion_de_Informacion_Financiera_y_Societaria_para_la_SuperCias(2).png?lmsauth=ce538372561858aee63033bbe40d18fc9ae44b62')"></div>
+          </div>
+
+            <p>
+              <strong>Presentación de Información Financiera y Societaria para la SuperCías</strong>
+            </p>
+
+          <p>Cumple correctamente con los requerimientos financieros y societarios de la SuperCías.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/16._Formacion_Integral_del_Asistente_Contable_Tributario(2).png?lmsauth=a8475dcf867763cd5fb127f025c1a35b4eb7a64b')"></div>
+          </div>
+
+            <p>
+              <strong>Formación Integral del Asistente Contable Tributario</strong>
+            </p>
+
+          <p>Fortalece tus competencias en contabilidad y cumplimiento tributario.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+  </div>
+</section>
+
+        
+  
+  
+  
+  
+
+
+
+<section class="panel panel1 circularImg" data-panel-id="186893">
+  <div  class="row-3-blocks">
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/17._Programa_Intensivo_de_Experto_Laboral(2).png?lmsauth=a0a6169b0dde4fb0b53bce1db30a2fa5588cbfe0')"></div>
+          </div>
+
+            <p>
+              <strong>Programa Intensivo de Experto Laboral</strong>
+            </p>
+
+          <p>Domina la legislación laboral y su aplicación en la gestión empresarial.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/18._Formacion_Avanzada_en_Mentoring(2).png?lmsauth=9a9a075f087a1985fa2e8778f7bb7b8855244a85')"></div>
+          </div>
+
+            <p>
+              <strong>Formación Avanzada en Mentoring</strong>
+            </p>
+
+          <p>Desarrolla habilidades para acompañar, potenciar y desarrollar el talento.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+        <div class="block">
+          <div class="flexFixer">
+            <div class="imgCrop" style="background-image: url('/files/11419856/19.Programa_de_Prevencion_en_Lavado_de_Activos(2).png?lmsauth=48027988da14b4ce37ff4a5afa8b70f0b28303b8')"></div>
+          </div>
+
+            <p>
+              <strong>Programa de Prevención en Lavado de Activos</strong>
+            </p>
+
+          <p>Aplica estrategias de prevención y cumplimiento frente a riesgos de LA/FT.</p>
+
+            <div class="btnHolder">
+              
+<a href='https://liderazgo.neolms.com/site/not_logged_in?from=%2Fregistration_codes&amp;log_in_required=true' class="clearBtn roundedBtn panelBtn" target='' style=' color: #C49F20 ;border-color:#C49F20;'>
+  Ingresar
+</a>
+            </div>
+        </div>
+  </div>
+</section>
+
+        <section class="panel panel_split_text_img " style="padding-top: 60px; padding-bottom: 60px; background-color: #001E3B" data-panel-id="186335">
+  <div class="row">
+    <div class="half">
+      <img src="/files/12196789/Liderazgo-Eventos.jpg?lmsauth=486dc8a1a5d74c4788561c56e470c1d03a06d65b" />
+    </div>
+    <div class="half">
+      <div class="text_wrapper" style="text-align: left; color: #FFFFFF;">
+        <p>
+          <h3 class="elementor-heading-title elementor-size-default" style="box-sizing: border-box; border: 0px; font-size: 50px; font-style: normal; font-weight: 600; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; clear: both; color: rgb(255, 255, 255); line-height: 1em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(0, 30, 59); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" data-mce-style="box-sizing: border-box; border: 0px; font-size: 50px; font-style: normal; font-weight: 600; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; clear: both; color: rgb(255, 255, 255); line-height: 1em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(0, 30, 59); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Liderazgo<span> </span><b style="box-sizing: border-box; font-weight: bold;" data-mce-style="box-sizing: border-box; font-weight: bold;"><i style="box-sizing: border-box; font-style: italic;" data-mce-style="box-sizing: border-box; font-style: italic;">Eventos </i></b></h3><p>Haz de cada evento una oportunidad para fortalecer tu empresa. Diseñamos experiencias a medida, desde capacitaciones y conferencias hasta actividades de team building y celebraciones corporativas, impulsando el crecimiento y la cultura organizacional.</p><p><strong>¿Listo para llevar tus eventos al siguiente nivel?</strong></p>
+        </p>
+            
+<a href='https://liderazgo-online.com/liderazgo-eventos/' class="clearBtn roundedBtn panelBtn" target='_blank' style=' color: #C49F20 ;border-color:#C49F20;'>
+   Más info
+</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    </div>
+
+      
+
+
+
+<footer>
+  <nav role="navigation" class="footerNav">
+      <div class="footerLinks">
+
+   
+    </div>
+
+    <div class="fullWidthMobile">
+        <ul id="socialBlocks">
+            <li>
+                <a href="https://www.linkedin.com/company/liderazgocapacitacion/" title="LinkedIn" target='_blank' class="socialLin">
+                  <i></i>
+                  <span>LinkedIn</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/liderazgocapacitacion" title="Facebook" target='_blank' class="socialFb">
+                  <i></i>
+                  <span>Facebook</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/liderazgo.ecuador/" title="Instagram" target='_blank' class="socialIG">
+                  <i></i>
+                  <span>Instagram</span>
+                </a>
+            </li>
+        </ul>
+
+
+    </div>
+  </nav>
+</footer>
+
+
+<a href="#" class="back-to-top">
+  <span>
+    De atrás hacia delante
+  </span>
+</a>
+  </div>
+
+  
+
+
+  <script>if(!window.jQuery){document.write('<script src="/javascripts/jquery-master.js"><\/script>'); document.write('<script src="/javascripts/main_jquery_migrate.min.js"><\/script>');}
+        </script>
+
+  <script src="/javascripts/plugins/response.min.js?1786067768"></script>
+  <script src="/javascripts/modernizr-load.js?1786067768"></script>
+  <script src="/javascripts/bjqs-1.3.js?1787085952"></script>
+
+
+      <script>
+        Response.ready(function() {
+            $('#carouselWrap').bjqs({
+                width: '100%',
+                animspeed: 6000            });
+        });
+      </script>
+
+  
+<script src="/javascripts/jquery_ujs.js?1786067768"></script>
+<script src="/javascripts/lifecycle.es5.js?1786067768"></script>
+
+
+<script src="/javascripts/plugins/jquery-confirm.min.js?1787093786"></script>
+<script src="/javascripts/custom-confirm.js?1786067768"></script>
+
+<script src="/javascripts/plugins/response.min.js?1786067768"></script>
+
+    <script src="/javascripts/modernizr-load.js?1786067768"></script>
+
+  <script src="/javascripts/bjqs-1.3.js?1787085952"></script>
+  <script src="/javascripts/plugins/jquery.waypoints.min.js?1786067768"></script>
+  <script src="/javascripts/plugins/inview.min.js?1786067768"></script>
+  <script src="/javascripts/plugins/owl.carousel.min-v2.js?1786067768"></script>
+
+  <script src="/javascripts/micromodal.js?1787093786"></script>
+<script src="/javascripts/easing.js?1786067768"></script>
+<script src="/javascripts/spin.min.js?1786067768"></script>
+
+  <script src="/javascripts/components/fab-scrolldown.js?1786067768"></script>
+  <script src="/javascripts/components/tabnav.js?1787093786"></script>
+  <script src="/javascripts/components/popup_handler.js?1786067768"></script>
+  <script src="/javascripts/components/dropdown.js?1786067768"></script>
+  <script src="/javascripts/functions.js?1787093786"></script>
+
+<script src="/javascripts/core.js?1787093786"></script>
+
+
+<script src="/javascripts/excalibur.js?1787085952"></script>
+
+
+
+
+
+
+  <script src="/javascripts/jquery-caret-ui-timepicker.js"></script>
+
+
+<script src="/javascripts/focus-trap.js?1786067768"></script>
+<script src="/javascripts/jquery.tools-1.2.4-min.js?1786067768"></script> <!-- upgrade to 1.2.7 -->
+<script src="/javascripts/jquery-form-3.0.9.js?1786067768"></script>
+
+
+
+
+
+
+
+
+<script>
+  on_ready(init_min_height);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/javascripts/plugins/popperjs_core.js?1786067768"></script>
+<script src="/javascripts/plugins/tippy_bundle.js?1786067768"></script>
+
+<!-- TODO: can we avoid pulling this in on every page? -->
+<script src="/javascripts/plugins/vex.combined.min.js?1786067768"></script>
+
+<script>
+    vex.defaultOptions.className = 'vex-theme-os';
+    vex.dialog.defaultOptions.showCloseButton = true;
+</script>
+
+<script src="/javascripts/p5.min.js?1786067768"></script>
+<script src="/javascripts/p5_middleware.js?1786067768"></script>
+
+<div class="stack" style="display: none"></div>
+
+
+<script>
+	$.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+		if ((options.dataType == 'script') || (originalOptions.dataType == 'script')) {
+			options.cache = true;
+		}
+	});
+
+	$(document).ready(run_on_ready);
+</script>
+
+
+
+
+
+<script>
+    window.addEventListener( "pageshow", function ( event ) {
+        let visitor = true;
+
+        if (sessionStorage.getItem("logged_out_session") === 'true' && visitor === false) {
+            let historyTraversal = event.persisted ||
+                (typeof window.performance != "undefined" &&
+                    window.performance.getEntriesByType("navigation")[0].type === "back_forward");
+            if (historyTraversal) {
+                // Handle page restore.
+                window.location.reload();
+            }
+            sessionStorage.setItem("logged_out_session", "false");
+        }
+    });
+</script>
+
+
+
+
+
+  <script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
+
+
+  
+  
+
+
+
+  	<script>
+  		on_ready(function() {
+  			if (!/from=/i.test($('.rightMobileBar').attr('href'))) {
+  				$('.rightMobileBar').attr('href', $('.rightMobileBar').attr('href') + '?from=%2Fanalytics%2Ftimeout_popup');
+          $('.rightMobileBar').click();
+  			}
+  		});
+  	</script>
+
+
+
+
+  <script>
+    on_ready(init_min_height);
+  </script>
+
+</body>
+
+  
+</html>

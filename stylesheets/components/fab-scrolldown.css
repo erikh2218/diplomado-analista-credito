@@ -1,0 +1,132 @@
+/*
+ * Floating Action Button for scrolling to bottom of page
+ */
+
+ .fab-wrapper {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* pointer-events: none; */
+    z-index: 1000;
+}
+
+#fab-scrolldown {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    bottom: 100px;
+    left: 59.5%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    padding: 8px 0;
+    background-color: #fff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+    transition: all .4s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#fab-scrolldown:hover {
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
+    transform: translateX(-50%) scale(1.05);
+    transition: all .1s ease-in-out;
+}
+
+.scrollable-container {
+    position: relative;
+}
+
+.arrow-container {
+    position: relative;
+    height: 30px;
+    width: 25px;
+    overflow: hidden;
+}
+
+.fab-scrolldown-icon {
+    position: absolute;
+    left: 0;
+    top: 25%;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+}
+
+.fab-show {
+    animation: fadeInUp 0.3s ease forwards;
+}
+
+.fab-hide {
+    animation: fadeOutDown 0.3s ease forwards;
+}
+
+@media (max-width: 1300px) {
+    #fab-scrolldown {
+        display: none !important; /* Use !important to override any other display settings injected by jquery*/
+    }
+}
+
+
+.arrow-1, .arrow-2 {
+    position: absolute;
+    animation: arrowFloat 2s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.arrow-2 {
+    animation-delay: .8s;
+}
+
+svg.fab-scrolldown-icon.arrow-1, svg.fab-scrolldown-icon.arrow-2 {
+    color: black;
+}
+
+@keyframes arrowFloat {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    40% {
+        opacity: .8;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}

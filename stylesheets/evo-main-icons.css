@@ -1,0 +1,554 @@
+body.evo i {
+    width: 20px; /*height: 20px;*/ height: auto; display: inline-block; vertical-align: middle !important; position: relative; overflow: hidden;
+}
+#user-menu ol > li .dropDown a i {
+   margin: -2px 4px 0 0;
+}
+
+body.evo i.icon.hide {
+    display: none;
+}
+
+#centreColumn i:not([class]), body.evo i.italics, .materialStyle i, [style*='font-family'] i {
+    width: auto !important;
+    height: auto;
+    overflow: visible;
+    vertical-align: inherit;
+}
+#centreColumn i:not([class]):after, body.evo i.italics:after, .materialStyle i:after, [style*='font-family'] i:after, body.evo i.hideIcon:after {
+    display: none
+}
+body.evo i.inverted:after, .quickLinks #btn-cancel body.evo i.inverted:after, .optionsRibbon ul.inverted li a i:after, .optionsRibbon ul.inverted li a:hover i:after, .options_btn.inverted i:after, .options_btn.inverted:hover i:after {
+    color: #fff;
+}
+body.evo i.copilot-icon.iconColor:after, body.evo i.fa-cypher.iconColor:after {color: var(--cypher-green)}
+.compactIcons i {margin-left: -3px}
+#wrapper body.evo i.inline, p body.evo i.info {margin: -4px -3px 0 0}
+.comment p i, .quickLinks i, #centreColumn p i[class] {
+    margin-top: -4px
+}
+body.evo i.small, body.evo i.medium{
+    font-size: 18px;
+    width: 26px;
+    text-align: left;
+    height: 24px;
+    padding-top: 3px;
+    box-sizing: border-box;
+}
+body.evo i.medium{
+    font-size: 15px;
+    width: 28px;
+    height: 28px;
+    padding-top: 7px;
+}
+body.evo i.small.icnColor:after, body.evo i.medium.icnColor:after {
+    color: var(--active-color);
+}
+/* SVG icons */
+body.evo i.icon {width: 16px; height: 16px}
+body.evo i.icon.w32 {width: 32px; height: 32px}
+body.evo i.icon.w80 {width: 80px; height: 80px}
+body.evo i.icon.w82 {width: 82px; height: 82px}
+body.evo i.icon > * {width: 100%; height: 100%}
+body.evo i.icon:after {display: none}
+body.evo i.icon.inverted * {fill: #fff}
+body.evo i.icon:not(.icnColor):not(.inverted) * {fill: #5e5f5f; fill: var(--icon-bg-color)}
+.optionsRibbon ul li a body.evo i.icon, .options_btn body.evo i.icon {margin: 4px 8px 0 0}
+.optionsRibbon ul li a body.evo i.icon.single, .options_btn body.evo i.icon.single {margin-left: 0; margin-right: 0}
+
+#socialBlocks a {padding: 10px; border: none}
+#socialBlocks a i:after {font-size: 16px; color: #222; background-image: none;}
+.user #socialBlocks a i {height: 19px; text-align: center; margin-top: -4px}
+#socialBlocks a:hover i:after, .profile_social_links a i:after {color: #fff}
+.color_social_links a.socialFb {background-color: #39579a}
+.color_social_links a.socialTwr {background-color: #00acf0}
+.color_social_links a.socialLin {background-color: #007ab8}
+.color_social_links a.socialIG {background-color: #ee1a74}
+
+i:after,
+#centreColumn ul li:before,
+.quickLinks #btn-cancel i:after,
+.user nav#leftColumn .dropDownHolder > a:hover:after,
+.user nav#leftColumn .dropDownHolder > a.highlight:after,
+a.rightMobileBar i:after, .quickLinks > a > i:after,
+.quickLinks > a.header_cart i:after,
+.quickLinks > div > a > i:after,
+.quickLinks button i:after,
+.linkHome i:after{
+    font-family: "Font Awesome 6 Pro";
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    font-weight:500;
+    text-rendering: auto;
+    color: var(--main-text-color);
+    width: 100% !important;
+    text-align: center;
+    height: initial !important;
+    background: none;
+    top: 0 !important;
+    left: 0 !important;
+    position: initial !important;
+}
+
+.materialStyle ul li:before {
+    display: block !important;
+}
+
+/* Safari-specific override */
+@supports (-webkit-appearance: none) and (not (appearance: none)) {
+    .materialStyle ul li:before {
+        display: none !important;
+    }
+}
+
+#fullscreen_msg .header a.close:after {
+    content: "\e59b";
+    font-family: "Font Awesome 6 Pro";
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    color: var(--main-text-color);
+    width: 100% !important;
+    text-align: center;
+    height: initial !important;
+    background: none;
+    top: 0 !important;
+    left: 0 !important;
+    position: initial !important;
+}
+
+body.evo i:before{
+    font-family: "Font Awesome 6 Pro";
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    font-weight:500;
+    text-rendering: auto;
+    color: var(--main-text-color);
+    width: 100% !important;
+    text-align: center;
+    height: initial !important;
+    background: none;
+    top: 0 !important;
+    left: 0 !important;
+    position: initial !important;
+}
+
+body.evo .fak, body.evo .fa-kit{
+   line-height:1.2;
+}
+
+body.evo i.facebook:after, body.evo i.linkedin:after, body.evo i.mailchimp:after, body.evo i.salesforce:after,
+#socialBlocks i:after, .profile_social_links a i:after {
+    font-family: "Font Awesome 6 Brands"
+}
+a.socialFb i:after {content: '\f39e'}
+a.socialTwr i:after {content: '\e61b'}
+a.socialLin i:after {content: '\f0e1'}
+a.socialBlog i:after {content: '\f781'}
+a.socialPin i:after {content: '\f231'}
+a.socialYouTube i:after {content: '\f167'}
+a.socialVimeo i:after {content: '\f27d'}
+a.socialIG i:after {content: '\f16d'}
+a.socialRss i:after {content: '\f09e'; font-weight: 900; font-family: "Font Awesome 6 Pro" !important}
+
+i.widget-icon.To-do:before {content: "\f058";}
+body.evo i.add:after {content: '\2b'; font-weight: 900}
+body.evo i.addCircle:after {content: '\f055'; font-weight: 500}
+body.evo i.administrator:after {content: '\f6a4'; font-weight: 500}
+body.evo i.admin_activity:after {content: '\f192'; font-weight: 500}
+body.evo i.alexa:after {content: '\e000'; font-family: Font Awesome Kit}
+body.evo i.API:after {content: '\f2f1'; font-weight: 500}
+body.evo i.appCenter:after, body.evo i.Appcenter:after {content: '\e197'; font-weight: 500}
+body.evo i.archive:after {content: '\f187'; font-weight: 500}
+body.evo i.arithmatic:after {content: '\f64c'; font-weight: 900}
+body.evo i.merge:after {content: '\f387'; font-weight: 900}
+body.evo i.arrowDown:after,
+body.evo i.arrow-down:after {content: '\f078'; font-weight: 900}
+i.arrowLeft:after {content: '\f053'; font-weight: 900}
+body.evo i.arrowRight:after {content: '\f054'; font-weight: 900}
+body.evo i.arrowRightSml:after {content: '\f105'; font-weight: 500}
+body.evo i.arrowUp:after {content: '\f077'; font-weight: 900}
+body.evo i.arrows_update:after {content: '\f021'; font-weight: 900}
+body.evo i.assignments:after, body.evo i.Assignments:after,body.evo i.Assessments:after {content: '\f316'; font-weight: 500}
+body.evo i.attachment:after {content: '\f0c6'; font-weight: 500}
+body.evo i.audioPause:after {content: '\f04c'; font-weight: 500}
+body.evo i.audioPlay:after {content: '\f04b'; font-weight: 500}
+body.evo i.audioRecord:after {content: '\f111'; font-weight: 500}
+body.evo i.audioStop:after {content: '\f04d'; font-weight: 500}
+body.evo i.audioOn:after {content: '\f6a9'; font-weight: 500}
+body.evo i.audioOff:after {content: '\f2e2'; font-weight: 500}
+body.evo i.badge:after {content: '\f336'; font-weight: 500}
+body.evo i.bell:after,
+body.evo i.notifications:after,
+body.evo .notificationsHolder i.unread:after,
+body.evo i.notifications.unread:after,
+body.evo i.notifications.messages:after
+{content: '\f0f3'; font-weight: 500}
+body.evo i.blockCircle:after {content: '\f056'; font-weight: 500}
+body.evo i.block_widget:after {content: '\e00d'; font-family: Font Awesome Kit}
+body.evo i.block_widget_right:after {content: '\e00e'; font-family: Font Awesome Kit}
+body.evo i.block_widget_center:after {content: '\e010'; font-family: Font Awesome Kit}
+i.book:after, body.evo i.Lessons:after, body.evo i.Modules:after {content: '\f02d'; font-weight: 500}
+i.book2:after {content: '\f5d9'; font-weight: 500}
+body.evo i.boxView:after, body.evo i.Catalogoverview:after {content: '\e196'; font-weight: 500}
+i.book-open-reader:after {content: '\f5da'; font-weight: 500}
+body.evo i.briefcase:after {content: '\f0b1'; font-weight: 500}
+i.buildings:after {content: '\e0cc'; font-weight: 500}
+body.evo i.bullet:after {content: '\e122'; font-weight: 900; font-size: .5em; position: relative; top: -2px}
+body.evo i.bundleItems:after {content: '\e178'; font-weight: 500}
+body.evo i.cabinet:after {content: '\f64b'; font-weight: 500}
+body.evo i.calculate:after {content: '\f1ec'; font-weight: 900}
+body.evo i.calendar:after {content: '\f133'; font-weight: 500}
+body.evo i.calendar_view_agenda:after {content: '\e0d5'; font-weight: 500}
+body.evo i.calendarViewDay:after {content: '\f783'; font-weight: 500}
+body.evo i.calendar_view_periods:after {content: '\e0d6'; font-weight: 500}
+body.evo i.calendarViewWeek:after {content: '\f784'; font-weight: 500}
+body.evo i.cart:after {content: '\f07a'; font-weight: 500}
+body.evo i.category:after {content: '\e3ad'; font-weight: 900}
+body.evo i.certificate:after {content: '\f5f3'; font-weight: 500}
+body.evo i.certificate2:after {content: '\f0a3'; font-weight: 500}
+body.evo i.chartArea:after {content: '\f201'; font-weight: 900}
+body.evo i.chartCurve:after {content: '\f643'; font-weight: 900}
+body.evo i.chartLineDots:after {content: '\f7ee'; font-weight: 900}
+body.evo i.chartLine:after {content: '\f201'; font-weight: 900}
+body.evo i.Chat:after {content: '\f086'; font-weight: 900}
+body.evo i.checkboxChecked:after {content: '\f14a'; font-weight: 500}
+body.evo i.checkboxUnchecked:after {content: '\f0c8'; font-weight: 500}
+body.evo i.class:after {content: '\f1b3'; font-weight: 500}
+body.evo i.classTemplate:after {content: '\e0be'; font-weight: 500}
+body.evo i.clever:after {content: '\e001'; font-family: Font Awesome Kit}
+body.evo i.clock:after {content: '\f017'; font-weight: 500}
+body.evo i.code:after, body.evo i.code:before{content: '\f054 '; font-weight: 500}
+body.evo i.cog:after, body.evo i.jobs:after {content: '\f013'; font-weight: 500}
+body.evo[class*="goals"] .modern_module_row a.cog i:after {
+    display: block;
+    content: '\f013';
+    color: var(--main-text-color);
+}
+body.evo i.coins:after {content: '\f51e'; font-weight: 500}
+body.evo i.cometchat:after {content: '\e002'; font-family: Font Awesome Kit}
+body.evo i.comment:after {content: '\f075'; font-weight: 500}
+body.evo i.comments:after {content: '\f086'; font-weight: 500}
+body.evo i.compliance:after {content: '\f2f7'; font-weight: 500}
+body.evo i.compress:after {content: '\f066'; font-weight: 900}
+body.evo i.content_template:after {content: '\e49e'; font-weight: 500}
+body.evo i.copilot:after, body.evo i.copilot-icon:after {content: '\e003'; font-family: Font Awesome Kit}
+body.evo i.copy:after {content: '\f0c5'; font-weight: 500}
+body.evo i.Courses:after, body.evo i.Classes:after {content: '\f1b3'; font-weight: 500}
+body.evo i.coursera:after {content: '\e004'; font-family: Font Awesome Kit}
+body.evo i.creditCard:after {content: '\f38a'; font-weight: 500}
+body.evo i.creditCard2:after {content: '\f09d'; font-weight: 500}
+body.evo i.credly:after {content: '\e005'; font-family: Font Awesome Kit}
+body.evo i.accredible:after {content: '\e045'; font-family: Font Awesome Kit}
+body.evo i.crossCircle:after {content: '\f057'; font-weight: 500}
+body.evo i.crown:after {content: '\f521'; font-weight: 500}
+body.evo i.curriculum:after {content: '\f12e'; font-weight: 500}
+body.evo i.dashboard:after {content: '\f624'; font-weight: 500}
+body.evo i.database:after {content: '\f1c0'; font-weight: 500}
+body.evo i.delete:after,
+body.evo i.trash:after {content: '\f2ed'; font-weight: 500}
+body.evo i.direction:after {content: '\f124'; font-weight: 500}
+body.evo i.disquette:after {content: '\f0c7'; font-weight: 500}
+body.evo i.dotHandle:after {content: '\e411'; font-weight: 900}
+body.evo i.E-commerce:after {content: '\f2e8'; font-weight: 500}
+body.evo i.edit:after,
+body.evo i.pencil:after {content: '\f303'; font-weight: 500}
+body.evo i.editAssignment:after {content: '\f31c'; font-weight: 500}
+body.evo i.edx:after {content: '\e006'; font-family: Font Awesome Kit}
+body.evo i.ellipsis:after {content: '\f141'; font-weight: 900}
+body.evo i.ellipsis_vertical:after {content: '\f142'; font-weight: 900}
+body.evo i.ellipsis_vertical_sml:after {content: '\e007'; font-family: Font Awesome Kit}
+body.evo i.email:after, body.evo i.Email:after,
+body.evo i.unread:after {content: '\f0e0'; font-weight: 500}
+body.evo i.enroll_others:after {content: '\e541'; font-weight: 500}
+body.evo i.enrolment:after {content: '\f044'; font-weight: 500}
+body.evo i.Enrollments:after {content: '\f5da'; font-weight: 500}
+body.evo i.equation:after {content: '\f661'; font-weight: 500}
+body.evo i.equella:after {content: '\e008'; font-family: Font Awesome Kit}
+body.evo i.error:after {content: '\f071'; font-weight: 500}
+body.evo i.excel:after {content: '\f1c3'; font-weight: 500}
+body.evo i.facebook:after {content: '\f082'}
+body.evo i.files:after {content: '\f5db'; font-weight: 500}
+body.evo i.fillIn:after {content: '\e1be'; font-weight: 500}
+body.evo i.filter:after {content: '\f1de'; font-weight: 500}
+body.evo i.flag:after,
+body.evo i.flagOrange:after,
+body.evo i.redFlag:after {content: '\f024'; font-weight: 500}
+body.evo i.flagCheckered:after {content: '\f11e'; font-weight: 500}
+body.evo i.folderBlue:after,
+body.evo i.folderGreen:after {content: '\f07b'; font-weight: 500}
+body.evo i.folderDown:after {content: '\e053'; font-weight: 500}
+body.evo i.folderUp:after {content: '\e054'; font-weight: 500}
+body.evo i.forward:after {content: '\f061'; font-weight: 500}
+body.evo i.Forums:after {content: '\f0ca'; font-weight: 500}
+body.evo i.go1:after {content: '\e009'; font-family: Font Awesome Kit}
+body.evo i.goal:after {content: '\f648'; font-weight: 500}
+body.evo i.gold:after {content: '\f5a2'; font-weight: 500}
+body.evo i.google:after {content: '\e024'; font-family: Font Awesome Kit}
+body.evo i.google_meet:after {content: '\e00a'; font-family: Font Awesome Kit}
+body.evo i.googleDrive:after {content: '\e023'; font-family: Font Awesome Kit}
+body.evo i.gotomeeting:after,
+body.evo i.gototraining:after,
+body.evo i.gotowebinar:after {content: '\e00b'; font-family: Font Awesome Kit}
+body.evo i.gradebook:after, body.evo i.form_edit:after,
+body.evo .tile_circle_icon i.gradeMap:after {content: '\f0ce'; font-weight: 500}
+body.evo i.grading_absent,
+body.evo i.grading_comment,
+body.evo i.grading_excused,
+body.evo i.grading_flag,
+body.evo i.grading_incomplete,
+body.evo i.grading_missing,
+body.evo i.grading_rubric,
+body.evo i.grading_submission {height: 20px}
+body.evo i.grading_absent:after,
+body.evo i.grading_comment:after,
+body.evo i.grading_excused:after,
+body.evo i.grading_flag:after,
+body.evo i.grading_incomplete:after,
+body.evo i.grading_missing:after,
+body.evo i.grading_rubric:after,
+body.evo i.grading_submission:after {content: ''; width: 20px !important; height: 20px !important; background-repeat: no-repeat; background-position: 0; vertical-align: top}
+body.evo i.grading_absent:after {background-image: url(/images/icons/table/grading_absent.svg)}
+body.evo i.grading_incomplete:after {background-image: url(/images/icons/table/grading_incomplete.svg)}
+body.evo i.grading_missing:after{background-image:url(/images/icons/table/grading_missing.svg)}
+body.evo i.grading_excused:after{background-image:url(/images/icons/table/grading_excused.svg)}
+body.evo i.grading_flag:after{background-image:url(/images/icons/table/grading_flag.svg)}
+body.evo i.grading_submission:after{background-image:url(/images/icons/table/grading_submission.svg)}
+body.evo i.grading_comment:after{background-image:url(/images/icons/table/grading_comment.svg)}
+body.evo i.graph:after,body.evo i.Mastery:after {content: '\e473'; font-weight: 500}
+body.evo i.group:after, body.evo i.Groups:after, body.evo i.Members:after {content: '\f0c0'; font-weight: 500}
+body.evo i.group3:after, body.evo i.Visits:after {content: '\e603'; font-weight: 500}
+body.evo i.group_add:after {content: '\f830'; font-weight: 500}
+body.evo i.group_remove:after {content: '\e073'; font-weight: 500}
+body.evo i.h5p:after {content: '\e00c'; font-family: Font Awesome Kit}
+body.evo i.handshake:after {content: '\f4c6'; font-weight: 500}
+body.evo i.hash:after {content: '\23'; font-weight: 500}
+body.evo i.heart_full:after {content: '\f004'; font-weight: 900}
+body.evo i.heart_outline:after {content: '\f004'; font-weight: 500}
+body.evo i.hide_assessment:after {content: '\e02d'; font-family: Font Awesome Kit}
+body.evo i.hide_icon:after {content: '\f070'; font-weight: 500}
+body.evo i.hide_module:after {content: '\e02c'; font-family: Font Awesome Kit}
+body.evo i.hide_section:after {content: '\e02b'; font-family: Font Awesome Kit}
+body.evo i.home:after {content: '\e487'; font-weight: 500}
+body.evo i.hotspots:after {content: '\f649'; font-weight: 500}
+body.evo i.htmlMode:after {content: '\f121'; font-weight: 900}
+body.evo i.illini:after {content: '\e013'; font-family: Font Awesome Kit}
+body.evo i.info:after, body.evo i.About:after {content: '\f05a'; font-weight: 500}
+body.evo i.invoice_template:after {content: '\f570'; font-weight: 500}
+body.evo i.job_title:after {content: '\f2c2'; font-weight: 500}
+body.evo i.kaltura:after {content: '\e011'; font-family: Font Awesome Kit}
+body.evo i.key:after {content: '\f084'; font-weight: 500}
+body.evo i.learningPath:after {content: '\f277'; font-weight: 500}
+body.evo i.level:after {content: '\f690'; font-weight: 500}
+body.evo i.link::after {content: '\f0c1'; font-weight: 500}
+body.evo i.linkBreak:after {content: '\f127'; font-weight: 500}
+body.evo i.linkedin:after {content: '\f08c'}
+body.evo i.list:after {content: '\f0c9'; font-weight: 500}
+body.evo i.listing:after {content: '\e489'; font-weight: 500}
+body.evo i.listNumbers:after {content: '\f0cb'; font-weight: 500}
+body.evo i.loadingIcon:after {content: '\e1d4'; font-weight: 500}
+body.evo i.lock:after {content: '\f30d'; font-weight: 500}
+body.evo i.logout:after {content: '\f011'; font-weight: 500}
+body.evo i.mailchimp:after {content: '\f59e'}
+body.evo i.mastery:after {content: '\f672'; font-weight: 500}
+body.evo i.matching:after {content: '\e038'; font-family: Font Awesome Kit}
+body.evo i.megaphone:after {content: '\f0a1'; font-weight: 500}
+body.evo i.mentors:after {content: '\f500'; font-weight: 500}
+body.evo i.message_queue:after {content: '\f674'; font-weight: 500}
+body.evo i.messages:after {content: '\f2b6'; font-weight: 500}
+body.evo i.microphone:after {content: '\f8cb'; font-weight: 500}
+body.evo i.microphone2:after {content: '\f130'; font-weight: 500}
+body.evo i.minimize:after {content: '\e0a5'; font-weight: 500}
+body.evo i.movieCamera:after {content: '\f03d'; font-weight: 500}
+body.evo i.movieStrip:after {content: '\f008'; font-weight: 500}
+body.evo i.ms_access:after {content: '\e01a'; font-family: Font Awesome Kit}
+body.evo i.ms_immersive_reader:after {content: '\e03d'; font-family: Font Awesome Kit}
+body.evo i.ms_teams:after {content: '\e025'; font-family: Font Awesome Kit}
+body.evo i.network:after {content: '\f78a'; font-weight: 500}
+body.evo i.news:after, body.evo i.News:after {content: '\f1ea'; font-weight: 500}
+body.evo i.notes:after {content: '\f249'; font-weight: 500}
+body.evo i.o1:after,
+body.evo i.o2:after,
+body.evo i.o3:after,
+body.evo i.o4:after,
+body.evo i.o5:after,
+body.evo i.o6:after,
+body.evo i.o7:after,
+body.evo i.o8:after,
+body.evo i.o9:after,
+body.evo i.o10:after,
+body.evo i.o11:after,
+body.evo i.o12:after,
+body.evo i.o13:after,
+body.evo i.o14:after,
+body.evo i.o15:after,
+body.evo i.o16:after,
+body.evo i.o17:after,
+body.evo i.o18:after,
+body.evo i.o19:after,
+body.evo i.o20:after,
+body.evo i.o21:after,
+body.evo i.o22:after,
+body.evo i.o23:after,
+body.evo i.o24:after,
+body.evo i.o25:after,
+body.evo i.o26:after,
+body.evo i.o27:after,
+body.evo i.o28:after,
+body.evo i.o29:after,
+body.evo i.o30:after,
+body.evo i.o31:after {content: '\f783'; font-weight: 500}
+body.evo i.office365:after {content: '\e01c'; font-family: Font Awesome Kit}
+body.evo i.offline:after {content: '\f6ac'; font-weight: 900}
+body.evo i.oneDrive:after {content: '\e017'; font-family: Font Awesome Kit}
+body.evo i.onenote:after {content: '\e03f'; font-family: Font Awesome Kit}
+i.openBook:after {content: '\f518'; font-weight: 500}
+body.evo i.organogram:after {content: '\f0e8'; font-weight: 500}
+body.evo i.outline:after {content: '\f0ca'; font-weight: 500}
+body.evo i.package:after {content: '\f1b2'; font-weight: 500}
+body.evo i.pageBlank:after {content: '\e428'; font-weight: 500}
+body.evo i.pageBlank2:after,
+body.evo i.link_go:after {content: '\f15b'; font-weight: 500}
+body.evo i.pageFolder:after {content: '\f07c'; font-weight: 500}
+body.evo i.pageLightning:after {content: '\e265'; font-weight: 500}
+body.evo i.pageText:after {content: '\f15c'; font-weight: 500}
+body.evo i.pageWord:after {content: '\f1c2'; font-weight: 500}
+body.evo i.parent:after {content: '\e45b'; font-weight: 500}
+body.evo i.Paths:after {content: '\e29c'; font-weight: 500}
+body.evo i.pause:after {content: '\f28b'; font-weight: 500}
+body.evo i.pdf:after {content: '\f1c1'; font-weight: 500}
+body.evo i.pen:after {content: '\f304'; font-weight: 500}
+body.evo i.picture:after {content: '\f03e'; font-weight: 500}
+body.evo i.pieChart:after {content: '\f64e'; font-weight: 500}
+body.evo i.Plan:after {content: '\f2bb'; font-weight: 900}
+body.evo i.plusMinus:after {content: '\e43c'; font-weight: 900}
+body.evo i.popin:after {content: '\e093'; font-weight: 500}
+body.evo i.popout:after {content: '\e09d'; font-weight: 500}
+body.evo i.portal:after {content: '\f57d'; font-weight: 500}
+body.evo i.powerpoint:after {content: '\f1c4'; font-weight: 500}
+body.evo i.print:after,
+body.evo i.printer:after {content: '\f02f'; font-weight: 500}
+body.evo i.proficiency:after {content: '\e27f'; font-weight: 500}
+body.evo i.puzzle:after,body.evo i.Games:after  {content: '\f12e'; font-weight:500}
+body.evo i.questionMark:after {content: '\f059'; font-weight: 500}
+body.evo i.quiz:after,
+body.evo i.help:after {content: '\f2fd'; font-weight: 500}
+body.evo i.rating_matrix:after {content: '\e5db'; font-weight: 500}
+body.evo i.rating_scale:after {content: '\e561'; font-weight: 500}
+body.evo i.recycle:after {content: '\f1b8'; font-weight: 500}
+body.evo i.refresh:after {content: '\f2f9'; font-weight: 900}
+body.evo i.refreshCircle:after {content: '\e03b'; font-family: Font Awesome Kit}
+body.evo i.remove:after {content: '\f068'; font-weight: 900}
+body.evo i.Report:after {content: '\f643'; font-weight: 500}
+body.evo i.repositories:after {content: '\f233'; font-weight: 500}
+body.evo i.resize:after {content: '\f31d'; font-weight: 500}
+body.evo i.resources:after {content: '\e185'; font-weight: 500}
+body.evo i.return:after {content: '\f060'; font-weight: 900}
+body.evo i.rotateAnticlockwise:after {content: '\f2ea'; font-weight: 400}
+body.evo i.rotateAnticlockwiseThick:after{content: '\f2ea'; font-weight: 900}
+body.evo i.rotateClockwise:after {content: '\f2f9'; font-weight: 500}
+body.evo i.rotateClockwiseThick:after {content: '\f2f9'; font-weight: 900}
+body.evo i.rss:after {content: '\f09e'; font-weight: 900}
+body.evo i.rulesEngine:after {content: '\f085'; font-weight: 500}
+body.evo i.salesforce:after {content: '\f83b'}
+body.evo i.saml2:after {content: '\e018'; font-family: Font Awesome Kit}
+body.evo i.school:after {content: '\f1ad'; font-weight: 500}
+body.evo i.school_building:after {content: '\f549'; font-weight: 500}
+body.evo i.Scores:after, body.evo i.grades:after {content: '\e41c'; font-weight: 500}
+body.evo i.search:after {content: '\f002'; font-weight: 500}
+body.evo i.seatingChart:after {content: '\f6c0'; font-weight: 500}
+body.evo i.send:after {content: '\f1d8'; font-weight: 500}
+body.evo i.sessions:after {content: '\f03a'; font-weight: 500}
+body.evo i.share:after {content: '\f1e0'; font-weight: 500}
+body.evo i.sharepoint:after {content: '\e016'; font-family: Font Awesome Kit}
+body.evo i.shield:after, body.evo i.shield2:after {content: '\f132'; font-weight: 500}
+body.evo i.shortcut:after {content: '\f08e'; font-weight: 500}
+body.evo i.show_assessment:after {content: '\e02a'; font-family: Font Awesome Kit}
+body.evo i.show_icon:after {content: '\f06e'; font-weight: 500}
+body.evo i.show_module:after {content: '\e029'; font-family: Font Awesome Kit}
+body.evo i.show_section:after {content: '\e028'; font-family: Font Awesome Kit}
+body.evo i.signal:after {content: '\f1eb'; font-weight: 500}
+body.evo i.signal2:after {content: '\f519'; font-weight: 500}
+body.evo i.signal3:after {content: '\f8dd'; font-weight: 500}
+body.evo i.singleSignOn:after {content: '\e248'; font-weight: 500}
+body.evo i.sort:after {content: '\f0dc'; font-weight: 500}
+body.evo i.starHalf:after {content: '\f5c0'; font-weight: 500}
+body.evo i.star:after{content: '\f005';}
+body.evo i.star2:after,
+body.evo i.starOutline:after,
+body.evo li i.star2:after {content: '\f005'; font-weight: 500}
+.ratingStatic i:after {font-weight: 900}
+body.evo i.startCircle:after {content: '\f138'; font-weight: 500}
+body.evo i.subscribe:after {content: '\e4e8'; font-weight: 500}
+body.evo i.Subscriptions:after {content: '\f2c1'; font-weight: 500}
+body.evo i.rubric_grading_scale:after,
+body.evo i.grading_rubric:after,
+body.evo .special-table .column>div:hover span.gb-grade.rubric:before,
+body.evo i.table:after {content: '\e292'; font-weight: 500}
+body.evo i.tablet:after {content: '\f3fb'; font-weight: 500}
+body.evo i.tag:after {content: '\f02b'; font-weight: 500}
+body.evo i.tag_add:after {content: '\e034'; font-family: Font Awesome Kit}
+body.evo i.tag_remove:after {content: '\e033'; font-family: Font Awesome Kit}
+body.evo i.textMode:after {content: '\f894'; font-weight: 500}
+body.evo i.thumbsUp:after {content: '\f164'; font-weight: 500}
+body.evo i.thumbTack:after {content: '\f08d'; font-weight: 500}
+body.evo i.tick:after,
+body.evo i.tickOrange:after {content: '\f00c'; font-weight: 900}
+body.evo i.tickCircle:after {content: '\f058'; font-weight: 500}
+body.evo i.tilde:after {content: '\7e'; font-weight: 900}
+body.evo i.tildeCircle:after {content: '\e03a'; font-family: Font Awesome Kit}
+body.evo i.tildeWarning:after {content: '\e039'; font-family: Font Awesome Kit}
+body.evo i.to_do_add:after {content: '\f737'; font-weight: 500}
+body.evo i.tool:after {content: '\f0ad'; font-weight: 500}
+body.evo i.toolbox:after {content: '\f552'; font-weight: 500}
+body.evo i.transfer_seats:after {content: '\e552'; font-weight: 500}
+body.evo i.trophy:after, body.evo i.Awards:after {content: '\f2eb'; font-weight: 500}
+body.evo i.trueFalse:after {content: '\e037'; font-family: Font Awesome Kit}
+body.evo i.turnitin:after {content: '\e012'; font-family: Font Awesome Kit}
+body.evo i.udemy:after {content: '\e01b'; font-family: Font Awesome Kit}
+body.evo i.unicheck:after {content: '\e022'; font-family: Font Awesome Kit}
+body.evo i.unlock:after {content: '\f13e'; font-weight: 500}
+body.evo i.unsubscribe:after {content: '\e040'; font-family: Font Awesome Kit}
+body.evo i.user:after, body.evo i.Students:after, body.evo i.Learners:after {content: '\f406'; font-weight: 500}
+body.evo i.userTie:after {content: '\f508'; font-weight: 500}
+body.evo i.LDAP:after {content: '\f2f7'; font-weight: 500}
+body.evo i.wallet:after {content: '\f555'; font-weight: 500}
+body.evo i.warning:after {content: '\f321'; font-weight: 500}
+body.evo i.webConferencing:after {content: '\e163'; font-weight: 500}
+body.evo i.webex:after {content: '\e021'; font-family: Font Awesome Kit}
+body.evo i.webhook:after, body.evo i.Webhooks:after {content: '\e5d5'; font-weight: 900}
+body.evo i.Wikis:after {content: '\f7e7'; font-weight: 500}
+body.evo i.window:after {content: '\f40e'; font-weight: 500}
+body.evo i.word:after {content: '\f1c2'; font-weight: 500}
+body.evo i.xAPI:after {content: '\e01f'; font-family: Font Awesome Kit}
+body.evo i.xCross:after {content: '\e59b'; font-weight: 900}
+body.evo i.xCrossSmall:after {content: '\f00d'; font-weight: 900}
+body.evo i.zapier:after, body.evo i.Zapier:after {content: '\e014'; font-family: Font Awesome Kit}
+body.evo i.zoom:after {content: '\e015'; font-family: Font Awesome Kit}
+
+/* Dark Mode */
+[data-theme="dark"] body.evo i:after{
+    color:var(--icon-color);
+}
+
+body.evo .special-table .column>div:hover span.gb-grade.rubric:before{
+    content: '\e292';
+    font-weight: 500;
+    font-family: Font Awesome Kit;
+    font-size: 15px;
+    background-image: none !important;
+    font-family: "Font Awesome 6 Pro";
+}
+
+body.evo .grade_book.special-table .assignment_grade_release i:after {
+    background-image: none !important;
+}

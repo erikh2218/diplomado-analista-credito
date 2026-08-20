@@ -1,0 +1,366 @@
+/*
+Saved view: body .materialStyle, [dir=rtl] .materialStyle
+Editor view: body.materialStyle, [dir=rtl].materialStyle
+*/
+
+/* ================================
+   1. BASE STYLES (Highest Priority)
+   ================================ */
+
+.materialStyle.withBorder {
+    border-bottom: 1px solid #D7DCDE;
+}
+
+/* ================================
+   2. TYPOGRAPHY (High Priority)
+   ================================ */
+
+/* Headings */
+.materialStyle h1, .materialStyle h2, .materialStyle h3,
+.materialStyle h4, .materialStyle h5, .materialStyle h6 {
+    font-family: var(--primary-font, 'Poppins', sans-serif);
+    font-weight: 600;
+}
+
+.materialStyle h2 {
+    margin-top: 0;
+}
+
+.materialStyle h1 {
+    font-size: 25px;
+}
+
+.materialStyle h2 {
+    font-size: 21px;
+}
+
+.materialStyle h3 {
+    font-size: 19px;
+}
+
+.materialStyle h4 {
+    font-size: 17px;
+}
+
+.materialStyle h5 {
+    font-size: 16px;
+}
+
+.materialStyle h6 {
+    font-size: 13px;
+}
+
+/* Consistent heading styles inside grid cells and flex columns.
+   Sizes are explicit because nested contenteditable elements can break
+   cascade from .materialStyle h1-h6. */
+.materialStyle .flex-column h1, .materialStyle .grid-cell h1 { font-size: 25px; }
+.materialStyle .flex-column h2, .materialStyle .grid-cell h2 { font-size: 21px; }
+.materialStyle .flex-column h3, .materialStyle .grid-cell h3 { font-size: 19px; }
+.materialStyle .flex-column h4, .materialStyle .grid-cell h4 { font-size: 17px; }
+.materialStyle .flex-column h5, .materialStyle .grid-cell h5 { font-size: 16px; }
+.materialStyle .flex-column h6, .materialStyle .grid-cell h6 { font-size: 13px; }
+
+.materialStyle .flex-column h1, .materialStyle .flex-column h2, .materialStyle .flex-column h3,
+.materialStyle .flex-column h4, .materialStyle .flex-column h5, .materialStyle .flex-column h6,
+.materialStyle .grid-cell h1, .materialStyle .grid-cell h2, .materialStyle .grid-cell h3,
+.materialStyle .grid-cell h4, .materialStyle .grid-cell h5, .materialStyle .grid-cell h6 {
+    margin: 0;
+    font-weight: 600;
+    color: var(--main-text-color, #0f0f0f);
+}
+
+/* Hide <br> immediately after a heading — headings are block elements
+   and don't need a line break to separate from the next line */
+.materialStyle .ui-component h1 + br,
+.materialStyle .ui-component h2 + br,
+.materialStyle .ui-component h3 + br,
+.materialStyle .ui-component h4 + br,
+.materialStyle .ui-component h5 + br,
+.materialStyle .ui-component h6 + br {
+    display: none;
+}
+
+/* User text */
+.materialStyle span span:not(.primaryColorText) {
+    color: inherit;
+}
+
+/* ================================
+   3. LISTS (High Priority)
+   ================================ */
+
+/* List styling reset for saved view */
+body .materialStyle ul {
+    list-style-type: disc;
+}
+
+body .materialStyle ul ul {
+    list-style-type: circle;
+}
+
+body .materialStyle ul ul ul {
+    list-style-type: square;
+}
+
+body .materialStyle ol {
+    list-style-type: decimal;
+}
+
+/* List spacing and positioning */
+body .materialStyle ul.list_inside,
+body .materialStyle ul,
+body .materialStyle ol {
+    margin: 1em 0;
+    padding-left: 40px;
+}
+
+[dir=rtl] .materialStyle ul.list_inside,
+[dir=rtl] .materialStyle ul,
+[dir=rtl] .materialStyle ol {
+    padding-right: 40px;
+}
+
+body .materialStyle ol ol,
+body .materialStyle ul ul,
+body .materialStyle ol ul,
+body .materialStyle ul ol {
+    margin: 0;
+}
+
+/* List items */
+body .materialStyle li {
+    margin-top: 2px;
+    line-height: 1.4;
+}
+
+body .materialStyle li:before {
+    display: none;
+}
+
+/* Special list positioning near images */
+.materialStyle .img_left ~ ul,
+.materialStyle .img_right ~ ul,
+.materialStyle .img_left ~ ol,
+.materialStyle .img_right ~ ol {
+    list-style-position: inside;
+}
+
+/* Center / right alignment on a list:
+   shift the WHOLE list as a block, bullets stay vertically aligned (Word-like). */
+body ul[style*="text-align: center"],
+body ol[style*="text-align: center"],
+body ul:has(> li[style*="text-align: center"]),
+body ol:has(> li[style*="text-align: center"]) {
+    list-style-position: outside !important;
+    width: fit-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 1.25em !important;
+    text-align: left !important;
+}
+
+body ul[style*="text-align: right"],
+body ol[style*="text-align: right"],
+body ul:has(> li[style*="text-align: right"]),
+body ol:has(> li[style*="text-align: right"]) {
+    list-style-position: outside !important;
+    width: fit-content;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    padding-left: 1.25em !important;
+    text-align: left !important;
+}
+
+body li[style*="text-align: center"],
+body li[style*="text-align: right"] {
+    text-align: left !important;
+    list-style-position: outside !important;
+}
+
+/* ================================
+   4. TABLES (Medium Priority)
+   ================================ */
+
+/* Table base structure */
+.materialStyle table:not([cellspacing]):not([style*='border-spacing']):not([style*='border-color']) {
+    border-collapse: collapse;
+}
+
+.materialStyle table[border='0'] th,
+.materialStyle table[border='0'] td {
+    border-width: 0;
+}
+
+/* Table cells - common styles */
+.materialStyle table th,
+.materialStyle table td {
+    font-family: inherit;
+    padding: 6px 8px;
+}
+
+.grey_background .materialStyle table th,
+.grey_background .materialStyle table td {
+    border-color: var(--user-table-border-color, #cacaca);
+}
+
+/* Table headers - consolidated styles */
+.materialStyle table th {
+    font-size: 17px;
+    text-align: left;
+    background: var(--th-bg-color, #efefef);
+}
+
+[dir=rtl].materialStyle table th {
+    text-align: right;
+}
+
+.grey_background .materialStyle table th {
+    background: var(--th-bg-color, #e0e2e4);
+}
+
+/* Table data cells */
+.materialStyle table td {
+    background-color: initial;
+}
+
+.materialStyle table tr td {
+    border-width: 1px;
+}
+
+.materialStyle table td span:not(.px16) {
+    font-size: inherit;
+}
+
+/* Table style overrides */
+.materialStyle table[style*="background-color"] th:not([style*="background-color"]) {
+    background-color: initial;
+}
+
+/*:not helps overwrite default style*/
+.materialStyle table [style*='font-size'] {
+    line-height: initial;
+}
+
+/* Table links */
+.materialStyle table a {
+    vertical-align: initial;
+}
+
+/* ================================
+   5. IMAGES (Medium Priority)
+   ================================ */
+
+/* Base image styles */
+.materialStyle img {
+    max-width: 100%;
+    height: auto !important;
+}
+
+/* Image positioning */
+.materialStyle .img_left {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.materialStyle .img_right {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+.materialStyle .img_center {
+    margin: 20px auto;
+    display: block;
+    max-width: 100%;
+    height: auto !important;
+}
+
+.materialStyle .img_full_width {
+    margin: 20px auto;
+    width: 100%;
+}
+
+/* ================================
+   6. THEME OVERRIDES (Medium Priority)
+   ================================ */
+
+/* Dark mode equations */
+[data-theme="dark"] img[src*='/equation?latex'],
+.dark_editor img[src*='/equation?latex'],
+[data-theme="dark"] img[src*='equation_'],
+.dark_editor img[src*='equation_'] {
+    filter: invert(1);
+}
+
+/* ================================
+   7. COMPONENTS (Lower Priority)
+   ================================ */
+
+/* Web conference blocks */
+.materialStyle .conference_block {
+    border: 1px solid var(--main-border-color, #e2e0e0);
+    border-radius: 3px;
+    padding: 14px;
+    display: table;
+    background-color: var(--block-bg-color);
+    margin: 15px 0;
+}
+
+.materialStyle .conference_block div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.materialStyle .conference_block span[class*='icon'] {
+    display: inline-block;
+    width: 30px;
+    height: 32px;
+    position: relative;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+}
+
+[dir=rtl] .materialStyle .conference_block span[class*='icon'],
+[dir=rtl].materialStyle .conference_block span[class*='icon'] {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.materialStyle .conference_block a {
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
+/* ================================
+   8. CONFERENCE ICONS (Lowest Priority)
+   ================================ */
+
+.materialStyle .conference_block .google_meet_icon {
+    background-image: url("data:image/svg+xml,%3Csvg id='ba5875c4-5400-4d7b-b641-7995ea1b0d0c' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M9,8,10.6,9.78l2.09,1.34L13.06,8l-.37-3L10.56,6.15Z' style='fill:%2300832d'/%3E%3Cpath d='M0,10.83v2.65a1.09,1.09,0,0,0,1.1,1.09H3.74l.55-2-.55-1.74-1.81-.55Z' style='fill:%230066da'/%3E%3Cpath d='M3.74,1.43,0,5.17l1.93.55,1.81-.55.54-1.72Z' style='fill:%23e94235'/%3E%3Cpath d='M3.74,5.17H0v5.66H3.74Z' style='fill:%232684fc'/%3E%3Cpath d='M15.08,3,12.69,5v6.15l2.4,2a.55.55,0,0,0,.89-.43V3.43A.55.55,0,0,0,15.08,3Z' style='fill:%2300ac47'/%3E%3Cpath d='M9,8v2.83H3.74v3.74H11.6a1.09,1.09,0,0,0,1.09-1.09V11.12Z' style='fill:%2300ac47'/%3E%3Cpath d='M11.6,1.43H3.74V5.17H9V8l3.65-3V2.52A1.09,1.09,0,0,0,11.6,1.43Z' style='fill:%23ffba00'/%3E%3C/svg%3E");
+}
+
+.materialStyle .conference_block .ms_teams_icon {
+    background-image: url("data:image/svg+xml,%3Csvg id='eecdd4aa-ca79-4447-85b4-fd0deddf6c8b' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='13.8' cy='5.92' r='1.2' style='fill:%235558af'/%3E%3Cpath d='M12.23,11.16a1,1,0,0,0,0-.24h0V7.1H9.83v5.22h1.42A1.17,1.17,0,0,0,12.23,11.16Z' style='fill:%235558af'/%3E%3Cpath d='M15,10.11a1,1,0,0,0,0-.24h0V7.78H12.6v3.5H14v0A1.16,1.16,0,0,0,15,10.11Z' style='fill:%235558af'/%3E%3Cpath d='M1,2.85V13.09L9.51,15V1ZM7.05,6.41H5.48V10.9H4.32V6.51l-1.39,0V5.47l4.12-.29Z' style='fill:%235558af'/%3E%3Cpath d='M10.78,4a1.22,1.22,0,0,0-.95.47V6A1.21,1.21,0,1,0,10.78,4Z' style='fill:%235558af'/%3E%3C/svg%3E");
+}
+
+.materialStyle .conference_block .gotomeeting_icon {
+    background-image: url("data:image/svg+xml,%3Csvg id='f21592fd-c9e7-46ee-8da7-7bff760bc054' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cdefs%3E%3Cstyle%3E.af2a275c-4074-491d-83f9-38a2cc9ed966%7Bfill:%23f68d2e;%7D%3C/style%3E%3C/defs%3E%3Cpath class='af2a275c-4074-491d-83f9-38a2cc9ed966' d='M14.2,9.15a2.09,2.09,0,0,0-2.31.08.41.41,0,0,1-.45,0L9.35,8.05a.05.05,0,0,1,0-.08l0,0,2.08-1.2a.41.41,0,0,1,.45,0,2.11,2.11,0,0,0,2.32.09A2.13,2.13,0,0,0,15,4.07a2.11,2.11,0,1,0-4,1.18.4.4,0,0,1-.21.4L8.71,6.86s-.05,0-.07,0,0,0,0,0V4.4A.45.45,0,0,1,8.88,4,2.11,2.11,0,1,0,6.09,3a2.15,2.15,0,0,0,1,1,.43.43,0,0,1,.25.38V6.81a.06.06,0,0,1,0,.06h0L5.2,5.65a.41.41,0,0,1-.2-.4,2.13,2.13,0,1,0-.88,1.53.43.43,0,0,1,.46,0L6.66,8a.06.06,0,0,1,0,.08l0,0L4.57,9.25a.41.41,0,0,1-.45,0,2.09,2.09,0,0,0-2.31-.08A2.13,2.13,0,0,0,1.05,12,2.1,2.1,0,0,0,5,10.75a.43.43,0,0,1,.21-.4L7.29,9.14s.06,0,.07,0a0,0,0,0,1,0,0V11.6a.43.43,0,0,1-.25.38,2.12,2.12,0,1,0,1.76,0,.45.45,0,0,1-.25-.38V9.19s0-.06.06-.06h0l2.1,1.21a.41.41,0,0,1,.2.4,2.11,2.11,0,1,0,3.19-1.6Z'/%3E%3C/svg%3E");
+}
+
+.materialStyle .conference_block .gototraining_icon {
+    background-image: url("data:image/svg+xml,%3Csvg id='a9f157be-073c-4d08-a831-0f98b6514198' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cdefs%3E%3Cstyle%3E.a9fa6ca0-25df-419a-8db2-0b02a9e5cdae%7Bfill:%23992977;%7D%3C/style%3E%3C/defs%3E%3Cpath id='a53680e4-dce3-44a8-aa6b-312da0f96d8d' data-name='Shape' class='a9fa6ca0-25df-419a-8db2-0b02a9e5cdae' d='M14.2,9.15a2.09,2.09,0,0,0-2.31.08.41.41,0,0,1-.45,0L9.35,8.05a.06.06,0,0,1,0-.1l2.07-1.2a.43.43,0,0,1,.46,0,2.11,2.11,0,0,0,2.32.09A2.13,2.13,0,0,0,15,4.07a2.09,2.09,0,0,0-2.45-1A2.12,2.12,0,0,0,11,5.25a.4.4,0,0,1-.21.4L8.71,6.86H8.66a.05.05,0,0,1,0-.05V4.4A.45.45,0,0,1,8.88,4,2.1,2.1,0,1,0,7.12,4a.43.43,0,0,1,.25.38V6.81a.08.08,0,0,1,0,.05H7.29L5.2,5.65a.41.41,0,0,1-.2-.4A2.11,2.11,0,0,0,1.07,4,2.1,2.1,0,0,0,4.12,6.78a.43.43,0,0,1,.46,0L6.66,8a.06.06,0,0,1,0,.1L4.57,9.25a.41.41,0,0,1-.45,0,2.09,2.09,0,0,0-2.31-.08A2.12,2.12,0,0,0,1.05,12,2.1,2.1,0,0,0,5,10.75a.43.43,0,0,1,.21-.4L7.29,9.14h.06a.08.08,0,0,1,0,0V11.6a.43.43,0,0,1-.25.38,2.11,2.11,0,1,0,1.76,0,.45.45,0,0,1-.25-.38V9.19a.05.05,0,0,1,0,0h.05l2.1,1.21a.41.41,0,0,1,.2.4A2.11,2.11,0,0,0,15,12,2.13,2.13,0,0,0,14.2,9.15Z'/%3E%3C/svg%3E");
+}
+
+.materialStyle .conference_block .gotowebinar_icon {
+    background-image: url("data:image/svg+xml,%3Csvg id='b5b8f464-76a9-448a-8778-4a3248eadf3d' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cdefs%3E%3Cstyle%3E.f295cea6-928a-4e91-8be8-8cda770389c7%7Bfill:%2300c0f3;%7D%3C/style%3E%3C/defs%3E%3Cpath id='b74d1fbb-c34f-4746-b289-f93f5f606b42' data-name='Shape' class='f295cea6-928a-4e91-8be8-8cda770389c7' d='M14.2,9.15a2.1,2.1,0,0,0-2.31.08.39.39,0,0,1-.45,0L9.35,8.05a.06.06,0,0,1,0-.1l2.07-1.2a.43.43,0,0,1,.46,0A2.11,2.11,0,1,0,11,5.25a.4.4,0,0,1-.21.4L8.71,6.86a.05.05,0,0,1-.08,0V4.4A.43.43,0,0,1,8.88,4,2.1,2.1,0,1,0,7.12,4a.43.43,0,0,1,.25.38V6.82s0,.06-.08,0L5.2,5.65a.41.41,0,0,1-.2-.4A2.11,2.11,0,1,0,1.85,6.89a2.08,2.08,0,0,0,2.27-.11.43.43,0,0,1,.46,0L6.66,8a.06.06,0,0,1,0,.1L4.57,9.25a.41.41,0,0,1-.45,0A2.11,2.11,0,1,0,4,12.77a2.07,2.07,0,0,0,1-2,.43.43,0,0,1,.21-.4L7.29,9.14s.08,0,.08,0V11.6a.43.43,0,0,1-.25.38,2.11,2.11,0,1,0,1.76,0,.42.42,0,0,1-.24-.38V9.18a0,0,0,0,1,.07,0l2.1,1.21a.41.41,0,0,1,.2.4A2.11,2.11,0,0,0,15,12,2.13,2.13,0,0,0,14.2,9.15Z'/%3E%3C/svg%3E");
+}
+
+.materialStyle .conference_block .webex_icon {
+    background-image: url("data:image/svg+xml,%3Csvg id='e0a6b43f-1b1e-4a77-8061-c8f7ed37510d' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2.7,8a5.3,5.3,0,0,1,9.05-3.75l1.91-1.91A8,8,0,0,0,2.34,13.66l1.91-1.91A5.29,5.29,0,0,1,2.7,8Z' style='fill:%2318b9e8'/%3E%3Cpath d='M13.66,2.34a1.36,1.36,0,0,0-1.91,0,1.35,1.35,0,0,0,0,1.91h0a5.3,5.3,0,0,1-7.5,7.5h0a1.35,1.35,0,0,0-1.91,0,1.36,1.36,0,0,0,0,1.91A8,8,0,0,0,13.66,2.34Z' style='fill:%23004a70'/%3E%3Cpath d='M11.35,3.89a8.3,8.3,0,0,1,.05.87A6.64,6.64,0,0,1,4.76,11.4a8.3,8.3,0,0,1-.87-.05,5.3,5.3,0,1,0,7.46-7.46Z' style='fill:%2379b53e'/%3E%3C/svg%3E");
+}
+
+.materialStyle .conference_block .zoom_icon {
+    background-image: url("data:image/svg+xml,%3Csvg id='a7a44904-d2cc-4bc0-863f-6039cba7dc7a' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16' height='16' viewBox='0 0 16 16'%3E%3Cdefs%3E%3ClinearGradient id='ad16fb13-8f7c-4e12-8bc2-1488fa4c7903' x1='8' y1='16' x2='8' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%233c83fb'/%3E%3Cstop offset='1' stop-color='%2356a2ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='8' cy='8' r='8' style='fill:url(%23ad16fb13-8f7c-4e12-8bc2-1488fa4c7903)'/%3E%3Cpath d='M11.06,9.61l.9.75a1.87,1.87,0,0,0,.42.3.4.4,0,0,0,.46-.21,1.52,1.52,0,0,0,0-.52V6.07a1.52,1.52,0,0,0,0-.52.4.4,0,0,0-.46-.21,1.87,1.87,0,0,0-.42.3l-.9.75a1.91,1.91,0,0,0-.28.26,1,1,0,0,0-.23.49,3.45,3.45,0,0,0,0,.37v1a3.45,3.45,0,0,0,0,.37,1,1,0,0,0,.23.49A1.91,1.91,0,0,0,11.06,9.61Z' style='fill:%23fff'/%3E%3Cpath d='M3.12,6.3a1.62,1.62,0,0,1,.07-.68.63.63,0,0,1,.28-.28,1.62,1.62,0,0,1,.68-.07H7.44a4.27,4.27,0,0,1,1.78.18,1.66,1.66,0,0,1,.74.74A4.06,4.06,0,0,1,10.15,8V9.7a1.62,1.62,0,0,1-.07.68.65.65,0,0,1-.29.28,1.57,1.57,0,0,1-.68.07H5.82A4.32,4.32,0,0,1,4,10.55a1.68,1.68,0,0,1-.73-.74A4.06,4.06,0,0,1,3.12,8Z' style='fill:%23fff'/%3E%3C/svg%3E");
+}

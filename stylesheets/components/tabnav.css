@@ -1,0 +1,402 @@
+/* CSS FOR TABS COMPONENT */
+
+body.evo #centreColumn .tabnav {
+  margin-bottom: 5px;
+}
+
+body.evo .tabnav {
+  height: 42px !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  padding: 0;
+  /* align-items: center; */
+}
+
+body.evo .tabnav.overflow-hidden {
+  overflow: hidden;
+  align-items: stretch;
+  align-content: stretch;
+}  
+
+body.evo .tabnav.vis {
+  overflow: visible !important;
+}
+
+body.evo .tabnav .width-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+body.evo nav#user-menu .tabnav.bypass {
+  gap: 0px;
+}
+
+body.evo .tabnav .width-wrap {
+  box-shadow: var(--tile-shadow);
+  border-radius: 50px;
+}
+
+body.evo #helpTabs.tabnav .width-wrap {
+  box-shadow: none;
+  align-content: center;
+}
+
+body.evo #helpTabs.tabnav .tabnav__tab {
+  height: auto;
+  margin-left: -5px !important;
+}
+
+body.evo #helpTabs.tabnav.tabnav-on-gray .tabnav__tab {
+  margin-left: 0 !important;
+}
+
+body.evo .inline_tabs_options .tabnav {
+  margin-bottom: 0px !important;
+}
+
+body.evo .tabnav .tabnav__tab {
+  position: relative;
+  margin: 0 !important;
+  background: transparent;
+  opacity: 1 !important;
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  padding: 6px 14px !important;
+  margin: 0px 0px;
+  line-height: 30px;
+  border-radius: 0;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: .3px;
+  margin-left: -5px;
+  transition: .3s all ease;
+  color: var(--main-text-color);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Reset native button styling when tabs are <button> */
+body.evo .tabnav button.tabnav__tab {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  height: auto;
+}
+
+body.evo .tabnav .tabs_more_link.tabnav__tab {
+  height: auto;
+  padding: 0px !important;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-light);
+}
+
+body.evo .tabnav.bypass .tabnav__tab {
+  padding: 0px !important;
+}
+
+body.evo .inline_tab_options .tabnav .tabnav__tab {
+  padding: 6px 15px;
+  border: 1px solid var(--button-border-color);
+  box-shadow: var(--box-shadow);
+}
+
+body.evo nav#user-menu .tabnav .tabnav__tab > span {
+  padding: 6px 14px !important;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  line-height: 19px;
+}
+
+body.evo nav#user-menu .tabnav {
+  border-bottom: 1px solid var(--table-border-color);
+}
+
+body.evo nav#user-menu .dropDown .tabnav:not(.bypass) .tabnav__tab.selected {
+  color: var(--main-text-color);
+  font-weight: var(--font-weight-bold);
+  border-radius: 0px;
+  border-bottom: 4px solid var(--active-color);
+  line-height: 23px;
+}
+
+body.evo .tabnav .tabnav__tab:not(.selected):not(.tabs_more_link):hover, 
+body.evo .tabnav .tabnav__tab:not(.selected):not(.tabs_more_link):hover span {
+  color: var(--active-color);
+}
+
+body.evo nav#user-menu .tabnav .tabnav__tab span,
+body.evo nav#user-menu .tabnav .tabnav__tab.selected span {
+  color: var(--main-text-color);
+}
+
+[data-theme="dark"] body.evo nav#user-menu .dropDown .tabnav .tabnav__tab:hover {
+  background: transparent;
+}
+
+body.evo .tabnav .tabnav__tab.selected span,
+body.evo .tabnav .tabnav__tab.selected:hover span {
+  color: #fff;
+}
+
+body.evo .inline_tabs_options .tabnav .tabnav__tab.selected {
+  padding: 6px 22px !important;
+  color:#fff;
+}
+
+body.evo .tabnav .tabnav__tab.selected span.block, body.evo .tabnav .tabnav__tab.selected .tabnav__badge, .accordion_heading .block {
+  background-color: #fff;
+  color: #333 !important;
+}
+
+body.evo .tabnav .tabnav__tab .tabnav__badge,
+body.evo .tabnav .tabnav__tab span.block {
+  line-height: 13px;
+  font-size: var(--font-size-smaller);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--primary-font);
+  background: var(--alert-bg);
+  color: var(--main-text-color) !important;
+  border-radius: 50px;
+  text-align: center;
+  padding: 5px;
+  min-width: 13px;
+  height: 13px;
+  display: inline-block;
+  margin-left: 3px;
+}
+
+body.evo .tabnav .tabnav__tab .tabnav__badge {
+  margin-left: 5px;
+}
+
+body.evo .tabnav .tabnav__toggle {
+  padding: 3px 10px !important;
+  font-weight: var(--font-weight-medium);
+  vertical-align: middle;
+  white-space: nowrap;
+  letter-spacing: .3px;
+  margin-left: -5px;
+  transition: .3s all ease;
+  margin: 0px 0px;
+  line-height: 32px;
+  border-radius: 0;
+  font-size: var(--font-size-medium);
+  color: var(--main-text-color);
+}
+
+body.evo .tabnav .tabnav__tab, 
+body.evo .tabnav .dropDown .tabnav__tab:hover, 
+body.evo .tabnav .dropDown .tabnav__tab:focus, 
+body.evo nav#leftColumn .tabnav .tabnav__tab, 
+body.evo .tabnav .tabnav__tab span, 
+body.evo .select_session .date {
+  color: var(--main-text-color);
+}
+
+.hasRightColumn #centreColumn .tabnav {
+  width: auto;
+}
+
+body.evo .tabnav .tabnav__tab:first-child:before, 
+body.evo .tabnav .tabnav__tab:first-child {
+  border-top-left-radius: var(--border-r-rounded);
+  border-bottom-left-radius: var(--border-r-rounded);
+}
+body.evo .tabnav .tabnav__tab:first-child:after {
+  border-top-left-radius: var(--border-r-rounded);
+  border-bottom-left-radius: var(--border-r-rounded);
+}
+body.evo .tabnav .tabnav__tab:last-child:not(.tabs_more_link):after,
+body.evo .tabnav .tabnav__tab:last-child:not(.tabs_more_link),
+body.evo .tabnav .tabnav__tab:has(+ .tabs_more_link):after,
+body.evo .tabnav .tabnav__tab:has(+ .tabs_more_link) {
+  border-top-right-radius: var(--border-r-rounded);
+  border-bottom-right-radius: var(--border-r-rounded);
+}
+body.evo .tabnav .tabnav__tab {
+  z-index: 0;
+}
+body.evo .tabnav:not(.bypass) .tabnav__tab:not(.tabs_more_link):before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--button-color);
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  display: block;
+}
+
+body.evo .tabnav .tabnav__tab.last_tab:before,
+body.evo .tabnav .tabnav__tab:last-child:not(.tabs_more_link):before,
+body.evo .tabnav .tabnav__tab:has(+ .tabs_more_link):before {
+  border-top-right-radius: var(--border-r-rounded);
+  border-bottom-right-radius: var(--border-r-rounded);
+}
+
+body.evo .tabnav:not(.bypass) .tabnav__tab.selected:after {
+  z-index: -1;
+  margin: 0 auto;
+  content: '';
+  position: absolute;
+  top: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  left: 0;
+  right: 0;
+  background: var(--active-color);
+  overflow: hidden;
+  border-radius: var(--border-r-rounded);
+}
+
+body.evo .tabnav .tabnav__tab .dropDown {
+  left: auto;
+  right: 0;
+}
+
+body.evo .tabnav .tabnav__tab .dropDown .tabnav__tab {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  background: transparent;
+  color: var(--main-text-color);
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  border-radius: 0;
+  height: auto;
+}
+
+body.evo .tabnav .tabnav__tab .dropDown .tabnav__tab:hover {
+  background: var(--nav-button-hover);
+}
+
+body.evo .tabnav .tabnav__tab, 
+body.evo .tabnav .tabnav__tab .dropDown .tabnav__tab:hover, 
+body.evo .tabnav .tabnav__tab .dropDown .tabnav__tab:focus, 
+body.evo nav#leftColumn .tabnav .tabnav__tab, 
+body.evo .tabnav .tabnav__tab span, 
+body.evo .select_session .date {
+  font-weight: var(--font-weight-semibold);
+}
+
+[data-theme="dark"] .tabnav .tabnav__tab:not(.selected) span.block {
+  background: var(--alert-bg);
+}
+
+[data-theme="dark"] body.evo .modal .tabnav:not(.bypass) .tabnav__tab:before {
+  background: var(--popup-bg-container);
+}
+
+body.evo .tabnav .tabnav__tab span {
+  width: auto;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-semibold);
+  margin-top: 1px;
+}
+
+body.evo .tabnav .tabnav__tab:first-child {
+  margin-left: 0;
+}
+
+body.evo .tabnav .tabnav__tab .dropDownHolder .tabnav__toggle {
+  background: transparent;
+  box-shadow: none;
+}
+
+body.evo .tabnav .tabnav__tab .dropDown {
+  margin-top: 0px;
+}
+
+body.evo .tabnav .tabnav__tab.tabs_more_link .dropDownHolder .tabnav__tab > * {
+  border-radius: 50px;
+  padding: 3px 10px 0px !important;
+  font-weight: var(--font-weight-medium);
+  vertical-align: middle;
+  white-space: nowrap;
+  line-height: 32px;
+}
+
+body.evo .tabnav .tabnav__tab.tabs_more_link .dropDownHolder .tabnav__tab > .tabnav__badge {
+  padding: 5px !important;
+  line-height: 13px;
+}
+
+body.evo .tabnav .tabs_more_link .dropDown .tabnav__tab:hover,
+body.evo .tabnav .tabs_more_link .dropDown .tabnav__tab:hover span,
+body.evo .tabnav .tabs_more_link .dropDown .tabnav__tab:hover span  {
+  background: var(--button-hover-bg-2);
+  color: var(--button-color-2) !important;
+  font-weight: var(--font-weight-medium);
+}
+
+body.evo .tabnav .tabs_more_link .dropDownHolder .tabnav__tab.selected{
+  background: var(--active-color);
+}
+
+body.evo #centreColumn .tabnav .tabs_more_link .dropDownHolder .tabnav__tab:before {
+  background: transparent;
+}
+
+body.evo #centreColumn .tabnav .tabnav__tab .dropDownHolder>.tabnav__tab:hover {
+  background: transparent;
+  box-shadow: none;
+}
+
+body.evo .inline_heading_tabs_options .inline_tabs_options .tabnav {
+  margin-left: 0;
+}
+
+body.evo .tabnav .width-wrap .tabnav__tab {
+  font-weight: var(--font-weight-semibold);
+  margin-left: -.5px;
+}
+
+body.evo .tabnav .tabnav__tab.tabnav__dropdown_tab {
+  z-index: 9;
+}
+
+body.evo .tabnav .tabnav__tab.show_resources_tab, 
+body.evo .tabnav .tabnav__tab.show_gdrive_tab, 
+body.evo .tabnav .tabnav__tab.show_onedrive_tab, 
+body.evo .tabnav .tabnav__tab.show_onedrive_business_tab, 
+body.evo .tabnav .tabnav__tab.show_settings_tab, 
+body.evo .tabnav .tabnav__tab.show_equella_tab {
+  display: inline-flex !important;
+}
+
+body.evo .tabnav .tabnav__tab.show_gdrive_tab span {
+  display: flex;
+}
+
+
+/* TABS Spacing */
+
+body.evo .inline_tabs_options.has_tabs {
+  margin-bottom: 25px;
+}
+
+body.evo #contentWrap.for_subnav_open .inline_tabs_options.has_tabs {
+  margin-bottom: 15px;
+}
+
+body.evo #contentWrap.for_subnav_open .inline_heading_tabs_options .inline_tabs_options,
+body.evo .inline_heading_tabs_options .inline_tabs_options {
+  margin-bottom: 0;
+}
+
+body.evo .inline_heading_tabs_options {
+  border-bottom: 0px;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
